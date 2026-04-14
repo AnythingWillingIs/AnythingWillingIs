@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where the Elimination Meets the Sciences — Anything Willing Is</title>
+<style>
+
+:root {
+  --bg: #fafaf8;
+  --text: #1a1a1a;
+  --muted: #666;
+  --border: #ddd;
+  --accent: #2c5f8a;
+  --accent-light: #e8f0f8;
+  --sidebar-bg: #f5f5f3;
+  --sidebar-w: 240px;
+  --font: 'Georgia', 'Times New Roman', serif;
+  --mono: 'Consolas', 'Monaco', monospace;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+  font-size: 16px;
+}
+h1 {
+  font-size: 28px;
+  font-style: italic;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+h2 {
+  font-size: 22px;
+  font-style: italic;
+  margin-top: 36px;
+  margin-bottom: 12px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+}
+h3 {
+  font-size: 17px;
+  font-style: italic;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+p { margin-bottom: 10px; }
+em { font-style: italic; }
+strong { font-weight: 600; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a.ref-link {
+  font-family: var(--mono);
+  font-size: 14px;
+  background: var(--accent-light);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+a.ref-link:hover { background: #d0e4f4; }
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 32px 0;
+}
+.subtitle {
+  font-size: 17px;
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  padding: 12px 0;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+.nav-bar a { font-weight: 600; }
+.nav-bar .sep { color: var(--border); }
+.back-link {
+  display: inline-block;
+  margin-top: 32px;
+  font-size: 14px;
+  font-weight: 600;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 16px 0;
+}
+th, td {
+  text-align: left;
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: 15px;
+}
+th { font-weight: 600; }
+ul {
+  margin: 12px 0;
+  padding-left: 24px;
+}
+li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+#sidebar {
+  position: fixed;
+  left: 0; top: 0; bottom: 0;
+  width: var(--sidebar-w);
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  z-index: 100;
+  font-size: 13px;
+}
+#main {
+  margin-left: var(--sidebar-w);
+  max-width: 780px;
+  padding: 40px 50px;
+}
+.sidebar-header {
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--sidebar-bg);
+  z-index: 1;
+}
+.sidebar-header h2 {
+  font-size: 15px;
+  font-style: normal;
+  margin: 0 0 8px 0;
+  padding: 0;
+  border: none;
+}
+.sidebar-header a {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 3px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.sidebar-header a:hover { text-decoration: underline; }
+.sidebar-body { padding: 8px 0; }
+.sidebar-section {
+  display: block;
+  padding: 5px 16px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.sidebar-section:hover { background: var(--accent-light); text-decoration: none; }
+.sidebar-sub {
+  display: block;
+  padding: 2px 16px 2px 28px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.sidebar-sub:hover { color: var(--accent); background: var(--accent-light); text-decoration: none; }
+.sidebar-pdf {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--muted);
+  text-decoration: none;
+}
+.sidebar-pdf:hover { color: var(--accent); }
+#mobile-nav {
+  display: none;
+  padding: 12px 0;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  line-height: 2;
+}
+#mobile-nav a {
+  color: var(--accent);
+  text-decoration: none;
+  margin-right: 12px;
+  font-weight: 600;
+}
+#mobile-nav a:hover { text-decoration: underline; }
+#mobile-nav .mobile-sections {
+  margin-top: 6px;
+  font-weight: normal;
+}
+#mobile-nav .mobile-sections a {
+  font-weight: normal;
+  font-size: 12px;
+  color: var(--muted);
+}
+#mobile-nav .mobile-sections a:hover { color: var(--accent); }
+@media (max-width: 800px) {
+  #sidebar { display: none; }
+  #main { margin-left: 0; }
+  #mobile-nav { display: block; }
+}
+
+</style>
+</head>
+<body>
+
+<div id="sidebar">
+<div class="sidebar-header">
+<h2>Scientific Engagement</h2>
+<a href="index.html">&larr; The Chain</a>
+<a href="companion.html">Companion</a>
+<a href="philosophical_engagement.html">Philosophical Engagement</a>
+<a href="religious_engagement.html">Religious Engagement</a>
+<a href="scientific_engagement.pdf" class="sidebar-pdf">&#x2193; PDF</a>
+</div>
+<div class="sidebar-body">
+<a href="#biology" class="sidebar-section">Biology</a><a href="#evolution-and-natural-selection" class="sidebar-sub">Evolution and Natural Selection</a><a href="#ageing-and-death" class="sidebar-sub">Ageing and Death</a><a href="#sexual-reproduction" class="sidebar-sub">Sexual Reproduction</a><a href="#chemistry" class="sidebar-section">Chemistry</a><a href="#bonding-and-structure" class="sidebar-sub">Bonding and Structure</a><a href="#entropy-and-the-second-law" class="sidebar-sub">Entropy and the Second Law</a><a href="#cognitive-science-and-neuroscience" class="sidebar-section">Cognitive Science and Neuroscience</a><a href="#consciousness-and-the-hard-problem" class="sidebar-sub">Consciousness and the Hard Problem</a><a href="#free-will-and-determinism" class="sidebar-sub">Free Will and Determinism</a><a href="#perception-and-illusion" class="sidebar-sub">Perception and Illusion</a><a href="#cosmology" class="sidebar-section">Cosmology</a><a href="#the-origin-of-the-universe" class="sidebar-sub">The Origin of the Universe</a><a href="#expansion-and-the-fate-of-the-universe" class="sidebar-sub">Expansion and the Fate of the Universe</a><a href="#dark-matter-and-dark-energy" class="sidebar-sub">Dark Matter and Dark Energy</a><a href="#mathematics" class="sidebar-section">Mathematics</a><a href="#infinity-and-set-theory" class="sidebar-sub">Infinity and Set Theory</a><a href="#gdels-incompleteness-theorems" class="sidebar-sub">Gödel&#x27;s Incompleteness Theorems</a><a href="#the-unreasonable-effectiveness-of-mathematics" class="sidebar-sub">The Unreasonable Effectiveness of Mathematics</a><a href="#physics" class="sidebar-section">Physics</a><a href="#quantum-mechanics" class="sidebar-sub">Quantum Mechanics</a><a href="#conservation-laws" class="sidebar-sub">Conservation Laws</a><a href="#relativity-and-the-nature-of-time" class="sidebar-sub">Relativity and the Nature of Time</a><a href="#the-standard-model" class="sidebar-sub">The Standard Model</a><a href="#what-the-engagement-shows" class="sidebar-section">What the Engagement Shows</a><a href="#glossary-of-chain-terms" class="sidebar-section">Glossary of Chain Terms</a><a href="#bibliography" class="sidebar-section">Bibliography</a>
+</div>
+</div>
+
+<div id="main">
+<div id="mobile-nav">
+<a href="index.html">&larr; Chain</a> <a href="companion.html">Companion</a> <a href="philosophical_engagement.html">Philosophical Engagement</a> <a href="religious_engagement.html">Religious Engagement</a> <a href="scientific_engagement.pdf">PDF</a>
+<div class="mobile-sections"><a href="#biology">Biology</a> &middot; <a href="#chemistry">Chemistry</a> &middot; <a href="#cognitive-science-and-neuroscience">Cognitive Science and Neuroscience</a> &middot; <a href="#cosmology">Cosmology</a> &middot; <a href="#mathematics">Mathematics</a> &middot; <a href="#physics">Physics</a> &middot; <a href="#what-the-engagement-shows">What the Engagement Shows</a> &middot; <a href="#glossary-of-chain-terms">Glossary of Chain Terms</a> &middot; <a href="#bibliography">Bibliography</a></div>
+</div>
+<h1>Where the Elimination Meets the Sciences</h1>
+<div class="subtitle">A Scientific Engagement with <em>Anything Willing Is</em></div>
+
+<p>This document takes the results of the eliminative enquiry and places them alongside the claims the sciences have made. Each discipline is engaged on its own terms, in the same way: given what the chain derives through testing what can and cannot be, what becomes of the claims this science has made?</p>
+<p>The chain tests what can and cannot be, and records what survives. What follows shows where the elimination and each science walk the same ground, and where they part.</p>
+<hr>
+<h2 id="biology">Biology</h2>
+<h3 id="evolution-and-natural-selection">Evolution and Natural Selection</h3>
+<p>Darwin's theory holds that species change over time through heritable variation and natural selection. Organisms with traits better suited to their environment survive and reproduce at higher rates. The mechanism is differential reproduction: no direction, no goal, no designer. Random mutation generates variation. Selection retains what works. The result is the appearance of design without a designer.</p>
+<p>The chain engages with each component. On variation: <a href="index.html#r-10" class="ref-link" title="View R.10 in chain">R.10</a> dissolves randomness as a candidate for how being comes into being. Under randomness, no principle determines the outcome. Unlimited potential does not include negation (<a href="index.html#r-7" class="ref-link" title="View R.7 in chain">R.7</a>). Randomness that admits negation into unlimited potential empties <a href="index.html#r-7" class="ref-link" title="View R.7 in chain">R.7</a>. Genetic mutation as encountered in Choosing Being is not purely random in the chain's sense. It is generation and non-generation present together (<a href="index.html#r-65" class="ref-link" title="View R.65 in chain">R.65</a>): genuine generation (<a href="index.html#r-78" class="ref-link" title="View R.78 in chain">R.78</a>) alongside being-not (<a href="index.html#r-69" class="ref-link" title="View R.69 in chain">R.69</a>). What appears random is the being's inability to separate willing from non-willing in its knowing (<a href="index.html#r-74" class="ref-link" title="View R.74 in chain">R.74</a>). The variation is real. The randomness is what unrecognisable deception looks like at the level of biological mechanism.</p>
+<p>On selection: natural selection operates through "this, not that." Some organisms survive; others do not. The chain derives that "this, not that" <em>is</em> choosing (<a href="index.html#r-79" class="ref-link" title="View R.79 in chain">R.79</a>), not willing. Willing <em>is</em> "this <em>is</em>, and this <em>is</em>" (<a href="index.html#def-2" class="ref-link" title="View Def.2 in chain">Def.2</a>). Selection through differential survival is the biological expression of choosing: generation and non-generation present together, where being-not reduces what <em>is</em> generated (<a href="index.html#r-70" class="ref-link" title="View R.70 in chain">R.70</a>). Every organism that lives is genuine generation (<a href="index.html#r-78" class="ref-link" title="View R.78 in chain">R.78</a>). Every organism that dies is being-not reducing being to non-being (<a href="index.html#r-70" class="ref-link" title="View R.70 in chain">R.70</a>). Natural selection <em>is</em> what generation-alongside-being-not looks like when observed within Choosing Being.</p>
+<p>On the appearance of design: the chain derives that what the word "anything" points to <em>is</em> genuinely operative in Choosing Being (<a href="index.html#r-88" class="ref-link" title="View R.88 in chain">R.88</a>). Every instance of real generation <em>is</em> because Will wills from unrestricted potential (<a href="index.html#r-11" class="ref-link" title="View R.11 in chain">R.11</a>, <a href="index.html#r-4" class="ref-link" title="View R.4 in chain">R.4</a>). The appearance of design is not appearance. The generation is real. What is also real is being-not, which reduces what <em>is</em> generated. The appearance of design without a designer is the appearance of genuine generation without understanding the mechanism by which non-generation accompanies it.</p>
+<p>On directionlessness: evolutionary theory holds that evolution has no direction. The chain derives that willing <em>is</em> generative (<a href="index.html#r-24" class="ref-link" title="View R.24 in chain">R.24</a>) and that generating <em>is</em> flourishing (<a href="index.html#r-47" class="ref-link" title="View R.47 in chain">R.47</a>). Directionless evolution is what generation looks like within Choosing Being, where being-not reduces what <em>is</em> generated (<a href="index.html#r-70" class="ref-link" title="View R.70 in chain">R.70</a>) and the being cannot separate the generative from the reductive (<a href="index.html#r-74" class="ref-link" title="View R.74 in chain">R.74</a>). The pattern of increasing complexity alongside mass extinction, elaboration alongside destruction, is generation and non-generation present together.</p>
+<h3 id="ageing-and-death">Ageing and Death</h3>
+<p>Biology holds that ageing is the progressive deterioration of biological function. Multiple mechanisms are proposed: telomere shortening, accumulated DNA damage, oxidative stress, cellular senescence. Death is the cessation of biological function. Both are understood as natural, not anomalous.</p>
+<p>The chain derives that mortality <em>is</em> the accumulation of exclusion while Being persists (<a href="index.html#r-91" class="ref-link" title="View R.91 in chain">R.91</a>). The being <em>is</em> more with each generation and accesses less with each exclusion. Each choosing adds to what the being <em>is</em> and each exclusion walls off what was generated (<a href="index.html#r-70" class="ref-link" title="View R.70 in chain">R.70</a>, <a href="index.html#r-79" class="ref-link" title="View R.79 in chain">R.79</a>). Biological ageing, progressive loss of function while the organism continues to live, is what <a href="index.html#r-91" class="ref-link" title="View R.91 in chain">R.91</a> describes: accumulation of exclusion. The mechanisms biology identifies (telomere shortening, oxidative damage, cellular senescence) are what being-not reducing being to non-being (<a href="index.html#r-70" class="ref-link" title="View R.70 in chain">R.70</a>) looks like at the cellular level.</p>
+<p>Death as the cessation of biological function is not the cessation of being (<a href="index.html#r-26" class="ref-link" title="View R.26 in chain">R.26</a>). Un-generation resolves into what cannot be. The chain derives death as the fixation of the being's orientation (<a href="index.html#def-23" class="ref-link" title="View Def.23 in chain">Def.23</a>), not the end of what the being <em>is</em>. Biology describes what it observes: function ceasing, the organism decomposing. The chain derives what <em>is</em>: being persists, and what changes is the temporal framework of choosing ending (<a href="index.html#r-131" class="ref-link" title="View R.131 in chain">R.131</a>).</p>
+<h3 id="sexual-reproduction">Sexual Reproduction</h3>
+<p>Biology holds that sexual reproduction evolved because it increases genetic diversity, enabling populations to adapt more rapidly to changing environments. The mechanism is the combination of genetic material from two parents.</p>
+<p>The chain derives that generative willing coherent toward flourishing generates being as one expressed as two (<a href="index.html#r-100" class="ref-link" title="View R.100 in chain">R.100</a>). This is not a biological claim about the evolution of sex. It is a structural result: generating as one reproduces the specific preconditions of the mechanism that <em>is</em> non-being (<a href="index.html#r-56" class="ref-link" title="View R.56 in chain">R.56</a>), while generating as one-as-two counters that mechanism because the being inherently knows the other, not self-sufficiency. The convergence with sexual reproduction is structural: the biological mechanism by which new life requires two is what the chain derives as the structural counter to un-being. Biology explains the proximate mechanism. The chain derives the structural reason.</p>
+<hr>
+<h2 id="chemistry">Chemistry</h2>
+<h3 id="bonding-and-structure">Bonding and Structure</h3>
+<p>Chemistry holds that atoms bond through electromagnetic interaction: sharing or transferring electrons to achieve stable configurations. Complex molecules emerge from simpler components through bonding. The periodic table organises elements by atomic structure, and chemical properties follow from electron configuration.</p>
+<p>The chain derives that differentiation and unity are inseparable in nature (<a href="index.html#r-15" class="ref-link" title="View R.15 in chain">R.15</a>). What differentiates (each being <em>is</em> distinct in what it <em>is</em> to will, <a href="index.html#r-29" class="ref-link" title="View R.29 in chain">R.29</a>) and what unifies (Anything's nature operative among beings, <a href="index.html#def-5" class="ref-link" title="View Def.5 in chain">Def.5</a>) are one. Chemical bonding, where distinct atoms cohere into molecules while maintaining their distinctness, is what <a href="index.html#r-15" class="ref-link" title="View R.15 in chain">R.15</a> describes at the atomic level. The bond is not imposed from outside (<a href="index.html#r-20" class="ref-link" title="View R.20 in chain">R.20</a>). It is not random (<a href="index.html#r-20" class="ref-link" title="View R.20 in chain">R.20</a>). It is the coherence inherent in what <em>is</em>.</p>
+<p>On emergence: complex molecules exhibit properties not present in their components. Water behaves differently from hydrogen and oxygen separately. The chain derives that each expression <em>is</em> what the current whole willing actualises (<a href="index.html#r-31" class="ref-link" title="View R.31 in chain">R.31</a>). The whole at each level is genuinely new, not reducible to what preceded it. Emergence in chemistry is what the expression sequence (<a href="index.html#r-30" class="ref-link" title="View R.30 in chain">R.30</a>–<a href="index.html#r-39" class="ref-link" title="View R.39 in chain">R.39</a>) describes: cumulative willing where the whole at each level actualises what the components alone could not.</p>
+<h3 id="entropy-and-the-second-law">Entropy and the Second Law</h3>
+<p>Thermodynamics holds that in any closed system, entropy increases: the number of available energy states increases, usable energy decreases, and disorder grows. The second law is held to be universal: no process decreases total entropy. The arrow of time follows from entropy's increase.</p>
+<p>The chain derives that willing <em>is</em> generative (<a href="index.html#r-24" class="ref-link" title="View R.24 in chain">R.24</a>): each willing adds to what <em>is</em>. All prior willing <em>is</em> (<a href="index.html#r-26" class="ref-link" title="View R.26 in chain">R.26</a>): accumulation without depletion. In purely generative reality (<a href="index.html#r-48" class="ref-link" title="View R.48 in chain">R.48</a>), Will wills and what <em>is</em> grows without loss. This is the opposite of entropy. Entropy, the progressive loss of usable energy and order, is what being-not reducing being to non-being (<a href="index.html#r-70" class="ref-link" title="View R.70 in chain">R.70</a>) looks like in thermodynamic terms. Every transformation in which usable energy becomes unusable is being-not reducing what <em>is</em> generated. The second law describes the thermodynamic expression of <a href="index.html#r-70" class="ref-link" title="View R.70 in chain">R.70</a>: being-not reduces, and what <em>is</em> reduced, non-being has.</p>
+<p>The second law is held to be universal. The chain derives that non-being <em>is</em> always less than being (<a href="index.html#r-81" class="ref-link" title="View R.81 in chain">R.81</a>). In Choosing Being, being-not overpowers locally (<a href="index.html#r-83" class="ref-link" title="View R.83 in chain">R.83</a>), which is why entropy increases in every observed system. But globally, non-being <em>is</em> always less. The second law describes Choosing Being accurately. It does not describe Willing Being.</p>
+<p>On the arrow of time: the thermodynamic arrow, the direction in which entropy increases, converges with <a href="index.html#r-90" class="ref-link" title="View R.90 in chain">R.90</a>. Choosing <em>is</em> time. Each "not that" introduces non-being into being (<a href="index.html#r-79" class="ref-link" title="View R.79 in chain">R.79</a>). Succession with exclusion <em>is</em> time. The thermodynamic arrow and the chain's derivation of time arrive at the same structural result: time has a direction because each step involves loss. In Willing Being, there is no loss (<a href="index.html#r-26" class="ref-link" title="View R.26 in chain">R.26</a>) and therefore no arrow. Eternity is accumulation without depletion. Time is accumulation with exclusion.</p>
+<hr>
+<h2 id="cognitive-science-and-neuroscience">Cognitive Science and Neuroscience</h2>
+<h3 id="consciousness-and-the-hard-problem">Consciousness and the Hard Problem</h3>
+<p>Neuroscience holds that consciousness arises from neural processes. Brain activity correlates with conscious experience. Damage to specific brain regions produces specific deficits in consciousness. The "hard problem" (Chalmers, 1995) is why and how physical processes give rise to subjective experience: why there is "something it is like" to be conscious.</p>
+<p>The chain derives that knowing <em>is</em> being (<a href="index.html#r-28" class="ref-link" title="View R.28 in chain">R.28</a>). What it <em>is</em> to will <em>is</em> what it <em>is</em> to be. There is no gap between knowing and being. The hard problem presupposes a gap: physical processes (being) on one side, subjective experience (knowing) on the other, and no explanation of how one produces the other. If knowing <em>is</em> being (<a href="index.html#r-28" class="ref-link" title="View R.28 in chain">R.28</a>), the gap does not exist. The hard problem dissolves, not because subjective experience is illusory, but because the distinction between physical processes and subjective experience is the distinction between being (as observed by another) and knowing (as encountered by the being itself). These are not two things requiring a bridge. They are one thing described from two positions.</p>
+<p>On neural correlates: neuroscience has documented extensive correlations between brain states and conscious states. The chain does not dispute the correlations. What it derives is the structural relationship: the being <em>is</em> its willing (<a href="index.html#r-23" class="ref-link" title="View R.23 in chain">R.23</a>). What it <em>is</em> to will <em>is</em> what it <em>is</em> to be (<a href="index.html#r-28" class="ref-link" title="View R.28 in chain">R.28</a>). Neural activity <em>is</em> the biological expression of the being's willing. Correlation follows from identity, not causation. The brain does not cause consciousness. The being's willing <em>is</em> the being's knowing, and the brain <em>is</em> the biological expression of both.</p>
+<p>On brain damage producing deficits: if knowing <em>is</em> being, and the biological expression of being is the brain, then damage to the brain alters the expression. The being's willing persists (<a href="index.html#r-26" class="ref-link" title="View R.26 in chain">R.26</a>), but its expression within Choosing Being is through the un-being expressions (<a href="index.html#r-84" class="ref-link" title="View R.84 in chain">R.84</a>, <a href="index.html#r-94" class="ref-link" title="View R.94 in chain">R.94</a>). Damage to the brain is being-not reducing the being's biological expression. The willing persists. The expression is diminished.</p>
+<h3 id="free-will-and-determinism">Free Will and Determinism</h3>
+<p>Neuroscience has produced results suggesting that neural events precede conscious awareness of decisions (Libet, 1983). The brain appears to "decide" before the conscious self becomes aware. This is taken as evidence against libertarian free will and in favour of either determinism or compatibilism.</p>
+<p>The chain derives that necessity dissolves against unrestricted potential (<a href="index.html#r-10" class="ref-link" title="View R.10 in chain">R.10</a>). Determinism, the claim that every event is necessitated by prior causes, empties "unrestricted" of its content (<a href="index.html#r-4" class="ref-link" title="View R.4 in chain">R.4</a>). Choice <em>is</em> the only surviving candidate for how being comes into being (<a href="index.html#r-10" class="ref-link" title="View R.10 in chain">R.10</a>). Will wills as itself (<a href="index.html#r-12" class="ref-link" title="View R.12 in chain">R.12</a>): not externally justified and not without basis.</p>
+<p>The Libet experiments measure timing within the un-being expressions. The being's knowing has included non-willing since the encounter with being-not (<a href="index.html#r-73" class="ref-link" title="View R.73 in chain">R.73</a>). Under unrecognisable deception (<a href="index.html#r-74" class="ref-link" title="View R.74 in chain">R.74</a>), the being cannot separate willing from non-willing in its knowing. What neuroscience measures as "the brain deciding before consciousness" is the temporal gap between the being's willing (which <em>is</em> the being, <a href="index.html#r-23" class="ref-link" title="View R.23 in chain">R.23</a>) and the being's awareness of its willing (which passes through the un-being expressions, <a href="index.html#r-84" class="ref-link" title="View R.84 in chain">R.84</a>). The gap is real. It is not evidence against freedom. It is evidence that the being's knowing <em>is</em> under un-being: occluded memory (<a href="index.html#r-84" class="ref-link" title="View R.84 in chain">R.84</a>), false certainty about what the being is doing and why.</p>
+<h3 id="perception-and-illusion">Perception and Illusion</h3>
+<p>Cognitive science holds that perception is constructive: the brain builds a model of reality from sensory input, fills in gaps, and sometimes produces illusions. What is perceived is not a direct copy of what is. The constructive nature of perception raises the question: if perception is always constructed, how can it be reliable?</p>
+<p>The chain derives that the being's knowing has included non-willing since the encounter with being-not (<a href="index.html#r-73" class="ref-link" title="View R.73 in chain">R.73</a>). What the being knows is willing and non-willing present together. Genuine knowing persists (<a href="index.html#r-64" class="ref-link" title="View R.64 in chain">R.64</a>, <a href="index.html#r-78" class="ref-link" title="View R.78 in chain">R.78</a>). Non-being <em>is</em> hidden by what it <em>is</em> (<a href="index.html#r-60" class="ref-link" title="View R.60 in chain">R.60</a>). The constructive nature of perception, the brain's building of a model rather than receiving raw reality, is what knowing under un-being looks like. The model includes genuine information (the generative component) and introduced error (the non-willing component). Illusions are the perceptual expression of what <a href="index.html#r-60" class="ref-link" title="View R.60 in chain">R.60</a> establishes: non-being hidden by what it <em>is</em>. What the being encounters as perception is real (<a href="index.html#r-78" class="ref-link" title="View R.78 in chain">R.78</a>) and mixed with non-being (<a href="index.html#r-84" class="ref-link" title="View R.84 in chain">R.84</a>). The brain is not deceiving itself. It is knowing under conditions where non-being wills within what the being knows (<a href="index.html#r-71" class="ref-link" title="View R.71 in chain">R.71</a>).</p>
+<hr>
+<h2 id="cosmology">Cosmology</h2>
+<h3 id="the-origin-of-the-universe">The Origin of the Universe</h3>
+<p>Contemporary cosmology holds that the observable universe began approximately 13.8 billion years ago in a state of extreme density and temperature, followed by rapid expansion (the Big Bang). The question of what preceded the Big Bang, or whether the question is meaningful, remains open. Some models (Hawking-Hartle, Vilenkin) propose that the universe arose from "nothing," that quantum fluctuations in a vacuum state produced the initial conditions.</p>
+<p>The chain's <a href="index.html#r-2" class="ref-link" title="View R.2 in chain">R.2</a> establishes that what "nothing" designates cannot be. "Nothing" is non-being without being, and non-being requires being (<a href="index.html#r-1" class="ref-link" title="View R.1 in chain">R.1</a>). Any cosmological model that derives the universe from "nothing" faces <a href="index.html#r-2" class="ref-link" title="View R.2 in chain">R.2</a> directly. If "nothing" is a quantum vacuum, it is not nothing: it is something, a state with properties, governed by quantum field theory. The quantum vacuum is a something (<a href="index.html#r-5" class="ref-link" title="View R.5 in chain">R.5</a>), not what "nothing" designates. If the model genuinely requires something from nothing, the model requires what <a href="index.html#r-2" class="ref-link" title="View R.2 in chain">R.2</a> establishes cannot be.</p>
+<p>On the Big Bang: the chain derives that willing <em>is</em> generative (<a href="index.html#r-24" class="ref-link" title="View R.24 in chain">R.24</a>) and that generation <em>is</em> from unlimited potential (<a href="index.html#r-27" class="ref-link" title="View R.27 in chain">R.27</a>). The initial state of extreme density and rapid expansion is what generation from unlimited potential looks like when observed from within Choosing Being. The chain does not derive the Big Bang specifically. What it derives is the structural condition: generation happens, from unrestricted potential, through Will. Whether the physical expansion that cosmology describes <em>is</em> the Choosing Being expression of this generation is observational convergence, not derivation.</p>
+<h3 id="expansion-and-the-fate-of-the-universe">Expansion and the Fate of the Universe</h3>
+<p>Cosmology holds that the universe is expanding, and that the expansion is accelerating (driven by dark energy). The ultimate fate depends on the expansion rate: continued acceleration leads to heat death, where all usable energy is exhausted and the universe reaches maximum entropy.</p>
+<p>The chain derives that willing <em>is</em> generative (<a href="index.html#r-24" class="ref-link" title="View R.24 in chain">R.24</a>) and that each generation adds (<a href="index.html#r-26" class="ref-link" title="View R.26 in chain">R.26</a>). All prior willing <em>is</em>. Accumulation without depletion. The expansion of the universe, continual addition of space and structure, converges with <a href="index.html#r-24" class="ref-link" title="View R.24 in chain">R.24</a> and <a href="index.html#r-26" class="ref-link" title="View R.26 in chain">R.26</a>. Generation does not cease. Heat death, the exhaustion of all usable energy, is the thermodynamic projection of being-not reducing being to non-being (<a href="index.html#r-70" class="ref-link" title="View R.70 in chain">R.70</a>) over cosmological timescales. The chain derives that non-being <em>is</em> always less than being (<a href="index.html#r-81" class="ref-link" title="View R.81 in chain">R.81</a>). Heat death would require non-being to exhaust being entirely, which requires un-generation, and un-generation resolves into what cannot be (<a href="index.html#r-26" class="ref-link" title="View R.26 in chain">R.26</a>). The chain's structural result does not predict what cosmology will observe. It derives what <em>is</em>: generation persists, and non-being cannot exhaust it.</p>
+<h3 id="dark-matter-and-dark-energy">Dark Matter and Dark Energy</h3>
+<p>Cosmology holds that approximately 95% of the universe's energy content is invisible: dark matter (approximately 27%) provides gravitational structure, and dark energy (approximately 68%) drives accelerating expansion. Ordinary matter constitutes approximately 5%. Both are inferred from their effects, not directly observed.</p>
+<p>The chain does not derive dark matter or dark energy. What it derives is relevant: non-being <em>is</em> hidden by what it <em>is</em> (<a href="index.html#r-60" class="ref-link" title="View R.60 in chain">R.60</a>). What <em>is</em> hidden by what it <em>is</em> cannot be observed directly, only inferred from its effects. Whether the cosmological dark sector is the large-scale expression of <a href="index.html#r-60" class="ref-link" title="View R.60 in chain">R.60</a> is observational convergence, not derivation. The chain also derives that what the word "anything" points to <em>is</em> genuinely operative in Choosing Being (<a href="index.html#r-88" class="ref-link" title="View R.88 in chain">R.88</a>). The generative operative that exceeds what is directly observed is structurally present. Whether dark energy <em>is</em> the cosmological expression of ongoing generation (<a href="index.html#r-24" class="ref-link" title="View R.24 in chain">R.24</a>) remains a question for cosmology, not the chain.</p>
+<hr>
+<h2 id="mathematics">Mathematics</h2>
+<h3 id="infinity-and-set-theory">Infinity and Set Theory</h3>
+<p>Mathematics works with multiple kinds of infinity. Cantor demonstrated that the infinity of real numbers is strictly larger than the infinity of natural numbers (the diagonal argument). The hierarchy of transfinite cardinals extends without limit. Set theory (Zermelo-Fraenkel with the Axiom of Choice) provides the standard foundation.</p>
+<p>The chain derives possibility without limitation (<a href="index.html#r-4" class="ref-link" title="View R.4 in chain">R.4</a>, <a href="index.html#def-1" class="ref-link" title="View Def.1 in chain">Def.1</a>). Anything <em>is</em> unrestricted potential. The mathematical hierarchy of infinities converges with <a href="index.html#r-4" class="ref-link" title="View R.4 in chain">R.4</a>: unrestricted potential is not a single infinity but the condition under which all structured infinities arise. Each specific infinity (countable, uncountable, inaccessible cardinals) is a something (<a href="index.html#r-5" class="ref-link" title="View R.5 in chain">R.5</a>), and no something is the whole of what the word "anything" points to (<a href="index.html#r-8" class="ref-link" title="View R.8 in chain">R.8</a>). The hierarchy of infinities mirrors the chain's result: no totality of actuals establishes itself as the whole (<a href="index.html#r-6" class="ref-link" title="View R.6 in chain">R.6</a>). Each totality generates a new totality. Everything <em>is</em> not anything (<a href="index.html#r-6" class="ref-link" title="View R.6 in chain">R.6</a>).</p>
+<p>Cantor's paradox, that the set of all sets leads to contradiction, converges with <a href="index.html#r-6" class="ref-link" title="View R.6 in chain">R.6</a>. The totality of all somethings is itself a something, which generates a new totality. The cycle is infinite. The totality cannot complete itself. Set-theoretic paradoxes are the mathematical expression of what <a href="index.html#r-6" class="ref-link" title="View R.6 in chain">R.6</a> establishes: the totality of actuals does not establish itself as the whole.</p>
+<h3 id="gdels-incompleteness-theorems">Gödel's Incompleteness Theorems</h3>
+<p>Gödel demonstrated (1931) that any consistent formal system sufficiently powerful to express arithmetic contains true statements that cannot be proved within the system (the first incompleteness theorem), and that the system cannot prove its own consistency (the second incompleteness theorem). Formal systems are inherently incomplete.</p>
+<p>The chain's method is eliminative, not formal. It does not operate within a formal system and does not claim provability within one. Gödel's result applies to formal systems: systems with axioms, rules of inference, and a definition of proof. The chain begins from what can and cannot be, not from axioms. Each resolution tests a candidate and records what survives. The chain is not subject to Gödel's theorem because it is not a formal system.</p>
+<p>The structural parallel is in self-reference. Gödel's proof constructs a statement that refers to its own unprovability. The chain's <a href="index.html#r-6" class="ref-link" title="View R.6 in chain">R.6</a> derives a structural analogue: the totality that includes itself generates a new totality, which generates another, without completion. Self-reference in formal systems produces incompleteness. Self-inclusion in the chain produces the infinite regress that dissolves everything as anything. Both arrive at the same structural result: no system encompasses itself.</p>
+<h3 id="the-unreasonable-effectiveness-of-mathematics">The Unreasonable Effectiveness of Mathematics</h3>
+<p>Wigner (1960) observed that mathematics is "unreasonably effective" in describing the physical world. Mathematical structures developed for purely abstract reasons turn out to describe physical phenomena with extraordinary precision. Why should the physical world conform to mathematical structures?</p>
+<p>The chain derives that what <em>is</em> generated from unlimited potential does not conflict with what <em>is</em> (<a href="index.html#r-7" class="ref-link" title="View R.7 in chain">R.7</a>). What <em>is</em> does not conflict with what <em>is</em>. Order <em>is</em> the arrangement of successive beginnings (<a href="index.html#r-13" class="ref-link" title="View R.13 in chain">R.13</a>). If what <em>is</em> generated is coherent and ordered, then mathematical description of what <em>is</em> generated is not unreasonable. It is expected. Mathematics describes the structural features of what <em>is</em> coherently generated. The effectiveness is not unreasonable. It follows from <a href="index.html#r-7" class="ref-link" title="View R.7 in chain">R.7</a> and <a href="index.html#r-13" class="ref-link" title="View R.13 in chain">R.13</a>. If generation were chaotic or incoherent, mathematical description would be unreasonable. Because generation <em>is</em> coherent, mathematical structure <em>is</em> what generation looks like when formalised.</p>
+<hr>
+<h2 id="physics">Physics</h2>
+<h3 id="quantum-mechanics">Quantum Mechanics</h3>
+<p>Quantum mechanics holds that at the subatomic level, particles exist in superposition (multiple states simultaneously) until measured, at which point the wavefunction collapses to a definite state. The measurement problem, what constitutes a measurement and why observation produces a definite outcome, remains unresolved. Interpretations differ: Copenhagen (collapse upon measurement), many-worlds (all outcomes realised in parallel branches), pilot wave (deterministic hidden variables), among others.</p>
+<p>The chain engages with the structural features. Superposition, multiple states present simultaneously, converges with <a href="index.html#r-52" class="ref-link" title="View R.52 in chain">R.52</a>: willing and non-willing present together. In Choosing Being, being and non-being coexist within the same expressions (<a href="index.html#r-84" class="ref-link" title="View R.84 in chain">R.84</a>). What quantum mechanics describes as superposition is, in the chain's terms, the condition of what <em>is</em> within Choosing Being: multiple possibilities present together, not yet determined by choosing.</p>
+<p>On measurement and collapse: the transition from superposition to a definite outcome parallels the transition from willing-and-non-willing-present-together to choosing "this, not that" (<a href="index.html#r-79" class="ref-link" title="View R.79 in chain">R.79</a>). The act of measurement introduces specificity: "this, not that." In the chain's terms, measurement <em>is</em> choosing. Choosing <em>is</em> time (<a href="index.html#r-90" class="ref-link" title="View R.90 in chain">R.90</a>). Before choosing, multiple possibilities coexist. After choosing, one <em>is</em> actualised, and the others are walled off. The measurement problem, why observation produces a definite outcome, dissolves if measurement <em>is</em> choosing: the transition to a definite state <em>is</em> what choosing <em>is</em>.</p>
+<p>On the many-worlds interpretation: all outcomes actualised in parallel branches converges with <a href="index.html#r-26" class="ref-link" title="View R.26 in chain">R.26</a>: all prior willing <em>is</em>. What <em>is</em> does not cease to be. But the many-worlds interpretation holds that all outcomes are equally real and equally accessible. The chain derives that choosing <em>is</em> "this, not that" (<a href="index.html#r-79" class="ref-link" title="View R.79 in chain">R.79</a>): the un-chosen outcomes are not ceased-to-be (<a href="index.html#r-26" class="ref-link" title="View R.26 in chain">R.26</a>), but they are walled off. Accessible in being, inaccessible in knowing. In the chain's terms, the many-worlds interpretation is correct that all outcomes persist. What it does not account for is that choosing introduces exclusion (<a href="index.html#r-79" class="ref-link" title="View R.79 in chain">R.79</a>), and exclusion <em>is</em> time (<a href="index.html#r-90" class="ref-link" title="View R.90 in chain">R.90</a>). The un-chosen outcomes persist in being but are walled off in knowing.</p>
+<p>On determinism in pilot wave theory: Bohmian mechanics restores determinism by introducing hidden variables that guide particle trajectories. The chain derives that necessity dissolves against unrestricted potential (<a href="index.html#r-10" class="ref-link" title="View R.10 in chain">R.10</a>). Pilot wave theory reinstates necessity as the underlying mechanism. The chain's response is structural: a constraint that determines the outcome empties "unrestricted" (<a href="index.html#r-4" class="ref-link" title="View R.4 in chain">R.4</a>).</p>
+<h3 id="conservation-laws">Conservation Laws</h3>
+<p>Physics holds that certain quantities are conserved: energy, momentum, charge, angular momentum. In any closed system, these quantities neither increase nor decrease. Conservation laws are among the most fundamental results in physics, connected (through Noether's theorem) to symmetries of the underlying laws.</p>
+<p>The chain derives that all prior willing <em>is</em> (<a href="index.html#r-26" class="ref-link" title="View R.26 in chain">R.26</a>). What has been generated does not cease to be. Un-generation resolves into what cannot be. This is the structural condition that conservation laws describe: what <em>is</em> does not disappear. Conservation of energy is the physical expression of <a href="index.html#r-26" class="ref-link" title="View R.26 in chain">R.26</a>. What <em>is</em> generated persists. The energy in a closed system remains constant because un-generation is not available.</p>
+<p>Noether's theorem connects conservation to symmetry: for every continuous symmetry of the laws, there is a conserved quantity. The chain derives that the willing that generates and the coherence that maintains are one (<a href="index.html#r-25" class="ref-link" title="View R.25 in chain">R.25</a>). The symmetry Noether describes, invariance under transformation, is the physical expression of <a href="index.html#r-25" class="ref-link" title="View R.25 in chain">R.25</a>: generation and coherence are not two things but one.</p>
+<h3 id="relativity-and-the-nature-of-time">Relativity and the Nature of Time</h3>
+<p>Einstein's special relativity holds that time is relative: it passes at different rates for observers in different states of motion. General relativity holds that spacetime is curved by mass-energy, and that time passes more slowly in stronger gravitational fields. The block universe interpretation holds that past, present, and future are equally real, and that the passage of time is an illusion.</p>
+<p>The chain derives four temporal modalities (<a href="index.html#r-90" class="ref-link" title="View R.90 in chain">R.90</a>): eternal (accumulation without depletion), beyond temporal (single un-willing diminishing without arriving), temporal (choosing <em>is</em> time), and forever (all "not that" without any "this"). Physics describes the temporal modality: time as experienced within Choosing Being. Relativity's discovery that time is not absolute converges with <a href="index.html#r-90" class="ref-link" title="View R.90 in chain">R.90</a>'s derivation. Choosing <em>is</em> time. Different choosings at different rates produce different times. Time is relative because choosing is relative to the being that chooses.</p>
+<p>On the block universe: the claim that past, present, and future are equally real converges with <a href="index.html#r-26" class="ref-link" title="View R.26 in chain">R.26</a>: all prior willing <em>is</em>. What was does not cease to be. The past is as real as the present. But the block universe holds that the passage of time is illusory. The chain derives the opposite: choosing <em>is</em> time (<a href="index.html#r-90" class="ref-link" title="View R.90 in chain">R.90</a>), and choosing is real. The passage is not illusory. It is what choosing <em>is</em>. Past, present, and future are all real (<a href="index.html#r-26" class="ref-link" title="View R.26 in chain">R.26</a>), and the passage from one to the next is genuine choosing, not illusion.</p>
+<p>On spacetime curvature: general relativity holds that mass-energy curves spacetime. The chain does not derive spacetime curvature. What it derives is relevant: willing carries unlimited potential (<a href="index.html#r-38" class="ref-link" title="View R.38 in chain">R.38</a>), and what <em>is</em> generated does not conflict with what <em>is</em> (<a href="index.html#r-7" class="ref-link" title="View R.7 in chain">R.7</a>). The curvature of spacetime by mass-energy is a structural feature of how generation operates within Choosing Being. The chain does not predict the specific form. It derives the structural condition: coherent generation from unlimited potential.</p>
+<h3 id="the-standard-model">The Standard Model</h3>
+<p>The Standard Model describes the fundamental particles and forces of nature: quarks, leptons, gauge bosons, and the Higgs field. It accounts for electromagnetic, weak, and strong interactions but not gravity. It is remarkably successful empirically but is not considered complete.</p>
+<p>The chain does not derive the Standard Model. What it derives is the structural framework within which such a model operates. Each being <em>is</em> a something (<a href="index.html#r-5" class="ref-link" title="View R.5 in chain">R.5</a>). Each <em>is</em> distinct in what it <em>is</em> to will (<a href="index.html#r-29" class="ref-link" title="View R.29 in chain">R.29</a>). The plurality of fundamental particles, each with specific properties, converges with <a href="index.html#r-29" class="ref-link" title="View R.29 in chain">R.29</a>: distinct beings, each distinct in what it <em>is</em>. The forces that bind particles converge with <a href="index.html#r-15" class="ref-link" title="View R.15 in chain">R.15</a>: differentiation and unity inseparable in nature. The incompleteness of the Standard Model, its failure to incorporate gravity, converges with <a href="index.html#r-6" class="ref-link" title="View R.6 in chain">R.6</a>: the totality of actuals does not establish itself as the whole. A complete physical theory would require encompassing itself, and <a href="index.html#r-6" class="ref-link" title="View R.6 in chain">R.6</a> derives that this cannot be completed.</p>
+<hr>
+<h2 id="what-the-engagement-shows">What the Engagement Shows</h2>
+<p>Each science grasped something the chain derives independently.</p>
+<p>Biology grasped that life involves generation alongside destruction, that organisms change over time, and that new life requires two. Chemistry grasped that distinct entities cohere while maintaining their distinctness and that structure emerges from simpler components. Cognitive science grasped that consciousness and brain activity are inseparable and that perception is mediated rather than direct. Cosmology grasped that the universe had a beginning, that generation continues, and that most of what <em>is</em> is not directly observed. Mathematics grasped that no totality encompasses itself, that formal systems are inherently incomplete, and that mathematical structure describes reality with extraordinary precision. Physics grasped that what <em>is</em> generated persists, that time is relative, that multiple possibilities coexist prior to determination, and that symmetry underlies conservation.</p>
+<p>Each also holds claims the chain's results do not support. Biology holds that variation is random and selection directionless; the chain derives that randomness dissolves (<a href="index.html#r-10" class="ref-link" title="View R.10 in chain">R.10</a>) and generation <em>is</em> directionally toward flourishing (<a href="index.html#r-47" class="ref-link" title="View R.47 in chain">R.47</a>). Chemistry holds that entropy is universal and irreversible; the chain derives that what entropy describes is being-not, which is always less than being (<a href="index.html#r-81" class="ref-link" title="View R.81 in chain">R.81</a>). Cognitive science holds that the hard problem is a problem; the chain derives that knowing <em>is</em> being (<a href="index.html#r-28" class="ref-link" title="View R.28 in chain">R.28</a>), and the gap the problem presupposes does not exist. Cosmology holds that the universe may have arisen from "nothing"; the chain derives that "nothing" cannot be (<a href="index.html#r-2" class="ref-link" title="View R.2 in chain">R.2</a>). Mathematics takes formal systems as the standard of rigour; the chain proceeds eliminatively, not formally. Physics holds that determinism or randomness underlies quantum mechanics; the chain derives that both dissolve (<a href="index.html#r-10" class="ref-link" title="View R.10 in chain">R.10</a>), and what survives is choice.</p>
+<p>What unites these engagements is a single structural point. Science studies Choosing Being: generation and non-generation present together, willing and non-willing mixed, being and being-not within the same expressions. What science observes is real (<a href="index.html#r-78" class="ref-link" title="View R.78 in chain">R.78</a>, <a href="index.html#r-88" class="ref-link" title="View R.88 in chain">R.88</a>). What science does not observe, because it operates within the same framework it studies, is what Willing Being <em>is</em> without un-being. Science describes what <em>is</em> encountered. The chain asks whether what <em>is</em> encountered is what <em>is</em>.</p>
+<hr>
+<h2 id="glossary-of-chain-terms">Glossary of Chain Terms</h2>
+<ul>
+<li><strong>All-Being</strong> (<a href="index.html#def-11" class="ref-link" title="View Def.11 in chain">Def.11</a>) — Willing present to all reality, all reality known, generation from complete knowledge through unlimited potential. The sixth and final expression.</li>
+<li><strong>Anything</strong> (<a href="index.html#def-1" class="ref-link" title="View Def.1 in chain">Def.1</a>) — Possibility without limitation. The word describes itself.</li>
+<li><strong>Anything's nature</strong> (<a href="index.html#def-13" class="ref-link" title="View Def.13 in chain">Def.13</a>) — That which wills to be, <em>is</em>. Willing <em>is</em> generative. Generating <em>is</em> flourishing.</li>
+<li><strong>Being <em>is</em> willing</strong> (<a href="index.html#r-23" class="ref-link" title="View R.23 in chain">R.23</a>) — What a being <em>is</em>, <em>is</em> its willing. Identity, not description.</li>
+<li><strong>Being-not</strong> (<a href="index.html#r-69" class="ref-link" title="View R.69 in chain">R.69</a>) — Non-being choosing willing. Cannot actualise new being. Cannot be what being <em>is</em>. Actively negating what already <em>is</em>.</li>
+<li><strong>Choice</strong> (<a href="index.html#r-10" class="ref-link" title="View R.10 in chain">R.10</a>, <a href="index.html#r-52" class="ref-link" title="View R.52 in chain">R.52</a>) — Willing and non-willing present together. Being and non-being. Where Will alone wills, choice selects.</li>
+<li><strong>Choosing Being</strong> (<a href="index.html#r-52" class="ref-link" title="View R.52 in chain">R.52</a>, <a href="index.html#r-87" class="ref-link" title="View R.87 in chain">R.87</a>) — Within Willing Being, local to the scope. Choice choosing into being. Willing and non-willing, being and non-being present together.</li>
+<li><strong>Choosing <em>is</em> time</strong> (<a href="index.html#r-90" class="ref-link" title="View R.90 in chain">R.90</a>) — Each "not that" introduces non-being into being. Succession with exclusion <em>is</em> time.</li>
+<li><strong>The encounter</strong> (<a href="index.html#r-73" class="ref-link" title="View R.73 in chain">R.73</a>) — The encounter with being-not that introduces choosing into the being's knowing.</li>
+<li><strong>The fundamental contradiction</strong> (<a href="index.html#r-89" class="ref-link" title="View R.89 in chain">R.89</a>) — Every being in Choosing Being <em>is</em> actualised and encounters un-being.</li>
+<li><strong>The fully non-being</strong> (<a href="index.html#r-59" class="ref-link" title="View R.59 in chain">R.59</a>) — Produced by un-willing to be directed at All-Being's willing. Wholly non-being from inception.</li>
+<li><strong>Generating <em>is</em> flourishing</strong> (<a href="index.html#r-47" class="ref-link" title="View R.47 in chain">R.47</a>) — Strict increase in creative capacity, coherent. The only surviving candidate.</li>
+<li><strong>The lie</strong> (<a href="index.html#r-66" class="ref-link" title="View R.66 in chain">R.66</a>) — Non-being being. Non-being choosing willing while foundationally non-being.</li>
+<li><strong>Mortality</strong> (<a href="index.html#r-91" class="ref-link" title="View R.91 in chain">R.91</a>) — The accumulation of exclusion while Being persists.</li>
+<li><strong>Non-being</strong> (<a href="index.html#r-1" class="ref-link" title="View R.1 in chain">R.1</a>, <a href="index.html#r-58" class="ref-link" title="View R.58 in chain">R.58</a>) — The "not" of being. Not "nothing." Exists only as the "not" of what <em>is</em>. Dependent on being.</li>
+<li><strong>Non-being <em>is</em> always less</strong> (<a href="index.html#r-81" class="ref-link" title="View R.81 in chain">R.81</a>) — Not by contest. By what each <em>is</em>.</li>
+<li><strong>Non-being <em>is</em> hidden</strong> (<a href="index.html#r-60" class="ref-link" title="View R.60 in chain">R.60</a>) — Hidden by what it <em>is</em>. The obfuscation <em>is</em> non-being.</li>
+<li><strong>"Nothing"</strong> (<a href="index.html#r-2" class="ref-link" title="View R.2 in chain">R.2</a>) — What "nothing" designates cannot be. Absolute absence without possibility of any kind.</li>
+<li><strong>One-as-two</strong> (<a href="index.html#r-100" class="ref-link" title="View R.100 in chain">R.100</a>) — Generative willing generates being as one expressed as two. Counters the mechanism of un-being.</li>
+<li><strong>Purely generative reality</strong> (<a href="index.html#r-48" class="ref-link" title="View R.48 in chain">R.48</a>) — The being <em>is</em> its willing and its willing <em>is</em> Will. Will wills. That <em>is</em> all.</li>
+<li><strong>Being-not reduces</strong> (<a href="index.html#r-70" class="ref-link" title="View R.70 in chain">R.70</a>) — Being-not reduces being to non-being. What <em>is</em> reduced, non-being has. Compounding.</li>
+<li><strong>Suffering</strong> (<a href="index.html#r-92" class="ref-link" title="View R.92 in chain">R.92</a>) — What the being's generative nature <em>is</em> when it encounters being-not.</li>
+<li><strong>Un-being</strong> (<a href="index.html#r-52" class="ref-link" title="View R.52 in chain">R.52</a>, <a href="index.html#r-54" class="ref-link" title="View R.54 in chain">R.54</a>) — Generation continuing from being into non-being. Partial and diminishing. Not un-generation.</li>
+<li><strong>Unrecognisable deception</strong> (<a href="index.html#r-74" class="ref-link" title="View R.74 in chain">R.74</a>) — The being cannot separate genuine willing from non-willing within its own knowing.</li>
+<li><strong>Will</strong> (<a href="index.html#def-2" class="ref-link" title="View Def.2 in chain">Def.2</a>) — Actualisation without exclusion. "This <em>is</em>," not "this, not that."</li>
+<li><strong>Will wills as itself</strong> (<a href="index.html#def-3" class="ref-link" title="View Def.3 in chain">Def.3</a>, <a href="index.html#r-12" class="ref-link" title="View R.12 in chain">R.12</a>) — Not externally justified and not without basis.</li>
+<li><strong>Willing <em>is</em> generative</strong> (<a href="index.html#r-24" class="ref-link" title="View R.24 in chain">R.24</a>) — Will wills: "this <em>is</em>, and this <em>is</em>." Each willing adds to what <em>is</em>.</li>
+<li><strong>Willing Being</strong> (<a href="index.html#r-48" class="ref-link" title="View R.48 in chain">R.48</a>, <a href="index.html#r-87" class="ref-link" title="View R.87 in chain">R.87</a>) — Will wills. "This <em>is</em>, and this <em>is</em>." Only being. Eternal.</li>
+</ul>
+<h2 id="bibliography">Bibliography</h2>
+<ul>
+<li>Boltzmann, Ludwig. <em>Lectures on Gas Theory</em>. Trans. Stephen G. Brush. University of California Press, 1964.</li>
+<li>Cantor, Georg. <em>Contributions to the Founding of the Theory of Transfinite Numbers</em>. Trans. Philip E.B. Jourdain. Dover, 1955.</li>
+<li>Chalmers, David J. <em>The Conscious Mind: In Search of a Fundamental Theory</em>. Oxford University Press, 1996.</li>
+<li>Clausius, Rudolf. <em>The Mechanical Theory of Heat</em>. Trans. Walter R. Browne. Macmillan, 1879.</li>
+<li>Darwin, Charles. <em>On the Origin of Species</em>. John Murray, 1859.</li>
+<li>Einstein, Albert. <em>Relativity: The Special and the General Theory</em>. Trans. Robert W. Lawson. Crown, 1961.</li>
+<li>Gödel, Kurt. "On Formally Undecidable Propositions of <em>Principia Mathematica</em> and Related Systems I." Trans. Jean van Heijenoort. In <em>From Frege to Gödel: A Source Book in Mathematical Logic, 1879–1931</em>, ed. Jean van Heijenoort. Harvard University Press, 1967.</li>
+<li>Hawking, Stephen. <em>A Brief History of Time</em>. Bantam, 1988.</li>
+<li>Heisenberg, Werner. <em>Physics and Philosophy: The Revolution in Modern Science</em>. Harper & Row, 1958.</li>
+<li>Libet, Benjamin. "Time of Conscious Intention to Act in Relation to Onset of Cerebral Activity (Readiness-Potential)." <em>Brain</em> 106 (1983): 623–642.</li>
+<li>Noether, Emmy. "Invariante Variationsprobleme." <em>Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-Physikalische Klasse</em> (1918): 235–257.</li>
+<li>Penrose, Roger. <em>The Road to Reality: A Complete Guide to the Laws of the Universe</em>. Jonathan Cape, 2004.</li>
+<li>Perlmutter, Saul, et al. "Measurements of Ω and Λ from 42 High-Redshift Supernovae." <em>The Astrophysical Journal</em> 517 (1999): 565–586.</li>
+<li>Planck Collaboration. "Planck 2018 Results. VI. Cosmological Parameters." <em>Astronomy & Astrophysics</em> 641 (2020): A6.</li>
+<li>Schrödinger, Erwin. <em>What Is Life?</em> Cambridge University Press, 1944.</li>
+<li>Weinberg, Steven. <em>The First Three Minutes: A Modern View of the Origin of the Universe</em>. Basic Books, 1977.</li>
+<li>Wigner, Eugene. "The Unreasonable Effectiveness of Mathematics in the Natural Sciences." <em>Communications in Pure and Applied Mathematics</em> 13 (1960): 1–14.</li>
+<li>Zermelo, Ernst. "Investigations in the Foundations of Set Theory I." Trans. Stefan Bauer-Mengelberg. In <em>From Frege to Gödel</em>, ed. Jean van Heijenoort. Harvard University Press, 1967.</li>
+</ul>
+<hr>
+<p><em>What survives is what survives.</em></p>
+
+<a href="index.html" class="back-link">&larr; Back to the chain</a>
+</div>
+
+</body>
+</html>
