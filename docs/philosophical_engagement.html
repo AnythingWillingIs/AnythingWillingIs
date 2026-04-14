@@ -168,9 +168,43 @@ li {
   line-height: 1.5;
 }
 .sidebar-sub:hover { color: var(--accent); background: var(--accent-light); text-decoration: none; }
+.sidebar-pdf {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--muted);
+  text-decoration: none;
+}
+.sidebar-pdf:hover { color: var(--accent); }
+#mobile-nav {
+  display: none;
+  padding: 12px 0;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  line-height: 2;
+}
+#mobile-nav a {
+  color: var(--accent);
+  text-decoration: none;
+  margin-right: 12px;
+  font-weight: 600;
+}
+#mobile-nav a:hover { text-decoration: underline; }
+#mobile-nav .mobile-sections {
+  margin-top: 6px;
+  font-weight: normal;
+}
+#mobile-nav .mobile-sections a {
+  font-weight: normal;
+  font-size: 12px;
+  color: var(--muted);
+}
+#mobile-nav .mobile-sections a:hover { color: var(--accent); }
 @media (max-width: 800px) {
   #sidebar { display: none; }
   #main { margin-left: 0; }
+  #mobile-nav { display: block; }
 }
 
 </style>
@@ -179,10 +213,11 @@ li {
 
 <div id="sidebar">
 <div class="sidebar-header">
-<h2>Navigation</h2>
+<h2>Philosophical Engagement</h2>
 <a href="index.html">&larr; The Chain</a>
 <a href="companion.html">Companion</a>
 <a href="religious_engagement.html">Religious Engagement</a>
+<a href="../philosophical_engagement.pdf" class="sidebar-pdf">&#x2193; PDF</a>
 </div>
 <div class="sidebar-body">
 <a href="#i-being-and-non-being" class="sidebar-section">I. Being and Non-Being</a><a href="#parmenides" class="sidebar-sub">Parmenides</a><a href="#heraclitus" class="sidebar-sub">Heraclitus</a><a href="#heidegger-and-the-question-of-being" class="sidebar-sub">Heidegger and the Question of Being</a><a href="#ii-the-ground-of-being" class="sidebar-section">II. The Ground of Being</a><a href="#plato-and-the-good" class="sidebar-sub">Plato and the Good</a><a href="#aristotle-act-and-potency" class="sidebar-sub">Aristotle: Act and Potency</a><a href="#aquinas-being-itself" class="sidebar-sub">Aquinas: Being Itself</a><a href="#plotinus-and-emanation" class="sidebar-sub">Plotinus and Emanation</a><a href="#iii-the-will" class="sidebar-section">III. The Will</a><a href="#augustine" class="sidebar-sub">Augustine</a><a href="#kant-the-limits-of-knowledge" class="sidebar-sub">Kant: The Limits of Knowledge</a><a href="#nietzsche-will-to-power" class="sidebar-sub">Nietzsche: Will to Power</a><a href="#schopenhauer-will-as-suffering" class="sidebar-sub">Schopenhauer: Will as Suffering</a><a href="#iv-self-subject-existence" class="sidebar-section">IV. Self, Subject, Existence</a><a href="#descartes-the-cogito" class="sidebar-sub">Descartes: The Cogito</a><a href="#kierkegaard-existence-and-despair" class="sidebar-sub">Kierkegaard: Existence and Despair</a><a href="#sartre-existence-and-bad-faith" class="sidebar-sub">Sartre: Existence and Bad Faith</a><a href="#v-ethics-and-the-other" class="sidebar-section">V. Ethics and the Other</a><a href="#levinas-the-face-of-the-other" class="sidebar-sub">Levinas: The Face of the Other</a><a href="#spinoza-one-substance" class="sidebar-sub">Spinoza: One Substance</a><a href="#vi-process-and-becoming" class="sidebar-section">VI. Process and Becoming</a><a href="#whitehead-process-philosophy" class="sidebar-sub">Whitehead: Process Philosophy</a><a href="#hegel-the-dialectic" class="sidebar-sub">Hegel: The Dialectic</a><a href="#vii-language-and-limits" class="sidebar-section">VII. Language and Limits</a><a href="#wittgenstein-whereof-one-cannot-speak" class="sidebar-sub">Wittgenstein: Whereof One Cannot Speak</a><a href="#viii-where-the-chain-becomes-most-distinctive" class="sidebar-section">VIII. Where the Chain Becomes Most Distinctive</a><a href="#the-mechanism-at-foreknowingpre-destining" class="sidebar-sub">The Mechanism at Foreknowing/Pre-Destining</a><a href="#one-as-two-the-structural-response-to-un-being" class="sidebar-sub">One-as-Two: The Structural Response to Un-being</a><a href="#the-restoration-sequence" class="sidebar-sub">The Restoration Sequence</a><a href="#ix-beyond-western-philosophy" class="sidebar-section">IX. Beyond Western Philosophy</a><a href="#buddhism-nyat-and-dependent-origination" class="sidebar-sub">Buddhism: Śūnyatā and Dependent Origination</a><a href="#advaita-vednta-brahman-and-the-self" class="sidebar-sub">Advaita Vedānta: Brahman and the Self</a><a href="#daoism-wu-wei-and-the-dao" class="sidebar-sub">Daoism: Wu Wei and the Dao</a><a href="#x-what-the-engagement-shows" class="sidebar-section">X. What the Engagement Shows</a><a href="#glossary-of-chain-terms" class="sidebar-section">Glossary of Chain Terms</a><a href="#bibliography" class="sidebar-section">Bibliography</a>
@@ -190,6 +225,10 @@ li {
 </div>
 
 <div id="main">
+<div id="mobile-nav">
+<a href="index.html">&larr; Chain</a> <a href="companion.html">Companion</a> <a href="religious_engagement.html">Religious Engagement</a> <a href="../philosophical_engagement.pdf">PDF</a>
+<div class="mobile-sections"><a href="#i-being-and-non-being">I. Being and Non-Being</a> &middot; <a href="#ii-the-ground-of-being">II. The Ground of Being</a> &middot; <a href="#iii-the-will">III. The Will</a> &middot; <a href="#iv-self-subject-existence">IV. Self, Subject, Existence</a> &middot; <a href="#v-ethics-and-the-other">V. Ethics and the Other</a> &middot; <a href="#vi-process-and-becoming">VI. Process and Becoming</a> &middot; <a href="#vii-language-and-limits">VII. Language and Limits</a> &middot; <a href="#viii-where-the-chain-becomes-most-distinctive">VIII. Where the Chain Becomes Most Distinctive</a> &middot; <a href="#ix-beyond-western-philosophy">IX. Beyond Western Philosophy</a> &middot; <a href="#x-what-the-engagement-shows">X. What the Engagement Shows</a> &middot; <a href="#glossary-of-chain-terms">Glossary of Chain Terms</a> &middot; <a href="#bibliography">Bibliography</a></div>
+</div>
 <h1>Where the Elimination Meets Philosophy</h1>
 <div class="subtitle">A Philosophical Engagement with <em>Anything Willing Is</em></div>
 
