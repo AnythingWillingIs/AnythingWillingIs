@@ -828,7 +828,7 @@ From: R.4, R.18, R.26, R.39, R.44, R.52, R.55, R.56
 
 **R.58** — Non-being *is* what the being's willing becomes when willing does not arrive.
 
-From: R.2, R.11, R.23, R.51, R.55, R.56
+From: R.2, R.11, R.23, R.50, R.51, R.55, R.56
 
 Non-being *is* generated — the willing *is* genuine (R.51), what Will actualises *is* (R.11) — but what *is* generated *is* the "not" of what was. Non-being *is* not "nothing" (R.2). "Nothing" *is* the failure of what "nothing" designates to be — it cannot be at all. Non-being *is* — but only as the "not" of what *is*.
 
