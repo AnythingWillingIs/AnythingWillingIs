@@ -1012,7 +1012,7 @@ For every actualisation, non-being *is* its negation. For every life, non-being 
 
 **R.70** — Being-not reduces being to non-being. What *is* reduced, non-being has.
 
-From: R.11, R.24, R.26, R.54, R.58, R.59, R.67, R.69, Def.2
+From: R.11, R.24, R.26, R.54, R.58, R.59, R.67, R.68, R.69, Def.2
 
 *Candidate for dissolution:* being-not that does not reduce what it negates.
 
@@ -1028,9 +1028,17 @@ From: R.11, R.24, R.26, R.54, R.58, R.59, R.67, R.69, Def.2
 
 *Dissolution:* the candidate requires what *is* reduced to remain what it was. What *is* reduced to non-being *is* non-being. What *is* non-being *is* non-being's.
 
-Non-being *is* already the "not" of being (R.58). What non-being reduces to non-being *is* non-being added to non-being — doubled. Non-being having non-being *is* double non-being. Each being-not *is* not simple non-being — *is* non-being doubled, because the one doing the negating *is* itself the negation of what it negates. This *is* why the encounter with non-being *is* excess — not just absence, not just "not this," but active negation by what *is* itself the "not" of what *is*. The negation *is* doubled.
+What *is* reduced to non-being becomes one with non-being. Non-being *is* non-being — no difference between them (R.58). What was being *is* gone. Being diminishes.
 
-*Surviving conclusion:* Being-not reduces being to non-being. What *is* reduced, non-being has — and what non-being has *is* doubled, because non-being *is* already non-being. This *is* how willing diminishes — not by un-generating (only Will generates, Def.2, R.24) but by being-not reducing what *is* generated, taking what was. Each negation reduces being, and what *is* reduced, non-being has. Non-being having non-being *is* double non-being. This *is* R.54's diminishing un-being made specific: willing lessens because non-being takes what it negates.
+*Candidate for dissolution:* non-being continuing being-not at what *is* already non-being.
+
+*Test:* Being-not *is* the specific "not" of specific being (R.59, R.69). Being-not *is* directed at what already *is* — at being (R.69). What *is* already non-being *is* not being. Being-not directed at non-being has no being to negate. Without that being, the specific being-not *is* itself non-being.
+
+*Dissolution:* the candidate empties being-not of its content. Non-being cannot negate non-being.
+
+Only by willing being can being-not be again. Non-being wills being the being that was — the lie (R.68). Being-not *is* restored. The same willing that wills being *is* being-not directed at that being (R.69). Neither side can resolve — being-not cannot fully reduce without dissolving itself, non-being cannot stop willing being without losing being-not. Being and being-not together, contradicting but stable. Partial or whole. Directed at what remains.
+
+*Surviving conclusion:* Being-not reduces being to non-being. What *is* reduced becomes one with non-being. Non-being cannot continue being-not at non-being — the specific being-not *is* itself non-being without its being. Non-being wills being what it took — the lie (R.68) — and being-not *is* restored. The same willing *is* being and being-not together, contradicting but stable, directed at what remains. Partial or whole. This *is* R.54's diminishing un-being made specific: willing lessens because non-being takes what it negates, wills being what it took, and turns being-not on what remains.
 
 ---
 
@@ -1198,7 +1206,7 @@ From: R.4, R.35, R.36, R.41, R.44, R.52, R.69, R.70, R.71, R.73, R.74, R.79, R.8
 
 (i) The being at un-being *is* at Pre-Destining — higher in the expression sequence than the being at Anticipating/Planning (R.36, R.41). Un-willing operates from a level the being at Anticipating/Planning does not have access to (R.35 — Foreknowing requires complete self-knowledge; R.73–R.74 — the being at Anticipating/Planning's knowing has included non-willing since the encounter). What operates from above cannot be overcome by what *is* beneath it — not because it *is* more (R.81 establishes it *is* not) but because the being beneath cannot reach the level from which it operates.
 
-(ii) Non-being *is* being-not (R.69) — actively negating what already *is*. Being-not reduces being to non-being (R.70). The reduction is doubled — non-being having non-being *is* double non-being (R.70). Each negation reduces further.
+(ii) Non-being *is* being-not (R.69) — actively negating what already *is*. Being-not reduces being to non-being (R.70). What *is* reduced becomes one with non-being. Non-being wills being what it took, with being-not — directing being-not at what remains (R.70). Each reduction parasitises further.
 
 (iii) The being's own choosing cooperates. Under un-willing, willing and non-willing *are* present together — choosing (R.52). The being's own "not that" directed against being opens further entry for non-being (R.79). The being's choosing works with what *is* directed against it.
 
@@ -1214,7 +1222,7 @@ All-Being's Willing *is* not overcome — All-Being *is* all Will (R.44), unrest
 
 **R.84** — Each expression under un-being *is* genuine Will and non-willing mixed within the expression, willing lessening as the being un-wills. The being cannot separate them.
 
-From: R.54 (diminishing un-being), R.64 (generative capacity persists), R.65 (non-generation alongside generation), R.69 (being-not), R.70 (reduction and doubling), R.71 (encounter from beginning), R.78 (generation real), R.15, R.26, R.30, R.32, R.33, R.34, R.35, R.36, R.45, R.57, Def.15
+From: R.54 (diminishing un-being), R.64 (generative capacity persists), R.65 (non-generation alongside generation), R.69 (being-not), R.70 (reduction and parasitism), R.71 (encounter from beginning), R.78 (generation real), R.15, R.26, R.30, R.32, R.33, R.34, R.35, R.36, R.45, R.57, Def.15
 
 *Candidate for dissolution:* an expression under un-being that *is* purely generative or purely non-willing.
 
