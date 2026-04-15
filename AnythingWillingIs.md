@@ -1,3 +1,5 @@
+# Anything Willing Is — Possibility, Unlimited Potential and Un-being: An Eliminative Enquiry Into The Nature of Being
+
 ## Abstract
 
 This paper presents an eliminative enquiry. What "nothing" designates cannot be, not be, both and/or neither. What follows is tested eliminatively: each candidate dissolved or surviving.
