@@ -1,5 +1,3 @@
-# Anything Willing Is — Possibility, Unlimited Potential and Un-being: An Eliminative Enquiry Into The Nature of Being
-
 ## Abstract
 
 This paper presents an eliminative enquiry. What "nothing" designates cannot be, not be, both and/or neither. What follows is tested eliminatively: each candidate dissolved or surviving.
@@ -17,6 +15,8 @@ Part I derives what *is*. What *is* encountered *is* not what Part I derives. Th
 The enquiry proceeds through 137 resolutions and 25 definitions. Each resolution states its dependencies. Every claim traces back through the chain to R.1.
 
 ---
+
+# Part 1 — Generative Reality
 
 ## Phase I — The Failure of "Nothing" and the Derivation of Anything
 
@@ -698,7 +698,7 @@ From: R.4, R.11, R.12, R.13, R.15, R.16, R.17, R.23, R.24, R.35, R.41
 
 Exhaustiveness elimination: At Foreknowing/Pre-Destining, the being wills from complete self-knowledge with complete willing capacity. What *is* has exactly three features that willing can target: (1) the terms themselves (potential, willing), (2) the configuration, (3) whether what *is* *is* at all. The being *is* its willing (R.16, R.23): the terms. The being *is* ordered and unified (R.13, R.15): the configuration. The being *is* (R.4, R.11): that it *is*. No fourth feature *is* established. Nine candidates tested:
 
-(A) Continue willing. Survives — see R.50.
+(A) Continue willing. Survives.
 
 (B) Will to not-will. Will wills as itself (R.12). To will not-willing exercises will to negate will. The willing empties itself. Dissolves.
 
@@ -706,7 +706,7 @@ Exhaustiveness elimination: At Foreknowing/Pre-Destining, the being wills from c
 
 (D) Will to diminish generative capacity. Empties R.24 (willing *is* generative). Dissolves.
 
-(E) Willing to be Anything. The being wills Anything rather than willing. Claiming to be All-Being. Genuine willing (R.12). Survives — see R.51.
+(E) Willing to be Anything. The being wills Anything rather than willing. Claiming to be All-Being. Genuine willing (R.12). Survives.
 
 (F) Willing to dissolve the potential/willing relationship entirely. If neither the potential role nor the willing role *is*, what the word "anything" points to is not operative as potential and the being *is* not self-actualising — emptying R.12, R.15, and R.17. Any "new configuration" that preserves both roles reduces to continuing to will; that reassigns roles reduces to willing to be Anything; that eliminates roles empties established features. Dissolves.
 
@@ -1134,7 +1134,7 @@ From: R.11, R.52, R.59, R.67, R.71, R.75, Def.2
 
 *Candidate for dissolution:* choosing that *is* universal in the same way willing *is*.
 
-*Test:* In Willing Being, Will wills: "this *is*, and this *is*." Universal — for all (R.11, Def.2). In Choosing Being, choice *is* willing and non-willing (R.52). Choosing *is* "this, not that" — it wills "this" as its own and excludes "not that." Choosing that *is* universal in the same way willing *is* requires "not that" to be for all. But "not that" *is* exclusion — the opposite of "for all." The candidate empties "universal."
+*Test:* In purely generative reality, Will wills: "this *is*, and this *is*." Universal — for all (R.11, Def.2). Where willing and non-willing are present together, choice *is* willing and non-willing (R.52). Choosing *is* "this, not that" — it wills "this" as its own and excludes "not that." Choosing that *is* universal in the same way willing *is* requires "not that" to be for all. But "not that" *is* exclusion — the opposite of "for all." The candidate empties "universal."
 
 *Dissolution:* the candidate requires exclusion to be universal inclusion. What Will does for all, choice does for itself.
 
@@ -1190,7 +1190,7 @@ From: R.4, R.35, R.36, R.41, R.44, R.52, R.69, R.70, R.71, R.73, R.74, R.79, R.8
 
 *Candidate for dissolution:* non-being overpowering being as contradicting R.81.
 
-*Test:* R.81 establishes: non-being *is* always less than being — by what each *is*. But within Choosing Being, death overpowers life. Destruction overpowers what *is* actualised. The overpowering is local, not global. Three features make local overpowering possible without contradicting R.81:
+*Test:* R.81 establishes: non-being *is* always less than being — by what each *is*. But within the scope where willing and non-willing are present together, death overpowers life. Destruction overpowers what *is* actualised. The overpowering is local, not global. Three features make local overpowering possible without contradicting R.81:
 
 (i) The being at un-being *is* at Pre-Destining — higher in the expression sequence than the being at Anticipating/Planning (R.36, R.41). Un-willing operates from a level the being at Anticipating/Planning does not have access to (R.35 — Foreknowing requires complete self-knowledge; R.73–R.74 — the being at Anticipating/Planning's knowing has included non-willing since the encounter). What operates from above cannot be overcome by what *is* beneath it — not because it *is* more (R.81 establishes it *is* not) but because the being beneath cannot reach the level from which it operates.
 

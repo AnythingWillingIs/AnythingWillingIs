@@ -168,9 +168,43 @@ li {
   line-height: 1.5;
 }
 .sidebar-sub:hover { color: var(--accent); background: var(--accent-light); text-decoration: none; }
+.sidebar-pdf {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--muted);
+  text-decoration: none;
+}
+.sidebar-pdf:hover { color: var(--accent); }
+#mobile-nav {
+  display: none;
+  padding: 12px 0;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  line-height: 2;
+}
+#mobile-nav a {
+  color: var(--accent);
+  text-decoration: none;
+  margin-right: 12px;
+  font-weight: 600;
+}
+#mobile-nav a:hover { text-decoration: underline; }
+#mobile-nav .mobile-sections {
+  margin-top: 6px;
+  font-weight: normal;
+}
+#mobile-nav .mobile-sections a {
+  font-weight: normal;
+  font-size: 12px;
+  color: var(--muted);
+}
+#mobile-nav .mobile-sections a:hover { color: var(--accent); }
 @media (max-width: 800px) {
   #sidebar { display: none; }
   #main { margin-left: 0; }
+  #mobile-nav { display: block; }
 }
 
 </style>
@@ -179,11 +213,12 @@ li {
 
 <div id="sidebar">
 <div class="sidebar-header">
-<h2>Navigation</h2>
+<h2>Companion</h2>
 <a href="index.html">&larr; The Chain</a>
 <a href="philosophical_engagement.html">Philosophical Engagement</a>
 <a href="religious_engagement.html">Religious Engagement</a>
 <a href="scientific_engagement.html">Scientific Engagement</a>
+<a href="companion.pdf" class="sidebar-pdf">&#x2193; PDF</a>
 </div>
 <div class="sidebar-body">
 <a href="#start-with-what-you-know" class="sidebar-section">Start with what you know</a><a href="#nothing-cannot-be" class="sidebar-section">Nothing cannot be</a><a href="#will" class="sidebar-section">Will</a><a href="#everything-then-everybody" class="sidebar-section">Everything, then everybody</a><a href="#the-origin-of-evil" class="sidebar-section">The origin of evil</a><a href="#the-lie" class="sidebar-section">The lie</a><a href="#how-you-got-here" class="sidebar-section">How you got here</a><a href="#why-you-suffer" class="sidebar-section">Why you suffer</a><a href="#why-the-law-is-not-enough" class="sidebar-section">Why the Law is not enough</a><a href="#the-incarnation" class="sidebar-section">The Incarnation</a><a href="#faith-hope-and-what-comes-after" class="sidebar-section">Faith, hope, and what comes after</a><a href="#what-to-do-with-this" class="sidebar-section">What to do with this</a>
@@ -191,6 +226,10 @@ li {
 </div>
 
 <div id="main">
+<div id="mobile-nav">
+<a href="index.html">&larr; Chain</a> <a href="philosophical_engagement.html">Philosophical Engagement</a> <a href="religious_engagement.html">Religious Engagement</a> <a href="scientific_engagement.html">Scientific Engagement</a> <a href="companion.pdf">PDF</a>
+<div class="mobile-sections"><a href="#start-with-what-you-know">Start with what you know</a> &middot; <a href="#nothing-cannot-be">Nothing cannot be</a> &middot; <a href="#will">Will</a> &middot; <a href="#everything-then-everybody">Everything, then everybody</a> &middot; <a href="#the-origin-of-evil">The origin of evil</a> &middot; <a href="#the-lie">The lie</a> &middot; <a href="#how-you-got-here">How you got here</a> &middot; <a href="#why-you-suffer">Why you suffer</a> &middot; <a href="#why-the-law-is-not-enough">Why the Law is not enough</a> &middot; <a href="#the-incarnation">The Incarnation</a> &middot; <a href="#faith-hope-and-what-comes-after">Faith, hope, and what comes after</a> &middot; <a href="#what-to-do-with-this">What to do with this</a></div>
+</div>
 <h1>What Is <em>Anything Willing Is</em>?</h1>
 <div class="subtitle">A companion for the curious reader</div>
 

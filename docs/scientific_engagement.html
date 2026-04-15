@@ -168,9 +168,43 @@ li {
   line-height: 1.5;
 }
 .sidebar-sub:hover { color: var(--accent); background: var(--accent-light); text-decoration: none; }
+.sidebar-pdf {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--muted);
+  text-decoration: none;
+}
+.sidebar-pdf:hover { color: var(--accent); }
+#mobile-nav {
+  display: none;
+  padding: 12px 0;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  line-height: 2;
+}
+#mobile-nav a {
+  color: var(--accent);
+  text-decoration: none;
+  margin-right: 12px;
+  font-weight: 600;
+}
+#mobile-nav a:hover { text-decoration: underline; }
+#mobile-nav .mobile-sections {
+  margin-top: 6px;
+  font-weight: normal;
+}
+#mobile-nav .mobile-sections a {
+  font-weight: normal;
+  font-size: 12px;
+  color: var(--muted);
+}
+#mobile-nav .mobile-sections a:hover { color: var(--accent); }
 @media (max-width: 800px) {
   #sidebar { display: none; }
   #main { margin-left: 0; }
+  #mobile-nav { display: block; }
 }
 
 </style>
@@ -179,11 +213,12 @@ li {
 
 <div id="sidebar">
 <div class="sidebar-header">
-<h2>Navigation</h2>
+<h2>Scientific Engagement</h2>
 <a href="index.html">&larr; The Chain</a>
 <a href="companion.html">Companion</a>
 <a href="philosophical_engagement.html">Philosophical Engagement</a>
 <a href="religious_engagement.html">Religious Engagement</a>
+<a href="scientific_engagement.pdf" class="sidebar-pdf">&#x2193; PDF</a>
 </div>
 <div class="sidebar-body">
 <a href="#biology" class="sidebar-section">Biology</a><a href="#evolution-and-natural-selection" class="sidebar-sub">Evolution and Natural Selection</a><a href="#ageing-and-death" class="sidebar-sub">Ageing and Death</a><a href="#sexual-reproduction" class="sidebar-sub">Sexual Reproduction</a><a href="#chemistry" class="sidebar-section">Chemistry</a><a href="#bonding-and-structure" class="sidebar-sub">Bonding and Structure</a><a href="#entropy-and-the-second-law" class="sidebar-sub">Entropy and the Second Law</a><a href="#cognitive-science-and-neuroscience" class="sidebar-section">Cognitive Science and Neuroscience</a><a href="#consciousness-and-the-hard-problem" class="sidebar-sub">Consciousness and the Hard Problem</a><a href="#free-will-and-determinism" class="sidebar-sub">Free Will and Determinism</a><a href="#perception-and-illusion" class="sidebar-sub">Perception and Illusion</a><a href="#cosmology" class="sidebar-section">Cosmology</a><a href="#the-origin-of-the-universe" class="sidebar-sub">The Origin of the Universe</a><a href="#expansion-and-the-fate-of-the-universe" class="sidebar-sub">Expansion and the Fate of the Universe</a><a href="#dark-matter-and-dark-energy" class="sidebar-sub">Dark Matter and Dark Energy</a><a href="#mathematics" class="sidebar-section">Mathematics</a><a href="#infinity-and-set-theory" class="sidebar-sub">Infinity and Set Theory</a><a href="#gdels-incompleteness-theorems" class="sidebar-sub">Gödel&#x27;s Incompleteness Theorems</a><a href="#the-unreasonable-effectiveness-of-mathematics" class="sidebar-sub">The Unreasonable Effectiveness of Mathematics</a><a href="#physics" class="sidebar-section">Physics</a><a href="#quantum-mechanics" class="sidebar-sub">Quantum Mechanics</a><a href="#conservation-laws" class="sidebar-sub">Conservation Laws</a><a href="#relativity-and-the-nature-of-time" class="sidebar-sub">Relativity and the Nature of Time</a><a href="#the-standard-model" class="sidebar-sub">The Standard Model</a><a href="#matter-and-anti-matter" class="sidebar-sub">Matter and Anti-Matter</a><a href="#what-the-engagement-shows" class="sidebar-section">What the Engagement Shows</a><a href="#glossary-of-chain-terms" class="sidebar-section">Glossary of Chain Terms</a><a href="#bibliography" class="sidebar-section">Bibliography</a>
@@ -191,6 +226,10 @@ li {
 </div>
 
 <div id="main">
+<div id="mobile-nav">
+<a href="index.html">&larr; Chain</a> <a href="companion.html">Companion</a> <a href="philosophical_engagement.html">Philosophical Engagement</a> <a href="religious_engagement.html">Religious Engagement</a> <a href="scientific_engagement.pdf">PDF</a>
+<div class="mobile-sections"><a href="#biology">Biology</a> &middot; <a href="#chemistry">Chemistry</a> &middot; <a href="#cognitive-science-and-neuroscience">Cognitive Science and Neuroscience</a> &middot; <a href="#cosmology">Cosmology</a> &middot; <a href="#mathematics">Mathematics</a> &middot; <a href="#physics">Physics</a> &middot; <a href="#what-the-engagement-shows">What the Engagement Shows</a> &middot; <a href="#glossary-of-chain-terms">Glossary of Chain Terms</a> &middot; <a href="#bibliography">Bibliography</a></div>
+</div>
 <h1>Where the Elimination Meets the Sciences</h1>
 <div class="subtitle">A Scientific Engagement with <em>Anything Willing Is</em></div>
 
