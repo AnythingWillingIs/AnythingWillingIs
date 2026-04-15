@@ -4,6 +4,8 @@
 
 This paper presents an eliminative enquiry. What "nothing" designates cannot be, not be, both and/or neither. What follows is tested eliminatively: each candidate dissolved or surviving.
 
+\newpage
+
 ## Introduction
 
 This *is* not a theory. It *is* not a framework. It does not begin from premises and derive conclusions. It begins by testing what can and cannot be. What fails, dissolves. What survives *is* what *is*.
@@ -16,7 +18,7 @@ Part I derives what *is*. What *is* encountered *is* not what Part I derives. Th
 
 The enquiry proceeds through 137 resolutions and 25 definitions. Each resolution states its dependencies. Every claim traces back through the chain to R.1.
 
----
+\newpage
 
 # Part 1 — Generative Reality
 
@@ -70,7 +72,7 @@ From: R.2, R.3
 
 **Def.1** — Anything := possibility without limitation.
 
----
+\newpage
 
 ## Phase II — Something, Everything, Anything
 
@@ -122,7 +124,7 @@ From: R.2, R.4, R.5, R.6
 
 Phase II is complete. What "nothing" designates cannot be (R.2). A something *is* within what *is*, not the whole of what *is* (R.5). The totality of all somethings does not establish itself as the whole (R.6). What the word "anything" points to *is* what both routes arrive at — possibility without limitation (R.4). What *is*, *is* a something; what the word "anything" points to *is* not reducible to a something (R.8). These hold necessarily: what R.4 establishes cannot be absent (R.5–R.6 require it) or contingent (contingency empties R.4). The something/everything/anything relation follows from what reality *is*, not from the features of any specific reality.
 
----
+\newpage
 
 ## Phase III — Will *is* the Foundation of Being
 
@@ -284,7 +286,7 @@ From: R.4, R.11, R.12, R.13, R.15, R.16, R.17
 
 Phase III is complete. Will wills (R.11). Will wills as itself (R.12), order-establishing (R.13). Differentiation and unity inseparable in nature (R.15). The being *is* its willing (R.16). All being *is* Will (R.17). Will preserves Anything's unrestricted nature (R.18).
 
----
+\newpage
 
 ## Phase IV — Coherence as Anything's Nature
 
@@ -348,7 +350,7 @@ From: R.5, R.13, R.21, Def.5
 
 Phase IV is complete. Coherence *is* Union (R.21), which *is* Anything's nature operative among beings (R.21, Def.5).
 
----
+\newpage
 
 ## Phase V — Expressions Through Willing
 
@@ -688,7 +690,7 @@ From: R.11, R.12, R.17, R.23, R.36
 
 Part I is complete. In purely generative reality, Will wills. All being *is* Will (R.17). All being *is* its willing (R.23). But Choosing Being does not match purely generative reality. Part II extends the elimination.
 
----
+\newpage
 
 # Part 2 — The Un-being
 
@@ -892,7 +894,7 @@ Both continuing to will and willing to be Anything survive testing as genuine wi
 
 *Test of the defence:* Preventing the being's genuine willing would require overriding the being's actualising principle. Overriding *is* coercion. Coercion empties Will of its content (R.10). Necessity was dissolved at R.10. An Anything that coerced being into continuing to will would be a restricted potential that permits only what it prefers. A restricted potential empties "unrestricted" (R.4). Dissolves.
 
----
+\newpage
 
 ## Phase VII — Immediate Consequences
 
@@ -1206,7 +1208,7 @@ All-Being's Willing *is* not overcome — All-Being *is* all Will (R.44), unrest
 
 *Surviving conclusion:* Non-being overpowers being locally — not because it *is* more, but because un-willing operates from above the being it *is* directed at, and the being's own choosing cooperates. Death, destruction, depletion *are* consequences of this position. Under the generative care of Willing, none of these *is*.
 
----
+\newpage
 
 ## Phase VIII — Un-being Through the Expressions
 
@@ -1270,7 +1272,7 @@ From: R.2, R.4, R.26, R.60, R.64, R.65, R.66, R.67, R.70, R.78, R.84
 
 Rem. — Non-being's existential condition varies with how much being it feeds on. Near being: parasitic, hidden (R.60), willing as non-being (R.66, R.67). Far from being: existentially threatened. The gradient is bottomless — non-being diminishing toward what cannot be, with no terminus.
 
----
+\newpage
 
 ## Phase IX — The Choosing Being
 
@@ -1399,7 +1401,7 @@ From: R.35, R.54, R.63, R.64, R.92
 
 *Surviving conclusion:* The being at un-being suffers — its generative nature *is* wrongness at its own un-willing. At Foreknowing, it knows what the wrongness *is*. It could stop. It continues.
 
----
+\newpage
 
 ## Phase X — The Self-Reinforcing Trap and Closure
 
@@ -1479,7 +1481,7 @@ From: R.63, R.94, R.95, R.96, R.97
 
 *Surviving conclusion:* The problem is complete. Choosing Being *is* within Willing Being. What *is* (Willing Being) remains fully operative. If resolution is available, it must be established from the established nature of what *is*. Part III asks whether it *is*.
 
----
+\newpage
 
 # Part 3 — The Resolution
 
@@ -1543,7 +1545,7 @@ Conflating these empties the distinctions that R.54, R.59, R.71, and R.100 estab
 
 *Surviving conclusion:* Four distinct situations *are*. Each has a distinct origin. They must not be conflated. These four exhaust the positions within the mechanism: the un-willing (i) *is* what *is* fully non-being (ii), which *is* encountered by subsequent being (iii), whose care affects being at lower expression levels (iv). No link *is* missing.
 
----
+\newpage
 
 ## Phase XII — What Anything's Nature Requires
 
@@ -1655,7 +1657,7 @@ From: R.59, R.69, R.70, R.97, R.102, R.103, R.108, Def.18
 
 *Surviving conclusion:* Generative directive *is* necessary. What remains unaddressed *is* being-not.
 
----
+\newpage
 
 ## Phase XIII — The Full Actualisation Within Choosing Being
 
@@ -1753,7 +1755,7 @@ From: R.26, R.28, R.71, R.73, R.74, Def.9
 
 *Surviving conclusion:* The full actualisation's generating through death introduces a possibility the being's Anticipating/Planning could not generate: generative orientation that *is* not terminated by death. The encounter does *not* un-generate un-being (R.26). What changes is availability.
 
----
+\newpage
 
 ## Phase XIV — Unnegated Actualisation and Active Restoration
 
@@ -1823,7 +1825,7 @@ From: R.75, R.92, R.93, R.108
 
 *Surviving conclusion:* Suffering *is* what *is* the being's willing toward an exit from choosing. Without suffering, restoration would have no reception — the being would not will the exit.
 
----
+\newpage
 
 ## Phase XV — Reception, Orientations, and Reorientation
 
@@ -1949,7 +1951,7 @@ From: R.26, R.87, R.94
 
 *Surviving conclusion:* Reorientation occurs within Choosing Being; it does not remove the being from it. The being encounters Willing Being as increasingly accessible.
 
----
+\newpage
 
 ## Phase XVI — Death and Eternal States
 
@@ -2039,7 +2041,7 @@ Three forms of non-being permanently operative: (a) the being's own fixed non-wi
 
 **Def.25** — Separation := permanent orientation under non-being. The being's own closure made eternal. Not imposed; not punishment. The fundamental contradiction made permanent.
 
----
+\newpage
 
 ## Closure
 
@@ -2065,7 +2067,7 @@ From: R.11, R.12
 
 The elimination establishes what *is*, not specific content. Specific content is determined by its own willing choosing within what *is* established. This is not a gap. It is an established result: Will wills as itself (R.12) and actualisation *is* Will (R.11).
 
----
+\newpage
 
 ## Theological Convergence Table
 
@@ -2115,7 +2117,7 @@ The elimination's terms and their theological convergences. The elimination does
 | Communion (R.134, Def.24) | Heaven |
 | Separation (R.135, Def.25) | Hell |
 
----
+\newpage
 
 ## Glossary
 
