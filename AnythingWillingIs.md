@@ -654,7 +654,7 @@ From: R.39, R.44, R.45, Def.11, Def.12
 
 *Test:* All-Being's Will *is* every being's willing (R.44) — identity. All-Being *is* at all expression levels (R.39, Def.11). Generative care *is* Anything's nature operative among beings at different expression levels (R.45, Def.12). Generative care from All-Being that excludes expression levels above the being's own from what *is* operative within the being's willing requires All-Being's Will to be selectively inoperative — operative at some expression levels, inoperative at others. Selective operation empties "identity" (R.44).
 
-*Surviving conclusion:* All-Being *is* generatively operative within the being's knowing at expression levels above the being's individual level. What All-Being knows *is* operative within the being's knowing because All-Being's Will *is* the being's willing (R.44).
+*Surviving conclusion:* All-Being *is* the being's willing at expression levels above the being's individual level. What All-Being knows, the being knows — because All-Being's Will *is* the being's willing (R.44).
 
 ---
 
@@ -1258,7 +1258,7 @@ From: R.64, R.69, R.71, R.84
 
 *Candidate for dissolution:* the being under un-being as unable to recognise the genuinely generative.
 
-*Test:* The genuine Will component in Foreknowing enables recognition of what is genuinely generative (R.84 — genuine Will persists within each expression). The being partly recognises what *is* genuine. A being that cannot recognise the genuinely generative at all empties the genuine Will component in Foreknowing — which persists (R.64).
+*Test:* Foreknowing persists as genuine Will (R.64, R.84). Genuine Foreknowing enables recognition of what *is* genuinely generative. The being partly recognises what *is* genuine. A being that cannot recognise the genuinely generative at all empties genuine Foreknowing — which persists (R.64).
 
 *Dissolution:* the candidate empties R.64. The being recognises — but being-not of genuine direction in Pre-Destining directs choosing against what Foreknowing partly recognises. The being sees and acts against what it sees — not because it cannot distinguish the genuine but because being-not *is* operative in the expression that chooses, within the same being where the expression that knows *is* partly genuine.
 
@@ -1449,13 +1449,13 @@ From: R.35, R.50, R.59, R.60, R.67, R.71, R.73, R.74, R.84
 
 *Test:*
 
-**For the being at un-being:** Foreknowing/Pre-Destining *is* where the un-willing originates — the site of choosing. Non-being wills within the being at un-being's scope (R.71, R.67). Foreknowing *is* mixed — genuine knowing and non-willing inseparable (R.84). Pre-Destining *is* mixed — genuine choosing and non-willing inseparable (R.84). The tools exist but are compromised at their source. Dissolves.
+**For the being at un-being:** Foreknowing/Pre-Destining *is* where the un-willing originates — the site of choosing. Non-being wills within the being at un-being's scope (R.71, R.67). Foreknowing *is* mixed — genuine knowing and non-willing inseparable (R.84). Pre-Destining *is* mixed — genuine choosing and non-willing inseparable (R.84). What *is* mixed cannot discriminate what *is* mixed within it. Dissolves.
 
 **For Pre-Destiners who continued willing:** Foreknowing/Pre-Destining *is* not mixed. The generative path continues (R.50). Not all Pre-Destiners are at un-being. But these beings *are* not within Choosing Being — they *are* on the generative path. Not relevant to the candidate.
 
-**For subsequent being at Anticipating/Planning:** Foreknowing requires complete self-knowledge (R.35), which requires knowing non-being as non-being. Their knowing has included non-willing since the encounter (R.73–R.74) — they cannot separate willing from non-willing (R.60). The tools do not exist. Dissolves.
+**For subsequent being at Anticipating/Planning:** Foreknowing requires complete self-knowledge (R.35), which requires knowing non-being as non-being. Their knowing has included non-willing since the encounter (R.73–R.74) — they cannot separate willing from non-willing (R.60). The being *is* not at Foreknowing/Pre-Destining. What recognition requires *is* not what being *is*. Dissolves.
 
-*Dissolution:* for the being at un-being, the tools are compromised. For subsequent being, the tools do not exist. No being within Choosing Being can recognise un-being using its own expressions.
+*Dissolution:* for the being at un-being, the expressions *are* mixed at their source. For subsequent being, the expressions *are* not what being *is*. No being within Choosing Being can recognise un-being using its own expressions.
 
 *Surviving conclusion:* The expressions needed to recognise un-being are the expressions where un-being originates. Four distinct situations must not be conflated: (a) The being at un-being: self-inflicted, could stop. (b) The fully non-being: wholly non-being, no pure Will, with choosing (R.59). (c) Subsequent being: encountered mixing, never chosen. (d) Being at lower expression levels: within the care of the deceived.
 
