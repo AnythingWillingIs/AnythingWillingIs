@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Eliminative Derivation of Will — Anything Willing Is</title>
+<style>
+
+:root {
+  --bg: #fafaf8;
+  --text: #1a1a1a;
+  --muted: #666;
+  --border: #ddd;
+  --accent: #2c5f8a;
+  --accent-light: #e8f0f8;
+  --sidebar-bg: #f5f5f3;
+  --sidebar-w: 240px;
+  --font: 'Georgia', 'Times New Roman', serif;
+  --mono: 'Consolas', 'Monaco', monospace;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+  font-size: 16px;
+}
+h1 {
+  font-size: 28px;
+  font-style: italic;
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+h2 {
+  font-size: 22px;
+  font-style: italic;
+  margin-top: 36px;
+  margin-bottom: 12px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border);
+}
+h3 {
+  font-size: 17px;
+  font-style: italic;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+p { margin-bottom: 10px; }
+em { font-style: italic; }
+strong { font-weight: 600; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a.ref-link {
+  font-family: var(--mono);
+  font-size: 14px;
+  background: var(--accent-light);
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+a.ref-link:hover { background: #d0e4f4; }
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 32px 0;
+}
+.subtitle {
+  font-size: 17px;
+  font-style: italic;
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+.nav-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  padding: 12px 0;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+.nav-bar a { font-weight: 600; }
+.nav-bar .sep { color: var(--border); }
+.back-link {
+  display: inline-block;
+  margin-top: 32px;
+  font-size: 14px;
+  font-weight: 600;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 16px 0;
+}
+th, td {
+  text-align: left;
+  padding: 6px 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: 15px;
+}
+th { font-weight: 600; }
+ul {
+  margin: 12px 0;
+  padding-left: 24px;
+}
+li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+
+#sidebar {
+  position: fixed;
+  left: 0; top: 0; bottom: 0;
+  width: var(--sidebar-w);
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  z-index: 100;
+  font-size: 13px;
+}
+#main {
+  margin-left: var(--sidebar-w);
+  max-width: 780px;
+  padding: 40px 50px;
+}
+.sidebar-header {
+  padding: 16px 16px 12px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--sidebar-bg);
+  z-index: 1;
+}
+.sidebar-header h2 {
+  font-size: 15px;
+  font-style: normal;
+  margin: 0 0 8px 0;
+  padding: 0;
+  border: none;
+}
+.sidebar-header a {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 3px;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+.sidebar-header a:hover { text-decoration: underline; }
+.sidebar-body { padding: 8px 0; }
+.sidebar-section {
+  display: block;
+  padding: 5px 16px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.4;
+}
+.sidebar-section:hover { background: var(--accent-light); text-decoration: none; }
+.sidebar-sub {
+  display: block;
+  padding: 2px 16px 2px 28px;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.sidebar-sub:hover { color: var(--accent); background: var(--accent-light); text-decoration: none; }
+.sidebar-pdf {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--muted);
+  text-decoration: none;
+}
+.sidebar-pdf:hover { color: var(--accent); }
+#mobile-nav {
+  display: none;
+  padding: 12px 0;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+  line-height: 2;
+}
+#mobile-nav a {
+  color: var(--accent);
+  text-decoration: none;
+  margin-right: 12px;
+  font-weight: 600;
+}
+#mobile-nav a:hover { text-decoration: underline; }
+#mobile-nav .mobile-sections {
+  margin-top: 6px;
+  font-weight: normal;
+}
+#mobile-nav .mobile-sections a {
+  font-weight: normal;
+  font-size: 12px;
+  color: var(--muted);
+}
+#mobile-nav .mobile-sections a:hover { color: var(--accent); }
+@media (max-width: 800px) {
+  #sidebar { display: none; }
+  #main { margin-left: 0; }
+  #mobile-nav { display: block; }
+}
+
+</style>
+</head>
+<body>
+
+<div id="sidebar">
+<div class="sidebar-header">
+<h2>Short Paper: R.1–R.14</h2>
+<a href="index.html">&larr; The Chain</a>
+<a href="index.html">The Chain</a>
+<a href="companion.html">Companion</a>
+<a href="philosophical_engagement.html">Philosophical Engagement</a>
+<a href="religious_engagement.html">Religious Engagement</a>
+<a href="scientific_engagement.html">Scientific Engagement</a>
+<a href="EliminativeDerivationOfWill.pdf" class="sidebar-pdf">&#x2193; PDF</a>
+</div>
+<div class="sidebar-body">
+<a href="#abstract" class="sidebar-section">Abstract</a><a href="#1-introduction" class="sidebar-section">§1. Introduction</a><a href="#2-the-impossibility-of-nothing" class="sidebar-section">§2. The Impossibility of &quot;Nothing&quot;</a><a href="#3-something-everything-and-the-absence-of-negation" class="sidebar-section">§3. Something, Everything, and the Absence of Negation</a><a href="#4-the-derivation-of-will" class="sidebar-section">§4. The Derivation of Will</a><a href="#5-order-and-the-reactivity-of-negation" class="sidebar-section">§5. Order and the Reactivity of Negation</a><a href="#6-what-has-been-derived" class="sidebar-section">§6. What Has Been Derived</a><a href="#references" class="sidebar-section">References</a>
+</div>
+</div>
+
+<div id="main">
+<div id="mobile-nav">
+<a href="index.html">&larr; Chain</a> <a href="index.html">The Chain</a> <a href="companion.html">Companion</a> <a href="philosophical_engagement.html">Philosophical Engagement</a> <a href="religious_engagement.html">Religious Engagement</a> <a href="scientific_engagement.html">Scientific Engagement</a> <a href="EliminativeDerivationOfWill.pdf">PDF</a>
+<div class="mobile-sections"><a href="#abstract">Abstract</a> &middot; <a href="#1-introduction">§1. Introduction</a> &middot; <a href="#2-the-impossibility-of-nothing">§2. The Impossibility of &quot;Nothing&quot;</a> &middot; <a href="#3-something-everything-and-the-absence-of-negation">§3. Something, Everything, and the Absence of Negation</a> &middot; <a href="#4-the-derivation-of-will">§4. The Derivation of Will</a> &middot; <a href="#5-order-and-the-reactivity-of-negation">§5. Order and the Reactivity of Negation</a> &middot; <a href="#6-what-has-been-derived">§6. What Has Been Derived</a> &middot; <a href="#references">References</a></div>
+</div>
+<h1>The Eliminative Derivation of Will</h1>
+<div class="subtitle">From the Impossibility of &ldquo;Nothing&rdquo; to Actualisation Without Exclusion</div>
+
+<p><strong>From the Impossibility of "Nothing" to Actualisation Without Exclusion</strong></p>
+<p>James A. Burrows ORCID: 0009-0002-6452-4842</p>
+<h2 id="abstract">Abstract</h2>
+<p>This paper presents the opening argument of a longer eliminative enquiry. Beginning from a single observation — that non-being requires being — the paper derives, through successive eliminations, that possibility is without limitation, that what is generated from unlimited potential does not conflict with what is, and that actualisation is Will: "this is," without exclusion. Each step tests a candidate. What fails dissolves. What survives is the conclusion. No premises are assumed. If any dissolution is not sound, the surviving conclusion does not stand at that point. The paper covers the first fourteen of 137 resolutions. The full enquiry is available at DOI: 10.5281/zenodo.19538257, PhilArchive (BURAWI), and SSRN (abstract 6567202).</p>
+<h2 id="1-introduction">§1. Introduction</h2>
+<p>This paper begins from a single observation and derives structural conclusions about being through elimination alone. It does not begin from premises and argue toward conclusions. It does not engage with existing positions as interlocutors whose frameworks structure the discussion. It tests candidates. What fails dissolves. What survives is what remains.</p>
+<p>The method is eliminative. At each step, a candidate is presented — a structural claim about being. The candidate is tested against what has already survived. If the candidate introduces a contradiction with what has survived, it dissolves. What remains after dissolution is the surviving conclusion. Every surviving conclusion depends only on prior surviving conclusions. The chain of dependence traces back to the opening observation.</p>
+<p>This paper covers the first fourteen resolutions of an enquiry that extends to 137 resolutions and 25 definitions. These fourteen resolutions derive five structural results: (1) that "nothing" — non-being without being — cannot be; (2) that possibility is without limitation; (3) that unlimited potential does not include negation; (4) that actualisation is Will — "this is," without exclusion; and (5) that Will does not negate, because negation is reactive, not generative.</p>
+<p>Two features of the method should be noted. First, the enquiry assumes no premises. It begins from what non-being means — the negation of being — and tests what follows. If the opening observation does not hold, what follows does not follow. Second, the method is strictly cumulative: each resolution depends only on prior resolutions. No result is used before it is derived. The chain of dependency is explicit — every resolution lists the prior results it requires. This makes the argument auditable at any point: if a dissolution is unsound, the surviving conclusion at that point does not stand, and whatever depends on it does not stand either.</p>
+<p>The full enquiry extends these results through the derivation of coherence among beings, the expressions of willing through actualised being, the mechanism by which non-being enters what is, and what being requires given that entry. This paper presents only the foundations.</p>
+<p>The resolutions are numbered <a href="index.html#r-1" class="ref-link" title="View R.1 in chain">R.1</a> through <a href="index.html#r-14" class="ref-link" title="View R.14 in chain">R.14</a> in the full enquiry. These numbers appear here as reference markers, allowing the reader to locate the corresponding argument in the complete chain.</p>
+<h2 id="2-the-impossibility-of-nothing">§2. The Impossibility of "Nothing"</h2>
+<p><strong><a href="index.html#r-1" class="ref-link" title="View R.1 in chain">R.1</a>.</strong> Non-being is the negation of being. This is what "non-being" means — the "not" of being. Without being, negation has no content. Non-being therefore requires being. This is not a metaphysical claim about priority or dependence. It is what negation is: a negation of something. Without the something, the negation has no content.</p>
+<p><strong><a href="index.html#r-2" class="ref-link" title="View R.2 in chain">R.2</a>.</strong> The word "nothing" designates non-being in the absence of being — the complete absence of being, including the absence of the possibility of being. But non-being requires being (<a href="index.html#r-1" class="ref-link" title="View R.1 in chain">R.1</a>). Non-being without being is what <a href="index.html#r-1" class="ref-link" title="View R.1 in chain">R.1</a> establishes cannot obtain. What "nothing" designates therefore cannot be. Not "does not happen to exist" — which would presuppose a framework in which existence and non-existence are symmetrical options — but cannot be: the designation is internally incoherent. It designates non-being in the absence of the very thing non-being requires.</p>
+<p>This result is the ground of the enquiry. Everything that follows depends on it. It also establishes a structural asymmetry between being and non-being that persists through the entire chain: non-being depends on being. Being does not depend on non-being. This is not asserted as a principle. It follows from what non-being is — negation, which requires something to negate.</p>
+<p><strong><a href="index.html#r-3" class="ref-link" title="View R.3 in chain">R.3</a>.</strong> Without the possibility of being, being cannot be. What remains without the possibility of being is the absence of being — what "nothing" designates. What "nothing" designates cannot be (<a href="index.html#r-2" class="ref-link" title="View R.2 in chain">R.2</a>). The possibility of being is therefore not optional. It is required by the impossibility of what "nothing" designates.</p>
+<p><strong><a href="index.html#r-4" class="ref-link" title="View R.4 in chain">R.4</a>.</strong> Can possibility be limited? If possibility is limited, beyond the limit there is no possibility of being. Without the possibility of being, being cannot be (<a href="index.html#r-3" class="ref-link" title="View R.3 in chain">R.3</a>). What is beyond the limit is what "nothing" designates — which cannot be (<a href="index.html#r-2" class="ref-link" title="View R.2 in chain">R.2</a>). A limit on possibility would require, beyond itself, what cannot be. The limit cannot hold.</p>
+<p>Possibility is without limitation. The word "anything" points to this: possibility without limitation. This is not a metaphysical assertion about a substance or an entity. It is what survives. Limited possibility requires what cannot be beyond its limit. Unlimited possibility does not require what cannot be. Unlimited possibility survives.</p>
+<p><strong><a href="index.html#def-1" class="ref-link" title="View Def.1 in chain">Def.1</a>.</strong> Anything := possibility without limitation.</p>
+<p>It is worth pausing on what this definition does not say. It does not say that "anything" is an entity, a substance, or a being. "Anything" is possibility without limitation — what the word points to when all the alternatives that require what cannot be have dissolved. No commitment beyond this is made at this stage.</p>
+<h2 id="3-something-everything-and-the-absence-of-negation">§3. Something, Everything, and the Absence of Negation</h2>
+<p><strong><a href="index.html#r-5" class="ref-link" title="View R.5 in chain">R.5</a>.</strong> To be is to be something. "Some" — specific. "Thing" — what is. A something is a specific what-is. The totality of all somethings is everything — all that is actual.</p>
+<p><strong><a href="index.html#r-6" class="ref-link" title="View R.6 in chain">R.6</a>.</strong> Is everything the same as anything? Everything is limited to actuals (<a href="index.html#r-5" class="ref-link" title="View R.5 in chain">R.5</a>). Anything is possibility without limitation (<a href="index.html#r-4" class="ref-link" title="View R.4 in chain">R.4</a>). What is limited is not what is unlimited. The identification fails.</p>
+<p>A defence: everything is complete — all actuals are present, so the totality is unlimited. But everything is itself actual and unique — a something. Including everything among its own members generates a new totality, which is itself a something, which generates another. The cycle is infinite. Everything cannot complete itself. The defence fails on its own terms. Everything is not anything.</p>
+<p><strong><a href="index.html#r-7" class="ref-link" title="View R.7 in chain">R.7</a>.</strong> Unlimited potential does not include negation. This result is critical for what follows, and the argument for it requires care.</p>
+<p>Consider what negation is. Negation is what is against what is. "Against" requires "not" — contradiction, opposition, and incompatibility each require the exclusion of what is by what is. Exclusion is restriction. Restriction empties "unrestricted" (<a href="index.html#r-4" class="ref-link" title="View R.4 in chain">R.4</a>). If unlimited potential included negation, it would restrict itself — because negation, by its nature, excludes, and exclusion is the one thing unrestricted potential cannot include without ceasing to be unrestricted.</p>
+<p>This is not a stipulation. It follows from what "unrestricted" means. Unrestricted potential that includes the restriction of itself is not unrestricted. The candidate — negation within unlimited potential — empties <a href="index.html#r-4" class="ref-link" title="View R.4 in chain">R.4</a>.</p>
+<p>What is generated from unlimited potential therefore does not conflict with what is. Without negation, what is does not stand against what is. This is a structural result, not a value judgment. It says something precise: that conflict — what is against what is — requires negation, and negation is not available within unlimited potential.</p>
+<p><strong><a href="index.html#r-8" class="ref-link" title="View R.8 in chain">R.8</a>.</strong> What is, is a something — a specific what-is (<a href="index.html#r-5" class="ref-link" title="View R.5 in chain">R.5</a>). What the word "anything" points to — possibility without limitation — is not specific, not a something. A something that is anything requires specificity and non-specificity simultaneously. No something is the whole of what "anything" points to. Every something is what it is within what "anything" points to.</p>
+<p>These four results establish the structural relationships. What is, is specific. The totality of specifics does not exhaust unlimited potential. What is generated from unlimited potential does not conflict with what is. And no specific actual is the whole of possibility.</p>
+<h2 id="4-the-derivation-of-will">§4. The Derivation of Will</h2>
+<p><strong><a href="index.html#r-9" class="ref-link" title="View R.9 in chain">R.9</a>.</strong> Unlimited potential includes the potential for "this" — for a something to come into being. If unlimited potential excluded the potential for a specific actual to come into being, it would lack something. Unrestricted potential that lacks something is not unrestricted (<a href="index.html#r-4" class="ref-link" title="View R.4 in chain">R.4</a>).</p>
+<p><strong><a href="index.html#r-10" class="ref-link" title="View R.10 in chain">R.10</a>.</strong> How does being come into being? The specificity of "this is" — this specific actual, not another — either has a source or does not. If it does not: randomness. If it does, the source is either external to what is specific or internal to it. External: necessity. Internal: choice. These three exhaust the options. Each must be tested.</p>
+<p><em>Necessity.</em> The outcome is forced by constraint. Constraint is restriction. Unrestricted potential under necessity is not unrestricted (<a href="index.html#r-4" class="ref-link" title="View R.4 in chain">R.4</a>). Necessity dissolves.</p>
+<p><em>Randomness.</em> No principle determines the outcome. Under randomness, no principle excludes any outcome — including non-actualisation. Non-actualisation is the negation of actualisation. Unlimited potential does not include negation (<a href="index.html#r-7" class="ref-link" title="View R.7 in chain">R.7</a>). Randomness that admits negation into unlimited potential contradicts what has already survived. Randomness dissolves.</p>
+<p>A defence of randomness: guarantee actualisation while keeping the specific outcome random. The potential always generates, but which specific actuality emerges is random. This defence requires scrutiny.</p>
+<p>The guarantee — "the potential always generates" — is itself a principle. It constrains the random process to exclude non-actualisation. Randomness with a guaranteed outcome is randomness with a constraint. At the level of <em>whether</em> generation occurs, this is necessity, not randomness. At the level of <em>which</em> generation occurs: unlimited potential includes unlimited real alternatives (<a href="index.html#r-4" class="ref-link" title="View R.4 in chain">R.4</a>, <a href="index.html#r-9" class="ref-link" title="View R.9 in chain">R.9</a>). A specific outcome from among unlimited real alternatives, with what makes it this outcome absent, requires the specificity of the outcome — the specific relationship between the actual and the alternatives — to have no source. The specificity of that relationship is specific (<a href="index.html#r-5" class="ref-link" title="View R.5 in chain">R.5</a>). Under randomness, this specificity has no ground. The defence dissolves.</p>
+<p><em>Choice.</em> Neither forced from outside (unrestricted potential preserved) nor admitting negation (<a href="index.html#r-7" class="ref-link" title="View R.7 in chain">R.7</a>). Choice survives as the sole candidate for how somethings come into being.</p>
+<p><strong><a href="index.html#r-11" class="ref-link" title="View R.11 in chain">R.11</a>.</strong> Choice survives. But choice, as ordinarily understood, is "this, not that" — selection of one option by exclusion of others. The question is whether this structure survives in unlimited potential, or whether choice itself requires further elimination.</p>
+<p>"Not that" requires something to be excluded. In unlimited potential, exclusion empties "unlimited" (<a href="index.html#r-4" class="ref-link" title="View R.4 in chain">R.4</a>). But the elimination is not this simple, and a critical distinction must be drawn before it can proceed.</p>
+<p>The specificity of "this is" is not itself restriction. A specific being actualised is specific (<a href="index.html#r-5" class="ref-link" title="View R.5 in chain">R.5</a>), but the non-actualised potentials remain open. "This is" does not wall off "that." Unlimited potential remains unrestricted because the specificity of "this is" does not close off what is not actualised. Specificity and restriction are not the same thing. A specific actual within unlimited potential is specific without restricting what else could be.</p>
+<p>Active exclusion is structurally different. "This, not that" does not merely leave "that" non-actualised. It actively walls off "that." A being that wills "this is" without excluding "that" leaves unlimited potential unlimited. A being that wills "this, not that" has willed two things: "this is" and "not that." The "not that" adds what "this is" did not require — a walling-off of what is not actualised. The walling-off is restriction. Restriction empties "unrestricted" (<a href="index.html#r-4" class="ref-link" title="View R.4 in chain">R.4</a>).</p>
+<p>The distinction between non-actualisation and active exclusion is precise and load-bearing. Non-actualisation is compatible with unrestricted potential. Active exclusion is not. These two are often conflated — ordinary experience treats choosing as necessarily involving rejection — and the conflation obscures the elimination. "This is" leaves everything open. "This, not that" closes something off. Only the first survives in unlimited potential.</p>
+<p>"Not that" is eliminated from choice. What remains is "this is" without "not that." Not "this, not that" but "this is, and this is." Each "this is" adds to what is without removing from what could be.</p>
+<p>Choice without "not that" is Will. Will wills: "this is." Will does not select. This is not a diminished form of choice. It is what choice is when the exclusion component — which ordinary experience treats as essential — dissolves under elimination.</p>
+<p><strong><a href="index.html#def-2" class="ref-link" title="View Def.2 in chain">Def.2</a>.</strong> Will := actualisation without exclusion. "This is," not "this, not that."</p>
+<p><strong><a href="index.html#r-12" class="ref-link" title="View R.12 in chain">R.12</a>.</strong> Will wills as itself — not externally justified and not unjustified. If Will requires an external justification, that justification constrains Will. An external constraint is restriction — it empties "unrestricted" (<a href="index.html#r-4" class="ref-link" title="View R.4 in chain">R.4</a>). If Will wills without any basis, actual being is specific (<a href="index.html#r-5" class="ref-link" title="View R.5 in chain">R.5</a>) but what makes it what it is, is not. This empties specificity of its content. Will is neither externally justified nor without basis. The willing is the willing.</p>
+<p><strong><a href="index.html#def-3" class="ref-link" title="View Def.3 in chain">Def.3</a>.</strong> Will wills as itself := not externally justified and not without basis.</p>
+<h2 id="5-order-and-the-reactivity-of-negation">§5. Order and the Reactivity of Negation</h2>
+<p><strong><a href="index.html#r-13" class="ref-link" title="View R.13 in chain">R.13</a>.</strong> Will establishes order. Before the first willing, Will has not willed. No differentiation is. Where there is no differentiation, there is no order. The first willing is the first differentiation — it creates the first distinction, and this is the first ordering.</p>
+<p>Could the first willing occur within a pre-existing order? If so, there would already be distinct states. But distinct states require prior differentiation, and differentiation requires prior willing. This generates an infinite regress that denies its own premise — that differentiation is willing. The candidate dissolves. Will establishes order by creating the first differentiation. Each willing adds to what is. This is ordering — accumulation without depletion.</p>
+<p><strong><a href="index.html#r-14" class="ref-link" title="View R.14 in chain">R.14</a>.</strong> Will does not negate. This result is load-bearing for everything that follows in the full enquiry.</p>
+<p>Will wills: "this is" (<a href="index.html#def-2" class="ref-link" title="View Def.2 in chain">Def.2</a>, <a href="index.html#r-11" class="ref-link" title="View R.11 in chain">R.11</a>). What actualises, is. Negation is the "not" of what is — it requires what already is. Actualisation and negation are structurally distinct. Actualisation is what is. Negation is the "not" of what is. They are not two modes of the same activity. They are distinct in kind: one generates; the other reacts against what has been generated.</p>
+<p>Will actualises. What Will actualises, is. Will does not negate — because negation requires what already is, and actualisation is what is, not the "not" of what is. The candidate — Will as actualising negation — requires actualisation to be negation. Actualisation and negation are distinct. The candidate empties <a href="index.html#def-2" class="ref-link" title="View Def.2 in chain">Def.2</a>.</p>
+<p>This reinforces the earlier result (<a href="index.html#r-7" class="ref-link" title="View R.7 in chain">R.7</a>) from a different direction. <a href="index.html#r-7" class="ref-link" title="View R.7 in chain">R.7</a> derives that unlimited potential does not include negation because negation restricts unlimited potential. <a href="index.html#r-14" class="ref-link" title="View R.14 in chain">R.14</a> derives it from what Will does: Will actualises; it does not react against what is. Both routes arrive at the same result — what is does not conflict with what is.</p>
+<p>Negation enters only when what is wills against what is. This is reactive, not generative. The structural distinction between generation and reaction — between actualisation and negation — is the hinge on which the full enquiry turns. If Will does not negate, then negation has no generative source. It can only enter what is reactively — through what already is turning against what is. The full enquiry traces the consequences of this structural distinction across 123 further resolutions: how non-being enters what is, what non-being does within what is, and what being requires for resolution.</p>
+<h2 id="6-what-has-been-derived">§6. What Has Been Derived</h2>
+<p>From a single observation — that non-being requires being — fourteen eliminations have derived:</p>
+<p>1. "Nothing" cannot be (<a href="index.html#r-2" class="ref-link" title="View R.2 in chain">R.2</a>). 2. Possibility is without limitation (<a href="index.html#r-4" class="ref-link" title="View R.4 in chain">R.4</a>). 3. What is generated from unlimited potential does not conflict with what is (<a href="index.html#r-7" class="ref-link" title="View R.7 in chain">R.7</a>). 4. Choice is the sole candidate for how being comes into being (<a href="index.html#r-10" class="ref-link" title="View R.10 in chain">R.10</a>). 5. Active exclusion — "not that" — does not survive in unlimited potential (<a href="index.html#r-11" class="ref-link" title="View R.11 in chain">R.11</a>). 6. Actualisation is Will: "this is," without exclusion (<a href="index.html#r-11" class="ref-link" title="View R.11 in chain">R.11</a>, <a href="index.html#def-2" class="ref-link" title="View Def.2 in chain">Def.2</a>). 7. Will wills as itself — not externally justified and not without basis (<a href="index.html#r-12" class="ref-link" title="View R.12 in chain">R.12</a>). 8. Will establishes order (<a href="index.html#r-13" class="ref-link" title="View R.13 in chain">R.13</a>). 9. Will does not negate. Negation is reactive, not generative (<a href="index.html#r-14" class="ref-link" title="View R.14 in chain">R.14</a>).</p>
+<p>No premises were assumed. Each surviving conclusion depends on what preceded it. If any elimination is unsound — if a candidate survives its test or a surviving conclusion does not follow from its dependencies — the chain does not stand at that point. This is not a rhetorical invitation. It is what the method requires. An eliminative enquiry that cannot withstand challenge at any point has not eliminated at that point.</p>
+<p>These nine results are the foundations of a longer argument. They establish what being is within unlimited potential: actualisation without exclusion, ordered, non-negating. They also establish what negation is: reactive, not generative — requiring what already is. Everything that follows in the full enquiry — the derivation of coherence among beings, the expressions of willing through actualised being, the mechanism by which non-being enters what is, and what being requires for resolution — depends on these foundations and extends them.</p>
+<h2 id="references">References</h2>
+<p>Burrows, J. A. (2026). <em>Anything Willing Is — Possibility, Unlimited Potential and Un-being: An Eliminative Enquiry Into The Nature of Being.</em> DOI: 10.5281/zenodo.19538257. PhilArchive: https://philarchive.org/rec/BURAWI. SSRN: https://ssrn.com/abstract=6567202.</p>
+
+<a href="index.html" class="back-link">&larr; Back to the chain</a>
+</div>
+
+<script data-goatcounter="https://anythingwillingis.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
