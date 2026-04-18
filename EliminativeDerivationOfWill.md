@@ -31,7 +31,7 @@ Possibility is without limitation. The word "anything" points to this: possibili
 
 **Def.1.** Anything := possibility without limitation.
 
-It is worth pausing on what this definition does not say. It does not say that "anything" is an entity, a substance, or a being. "Anything" is possibility without limitation — what the word points to when all the alternatives that require what cannot be have dissolved. No commitment beyond this is made at this stage.
+This definition does not say that "anything" is an entity, a substance, or a being. "Anything" is possibility without limitation — what the word points to when all the alternatives that require what cannot be have dissolved. No commitment beyond this is made at this stage.
 
 ## §3. Something, Everything, and the Absence of Negation
 
@@ -41,9 +41,9 @@ It is worth pausing on what this definition does not say. It does not say that "
 
 A defence: everything is complete — all actuals are present, so the totality is unlimited. But everything is itself actual and unique — a something. Including everything among its own members generates a new totality, which is itself a something, which generates another. The cycle is infinite. Everything cannot complete itself. The defence fails on its own terms. Everything is not anything.
 
-**R.7.** Unlimited potential does not include negation. This result is critical for what follows, and the argument for it requires care.
+**R.7.** Unlimited potential does not include negation.
 
-Consider what negation is. Negation is what is against what is. "Against" requires "not" — contradiction, opposition, and incompatibility each require the exclusion of what is by what is. Exclusion is restriction. Restriction empties "unrestricted" (R.4). If unlimited potential included negation, it would restrict itself — because negation, by its nature, excludes, and exclusion is the one thing unrestricted potential cannot include without ceasing to be unrestricted.
+Negation is what is against what is. "Against" requires "not" — contradiction, opposition, and incompatibility each require the exclusion of what is by what is. Exclusion is restriction. Restriction empties "unrestricted" (R.4). If unlimited potential included negation, it would restrict itself — because negation, by its nature, excludes, and exclusion is the one thing unrestricted potential cannot include without ceasing to be unrestricted.
 
 This is not a stipulation. It follows from what "unrestricted" means. Unrestricted potential that includes the restriction of itself is not unrestricted. The candidate — negation within unlimited potential — empties R.4.
 
@@ -57,21 +57,21 @@ These four results establish the structural relationships. What is, is specific.
 
 **R.9.** Unlimited potential includes the potential for "this" — for a something to come into being. If unlimited potential excluded the potential for a specific actual to come into being, it would lack something. Unrestricted potential that lacks something is not unrestricted (R.4).
 
-**R.10.** How does being come into being? The specificity of "this is" — this specific actual, not another — either has a source or does not. If it does not: randomness. If it does, the source is either external to what is specific or internal to it. External: necessity. Internal: choice. These three exhaust the options. Each must be tested.
+**R.10.** How does being come into being? The specificity of "this is" — this specific actual, not another — either has a source or does not. If it does not: randomness. If it does, the source is either external to what is specific or internal to it. External: necessity. Internal: choice. These three exhaust the options.
 
 *Necessity.* The outcome is forced by constraint. Constraint is restriction. Unrestricted potential under necessity is not unrestricted (R.4). Necessity dissolves.
 
 *Randomness.* No principle determines the outcome. Two independent routes dissolve randomness. First: under randomness, the absence of principle would itself have to determine the outcome. An absence is the "not" of what is present — non-being requires being (R.1). Under randomness, no principle is present; the absence has no being to be the "not" of. An absence with no being to be the "not" of is what "nothing" designates, which cannot be (R.2). Second: under randomness, no principle excludes any outcome — including non-actualisation. Non-actualisation is the negation of actualisation. Unlimited potential does not include negation (R.7). Randomness that admits negation into unlimited potential contradicts what has already survived. Randomness dissolves.
 
-A defence of randomness: guarantee actualisation while keeping the specific outcome random. The potential always generates, but which specific actuality emerges is random. This defence requires scrutiny.
+A defence of randomness: guarantee actualisation while keeping the specific outcome random. The potential always generates, but which specific actuality emerges is random.
 
 The guarantee — "the potential always generates" — is itself a principle. It constrains the random process to exclude non-actualisation. Randomness with a guaranteed outcome is randomness with a constraint. At the level of *whether* generation occurs, this is necessity, not randomness. At the level of *which* generation occurs, no principle selects among the alternatives — the selection would itself be by the absence of principle. An absence is the "not" of what is present — non-being requires being (R.1). At this level, no principle is present; the absence has no being to be the "not" of. An absence with no being to be the "not" of is what "nothing" designates, which cannot be (R.2). The defence dissolves.
 
 *Choice.* Neither forced from outside (unrestricted potential preserved) nor admitting negation (R.7). Choice survives as the sole candidate for how somethings come into being.
 
-**R.11.** Choice survives. But choice, as ordinarily understood, is "this, not that" — selection of one option by exclusion of others. The question is whether this structure survives in unlimited potential, or whether choice itself requires further elimination.
+**R.11.** Choice survives. But choice, as ordinarily understood, is "this, not that" — selection of one option by exclusion of others.
 
-"Not that" requires something to be excluded. In unlimited potential, exclusion empties "unlimited" (R.4). But the elimination is not this simple, and a critical distinction must be drawn before it can proceed.
+"Not that" requires something to be excluded. In unlimited potential, exclusion empties "unlimited" (R.4).
 
 The specificity of "this is" is not itself restriction. A specific being actualised is specific (R.5), but the non-actualised potentials remain open. "This is" does not wall off "that." Unlimited potential remains unrestricted because the specificity of "this is" does not close off what is not actualised. Specificity and restriction are not the same thing. A specific actual within unlimited potential is specific without restricting what else could be.
 
