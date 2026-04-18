@@ -142,17 +142,17 @@ From: R.4
 
 **R.10** — Choice *is* the only candidate for how being comes into being. Necessity and Randomness dissolve.
 
-From: R.1, R.4, R.5, R.7, R.9
+From: R.1, R.2, R.4, R.5, R.7, R.9
 
 *Test:* Being *is* (R.1). Being *is* specific (R.5). Unlimited potential includes the potential for specifics (R.9). Specificity either has a source or does not. If it does not: Randomness. If it does, the source *is* either external to what *is* specific or internal to it. External: Necessity. Internal: Choice. These three exhaust the options.
 
 (a) Necessity — the outcome *is* forced by constraint. Constraint *is* restriction. Unrestricted potential forced by necessity empties "unrestricted" (R.4). Dissolves.
 
-(b) Randomness — no principle determines the transition. Under randomness, no principle excludes any outcome — including non-actualisation. Non-actualisation *is* negation of actualisation. Unlimited potential does not include negation (R.7). Randomness that admits negation into unlimited potential empties R.7. Dissolves.
+(b) Randomness — no principle determines the transition. No principle *is* the absence of what would determine. The absence of what would determine *is* what "nothing" designates — which cannot be (R.2). Further: under randomness, no principle excludes any outcome — including non-actualisation. Non-actualisation *is* negation of actualisation. Unlimited potential does not include negation (R.7). Randomness that admits negation into unlimited potential empties R.7. Dissolves.
 
 *Defence of randomness:* randomness with actualisation guaranteed — the potential always generates, but which specific actuality emerges *is* random.
 
-*Test of the defence:* The guarantee "the potential always generates" *is* a principle — it constrains the random process to exclude non-actualisation. Randomness with a guaranteed outcome *is* randomness with a constraint. A constraint *is* restriction. The defence reduces to necessity at the level of whether generation occurs, with randomness only at the level of which generation occurs. At the level of which: unlimited potential includes unlimited real alternatives (R.4, R.9). "This rather than that, with no principle" requires a specific outcome from among unlimited real alternatives with what makes it this outcome absent. The specific relationship between the actual outcome and the real alternatives (R.4) *is* specific (R.5). Under randomness, the specificity of that relationship has no source. The candidate empties the specificity of the relationship (R.5). Dissolves.
+*Test of the defence:* The guarantee "the potential always generates" *is* a principle — it constrains the random process to exclude non-actualisation. Randomness with a guaranteed outcome *is* randomness with a constraint. A constraint *is* restriction. The defence reduces to necessity at the level of whether generation occurs, with randomness only at the level of which generation occurs. At the level of which: no principle selects among the alternatives. No principle *is* the absence of what would select. The absence of what would select *is* what "nothing" designates — which cannot be (R.2). Dissolves.
 
 (c) Choice — being's own. Neither forced from outside (unrestricted preserved) nor admitting negation (R.7). Survives.
 
