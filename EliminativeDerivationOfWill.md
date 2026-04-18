@@ -11,11 +11,9 @@ This paper presents the opening argument of a longer eliminative enquiry. Beginn
 
 ## §1. Introduction
 
-This paper presents the first fourteen resolutions of an enquiry that extends to 137 resolutions and 25 definitions. These resolutions derive five structural results: (1) "nothing" — non-being without being — cannot be; (2) possibility is without limitation; (3) unlimited potential does not include negation; (4) actualisation is Will — "this is," without exclusion; and (5) Will does not negate, because negation is reactive, not generative.
+R.1 through R.14 establish the foundations on which the full 137-resolution enquiry is built. The five structural results stated in the abstract are derived in sequence below.
 
-The method is eliminative. At each step, a candidate is tested against what has already survived; what contradicts what has survived dissolves; what remains is the surviving conclusion. No premises are assumed — the enquiry begins from what non-being means, the negation of being, and tests what follows. Every resolution lists the prior results it requires, so the argument is auditable at any point: if a dissolution is unsound, the surviving conclusion does not stand, and whatever depends on it does not stand either.
-
-The full enquiry extends these foundations through the derivation of coherence among beings, the expressions of willing through actualised being, the mechanism by which non-being enters what is, and what being requires given that entry. The resolutions are numbered R.1 through R.14 as in the full enquiry.
+Every resolution lists the prior results it requires, so the argument is auditable at any point: if a dissolution is unsound, the surviving conclusion does not stand, and whatever depends on it does not stand either. The resolutions are numbered R.1 through R.14 as in the full enquiry.
 
 ## §2. The Impossibility of "Nothing"
 
@@ -123,7 +121,7 @@ From a single observation — that non-being requires being — fourteen elimina
 
 No premises were assumed. Each surviving conclusion depends on what preceded it. If any elimination is unsound — if a candidate survives its test or a surviving conclusion does not follow from its dependencies — the chain does not stand at that point. This is not a rhetorical invitation. It is what the method requires. An eliminative enquiry that cannot withstand challenge at any point has not eliminated at that point.
 
-These nine results are the foundations of a longer argument. They establish what being is within unlimited potential: actualisation without exclusion, ordered, non-negating. They also establish what negation is: reactive, not generative — requiring what already is. Everything that follows in the full enquiry — the derivation of coherence among beings, the expressions of willing through actualised being, the mechanism by which non-being enters what is, and what being requires for resolution — depends on these foundations and extends them.
+These nine results establish what being is within unlimited potential: actualisation without exclusion, ordered, non-negating. They also establish what negation is: reactive, not generative — requiring what already is. Everything that follows in the full enquiry — the derivation of coherence among beings, the expressions of willing through actualised being, the mechanism by which non-being enters what is, and what being requires for resolution — depends on these foundations and extends them.
 
 ## References
 
