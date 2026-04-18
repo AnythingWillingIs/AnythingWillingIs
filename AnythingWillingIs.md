@@ -2075,6 +2075,8 @@ From: R.11, R.12
 
 The elimination establishes what *is*, not specific content. Specific content is determined by its own willing choosing within what *is* established. This is not a gap. It is an established result: Will wills as itself (R.12) and actualisation *is* Will (R.11).
 
+---
+
 \newpage
 
 ## Theological Convergence Table
