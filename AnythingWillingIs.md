@@ -480,7 +480,7 @@ From: R.23, R.24, Def.2
 
 From: R.13, R.23, R.26
 
-*Test:* The being at Being-Doing exists in ordered relation (R.13) with accumulated reality: prior expressions, prior willing — all of which *is* (R.26). The being whose nature *is* active wills, with all prior willing present (R.26). Accumulated reality *is* operative — the being carries what has been (R.26) and wills from it (R.23). A being whose accumulated reality either does not persist (empties R.26) or *is* not willed from (empties R.23) dissolves.
+*Test:* The being at Being-Doing exists in ordered relation (R.13) with accumulated reality: prior expressions, prior willing — all of which *is* (R.26). The being whose nature *is* active wills, with all prior willing present (R.26). The being's willing *is* accumulated reality willing — what *is* (R.26) wills (R.23). A being whose accumulated reality either does not persist (empties R.26) or *is* not willing (empties R.23) dissolves.
 
 *Surviving conclusion:* Remembering/Reacting *is* what Doing willing actualises.
 
