@@ -148,11 +148,15 @@ From: R.1, R.2, R.4, R.5, R.7, R.9
 
 (a) Necessity — the outcome *is* forced by constraint. Constraint *is* restriction. Unrestricted potential forced by necessity empties "unrestricted" (R.4). Dissolves.
 
-(b) Randomness — no principle determines the transition. No principle *is* the absence of what would determine. The absence of what would determine *is* what "nothing" designates — which cannot be (R.2). Further: under randomness, no principle excludes any outcome — including non-actualisation. Non-actualisation *is* negation of actualisation. Unlimited potential does not include negation (R.7). Randomness that admits negation into unlimited potential empties R.7. Dissolves.
+(b) Randomness — no principle determines the transition. Two independent routes dissolve it.
+
+*First:* Under randomness, the absence of principle would itself have to determine the transition. An absence *is* the "not" of what *is* present — non-being requires being (R.1). Under randomness, no principle *is* present; the absence has no being to be the "not" of. An absence with no being to be the "not" of *is* what "nothing" designates — which cannot be (R.2). Dissolves.
+
+*Second:* Under randomness, no principle excludes any outcome — including non-actualisation. Non-actualisation *is* negation of actualisation. Unlimited potential does not include negation (R.7). Randomness that admits negation into unlimited potential empties R.7. Dissolves.
 
 *Defence of randomness:* randomness with actualisation guaranteed — the potential always generates, but which specific actuality emerges *is* random.
 
-*Test of the defence:* The guarantee "the potential always generates" *is* a principle — it constrains the random process to exclude non-actualisation. Randomness with a guaranteed outcome *is* randomness with a constraint. A constraint *is* restriction. The defence reduces to necessity at the level of whether generation occurs, with randomness only at the level of which generation occurs. At the level of which: no principle selects among the alternatives. No principle *is* the absence of what would select. The absence of what would select *is* what "nothing" designates — which cannot be (R.2). Dissolves.
+*Test of the defence:* The guarantee "the potential always generates" *is* a principle — it constrains the random process to exclude non-actualisation. Randomness with a guaranteed outcome *is* randomness with a constraint. A constraint *is* restriction. The defence reduces to necessity at the level of whether generation occurs, with randomness only at the level of which generation occurs. At the level of which: the selection would itself be by absence of principle. An absence *is* the "not" of what *is* present — non-being requires being (R.1). At this level, no principle *is* present; the absence has no being to be the "not" of. An absence with no being to be the "not" of *is* what "nothing" designates — which cannot be (R.2). Dissolves.
 
 (c) Choice — being's own. Neither forced from outside (unrestricted preserved) nor admitting negation (R.7). Survives.
 
