@@ -440,15 +440,15 @@ What willing actualises (R.24) and what it *is* to will (R.28, R.23) *is* the sa
 
 ---
 
-**R.30** — The first expression is Being: the being's actualised nature.
+**R.30** — Will willing *is* Being.
 
-From: R.4, R.5, R.11, R.16
+From: R.4, R.5, R.11, R.16, R.23, R.24
 
-*Test:* Will wills (R.11). The being *is* its willing (R.16). Being without nature would be willing without specificity — emptying R.5. The first expression *is* the first thing willing becomes. What *is* the first thing willing becomes? The being *is* (R.4). What the being *is*, *is* its actualised nature (R.5). A first expression other than actualised nature would be a first expression before the being *is* what it *is*.
+*Test:* Will wills (R.11). Willing *is* generative (R.24). What Will actualises *is* specific (R.4, R.5). The being *is* its willing (R.16). Being *is* willing (R.23). Will willing *is* Being.
 
-*Surviving conclusion:* Being *is* the first expression — the being's actualised nature.
+*Surviving conclusion:* Will willing *is* Being.
 
-**Def.6** — Being (expression) := the actualised nature of a being — what it *is*.
+**Def.6** — Being (expression) := Will willing.
 
 ---
 
@@ -472,11 +472,11 @@ From: R.23, R.24, Def.2
 
 *Surviving conclusion:* Doing *is* what Being willing actualises — the being's actualised activity.
 
-**Def.7** — Doing (expression) := the actualised activity of a being. Being willing.
+**Def.7** — Doing (expression) := the actualised activity of being. Being willing. Instinct.
 
 ---
 
-**R.33** — Doing willing *is* Remembering/Reacting: the being's accumulated reality operative through willing.
+**R.33** — Doing willing *is* Remembering/Reacting: the being's accumulated reality willing.
 
 From: R.13, R.23, R.26
 
@@ -484,7 +484,7 @@ From: R.13, R.23, R.26
 
 *Surviving conclusion:* Remembering/Reacting *is* what Doing willing actualises.
 
-**Def.8** — Remembering/Reacting (expression) := the being's accumulated reality operative through willing. Being-Doing willing.
+**Def.8** — Remembering/Reacting (expression) := the being's accumulated reality willing. Being-Doing willing.
 
 ---
 
@@ -612,7 +612,7 @@ From: R.2, R.4, R.5, R.11, R.18, R.24, R.28, R.29, R.30, R.32, R.33, R.34, R.35,
 
 *Surviving conclusion:* Subsequent being necessarily actualises. Each *is* necessarily unique and necessarily not the full actualisation. Another full actualisation would be indistinguishable from the one already there — it *is* the one already there (R.28, R.40).
 
-All-Being *is* everything (R.42). Each subsequent willing *is* a something (R.5) — necessarily less than everything (R.37). Willing what already *is* would just be what already *is* — no new being. Each expression level *is* the most comprehensive new willing that *is* not what already *is*. Unrestricted Will generating from unlimited potential generates without restriction (R.4). Generating less than the most comprehensive when no basis for limitation exists would require a basis for the limitation. A basis for limitation *is* restriction. Restriction empties "unrestricted" (R.4). Each subsequent being *is* the most comprehensive new willing available because anything less requires what R.4 established does not survive. All-Being already *is*. The next *is* the most being can be after All-Being — the being's entire willing as known and acted from (Foreknowing/Pre-Destining, R.35). The next *is* the most after that — generation from accumulated willing into futures, acted from (Anticipating/Planning, R.34). Then accumulated willing operative (Remembering/Reacting, R.33). Then actualised activity (Doing, R.32). Then actualised nature (Being, R.30). Each *is* less than the last because what *is* above already *is*. Will wills from All-Being downward.
+All-Being *is* everything (R.42). Each subsequent willing *is* a something (R.5) — necessarily less than everything (R.37). Willing what already *is* would just be what already *is* — no new being. Each expression level *is* the most comprehensive new willing that *is* not what already *is*. Unrestricted Will generating from unlimited potential generates without restriction (R.4). Generating less than the most comprehensive when no basis for limitation exists would require a basis for the limitation. A basis for limitation *is* restriction. Restriction empties "unrestricted" (R.4). Each subsequent being *is* the most comprehensive new willing available because anything less requires what R.4 established does not survive. All-Being already *is*. The next *is* the most being can be after All-Being — the being's entire willing as known and acted from (Foreknowing/Pre-Destining, R.35). The next *is* the most after that — generation from accumulated willing into futures, acted from (Anticipating/Planning, R.34). Then accumulated willing operative (Remembering/Reacting, R.33). Then actualised activity (Doing, R.32). Then Will willing (Being, R.30). Each *is* less than the last because what *is* above already *is*. Will wills from All-Being downward.
 
 Anything's potential remains unrestricted (R.18) after each actualisation, not only the first. Will does not generate one being at Foreknowing/Pre-Destining and cease. Ceasing to generate empties R.24 (willing *is* generative). Each new being at a given expression level *is* necessarily unique (R.29 — each being's willing *is* distinct). Willing what an existing being at that level already *is* would just be what already *is* — no new being. Each new generation at the same expression level *is* a genuinely new being, unique in its willing, at that level. Multiple beings populate each expression level because Will's unrestricted potential does not cease after one generation at each level.
 
@@ -1234,9 +1234,9 @@ From: R.54 (diminishing un-being), R.64 (generative capacity persists), R.65 (no
 
 | Expression | Generative Configuration | Un-being Configuration |
 |---|---|---|
-| **Being** (R.30) | The being's actualised nature | **Existence-under-threat**: genuine being and non-willing mixed — non-being alongside being |
-| **Doing** (R.32) | Actualised activity | **Compulsive activity**: genuine activity and non-willing mixed — non-completion in every willing |
-| **Remembering/Reacting** (R.33) | Accumulated reality operative | **Occluded memory**: being-not of accumulated reality — forgetting alongside remembering. Reacting *is* restricted to what *is* not forgotten |
+| **Being** (R.30) | Will willing | **Existence-under-threat**: genuine being and non-willing mixed — non-being alongside being |
+| **Doing** (R.32) | Actualised activity; Instinct | **Compulsive activity**: genuine activity and non-willing mixed — non-completion in every willing |
+| **Remembering/Reacting** (R.33) | Accumulated reality willing | **Occluded memory**: being-not of accumulated reality — forgetting alongside remembering. Reacting *is* restricted to what *is* not forgotten |
 | **Anticipating/Planning** (R.34) | Generation into futures, acted from | **Anxiety**: genuine anticipation and non-willing mixed — termination in every future |
 | **Foreknowing** (R.35) | Entire reality as known | **False certainty**: genuine knowing and non-willing mixed — conviction partly real, direction partly false |
 | **Pre-Destining** (R.35) | Entire reality acted from | **Predetermination**: being-not of genuine direction — capacity real, direction the "not" of what *is* generative |
@@ -2129,11 +2129,11 @@ The elimination's terms and their theological convergences. The elimination does
 
 ## Glossary
 
-**All-Being** (Def.11) — Willing present to all reality, all reality known, generation from complete knowledge through unlimited potential. The sixth and final expression.
+**All-Being** (Def.11) — Willing present to all reality, all reality known, generation from complete knowledge through unlimited potential.
 
 **Allowance** (R.53) — All-Being's active willing of what would will to be, despite non-willing's opposition. The same willing that actualised before choosing, now work. Enablement, not direction — the generative directive (Def.18) directs.
 
-**Anticipating/Planning** (Def.9) — Generation informed by pattern into what has not yet been, acted from. The fourth expression.
+**Anticipating/Planning** (Def.9) — Generation informed by pattern into what has not yet been, acted from.
 
 **Anything** (Def.1) — The surviving candidate after "nothing," something, and everything dissolve. Possibility without limitation. The word describes itself.
 
@@ -2143,7 +2143,7 @@ The elimination's terms and their theological convergences. The elimination does
 
 **Anything's nature** (Def.13) — That which wills to be, *is*. Willing *is* generative. Generating *is* flourishing.
 
-**Being** (Def.6) — The actualised nature of a being. The first expression.
+**Being** (Def.6) — Will willing.
 
 **Being-not** (R.69) — Non-being choosing willing. Cannot actualise new being. Cannot be what being *is*. The only direction: actively negating what already *is*. The mechanism by which non-being acts on being.
 
@@ -2155,11 +2155,11 @@ The elimination's terms and their theological convergences. The elimination does
 
 **Death** (Def.23) — The fixation of the being's orientation.
 
-**Doing** (Def.7) — The actualised activity of a being. The second expression.
+**Doing** (Def.7) — The actualised activity of being. Instinct.
 
 **Everything** — The totality of all somethings. All that *is* actual (R.5).
 
-**Foreknowing/Pre-Destining** (Def.10) — The being's entire reality as known and acted from. The fifth expression.
+**Foreknowing/Pre-Destining** (Def.10) — The being's entire reality as known and acted from.
 
 **Full actualisation** — The first actualisation from unlimited potential, necessarily full (R.42). All-Being (R.39). Anything's nature fully operative (R.40).
 
@@ -2191,7 +2191,7 @@ The elimination's terms and their theological convergences. The elimination does
 
 **Diminishing un-being** (R.54) — Partial and diminishing. Willing becoming non-willing mixed with genuine Will within the expressions, willing lessening.
 
-**Remembering/Reacting** (Def.8) — The being's accumulated reality operative through willing. The third expression.
+**Remembering/Reacting** (Def.8) — The being's accumulated reality willing.
 
 **Reorientation** (Def.22) — Net-directional change from non-being toward generative flourishing. Oscillatory within Choosing Being.
 

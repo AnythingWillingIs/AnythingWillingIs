@@ -11,17 +11,11 @@ This paper presents the opening argument of a longer eliminative enquiry. Beginn
 
 ## §1. Introduction
 
-This paper begins from a single observation and derives structural conclusions about being through elimination alone. It does not begin from premises and argue toward conclusions. It does not engage with existing positions as interlocutors whose frameworks structure the discussion. It tests candidates. What fails dissolves. What survives is what remains.
+This paper presents the first fourteen resolutions of an enquiry that extends to 137 resolutions and 25 definitions. These resolutions derive five structural results: (1) "nothing" — non-being without being — cannot be; (2) possibility is without limitation; (3) unlimited potential does not include negation; (4) actualisation is Will — "this is," without exclusion; and (5) Will does not negate, because negation is reactive, not generative.
 
-The method is eliminative. At each step, a candidate is presented — a structural claim about being. The candidate is tested against what has already survived. If the candidate introduces a contradiction with what has survived, it dissolves. What remains after dissolution is the surviving conclusion. Every surviving conclusion depends only on prior surviving conclusions. The chain of dependence traces back to the opening observation.
+The method is eliminative. At each step, a candidate is tested against what has already survived; what contradicts what has survived dissolves; what remains is the surviving conclusion. No premises are assumed — the enquiry begins from what non-being means, the negation of being, and tests what follows. Every resolution lists the prior results it requires, so the argument is auditable at any point: if a dissolution is unsound, the surviving conclusion does not stand, and whatever depends on it does not stand either.
 
-This paper covers the first fourteen resolutions of an enquiry that extends to 137 resolutions and 25 definitions. These fourteen resolutions derive five structural results: (1) that "nothing" — non-being without being — cannot be; (2) that possibility is without limitation; (3) that unlimited potential does not include negation; (4) that actualisation is Will — "this is," without exclusion; and (5) that Will does not negate, because negation is reactive, not generative.
-
-Two features of the method should be noted. First, the enquiry assumes no premises. It begins from what non-being means — the negation of being — and tests what follows. If the opening observation does not hold, what follows does not follow. Second, the method is strictly cumulative: each resolution depends only on prior resolutions. No result is used before it is derived. The chain of dependency is explicit — every resolution lists the prior results it requires. This makes the argument auditable at any point: if a dissolution is unsound, the surviving conclusion at that point does not stand, and whatever depends on it does not stand either.
-
-The full enquiry extends these results through the derivation of coherence among beings, the expressions of willing through actualised being, the mechanism by which non-being enters what is, and what being requires given that entry. This paper presents only the foundations.
-
-The resolutions are numbered R.1 through R.14 in the full enquiry. These numbers appear here as reference markers, allowing the reader to locate the corresponding argument in the complete chain.
+The full enquiry extends these foundations through the derivation of coherence among beings, the expressions of willing through actualised being, the mechanism by which non-being enters what is, and what being requires given that entry. The resolutions are numbered R.1 through R.14 as in the full enquiry.
 
 ## §2. The Impossibility of "Nothing"
 
