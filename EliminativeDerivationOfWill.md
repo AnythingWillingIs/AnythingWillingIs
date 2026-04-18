@@ -119,8 +119,6 @@ From a single observation — that non-being requires being — fourteen elimina
 8. Will establishes order (R.13).
 9. Will does not negate. Negation is reactive, not generative (R.14).
 
-No premises were assumed. Each surviving conclusion depends on what preceded it. If any elimination is unsound — if a candidate survives its test or a surviving conclusion does not follow from its dependencies — the chain does not stand at that point. This is not a rhetorical invitation. It is what the method requires. An eliminative enquiry that cannot withstand challenge at any point has not eliminated at that point.
-
 These nine results establish what being is within unlimited potential: actualisation without exclusion, ordered, non-negating. They also establish what negation is: reactive, not generative — requiring what already is. Everything that follows in the full enquiry — the derivation of coherence among beings, the expressions of willing through actualised being, the mechanism by which non-being enters what is, and what being requires for resolution — depends on these foundations and extends them.
 
 ## References
