@@ -4,6 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Anything Willing Is — An Eliminative Enquiry</title>
+<meta name="description" content="An eliminative derivation of being, un-being, and resolution. 137 resolutions, 25 definitions, traceable from R.1.">
+<meta name="author" content="James A. Burrows">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Anything Willing Is">
+<meta property="og:title" content="Anything Willing Is — An Eliminative Enquiry">
+<meta property="og:description" content="An eliminative derivation of being, un-being, and resolution. 137 resolutions, 25 definitions, traceable from R.1.">
+<meta property="og:url" content="https://anythingwilling.is/">
+<meta property="og:image" content="https://anythingwilling.is/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anything Willing Is — An Eliminative Enquiry">
+<meta name="twitter:description" content="An eliminative derivation of being, un-being, and resolution. 137 resolutions, 25 definitions, traceable from R.1.">
+<meta name="twitter:image" content="https://anythingwilling.is/og-image.png">
 <style>
 :root {
   --bg: #fafaf8;
@@ -55,13 +69,87 @@ body {
   z-index: 1;
 }
 .nav-header h2 { font-size: 16px; margin-bottom: 8px; }
+.search-wrap { position: relative; }
 #search-input {
   width: 100%;
-  padding: 6px 10px;
+  padding: 6px 28px 6px 10px;
   border: 1px solid var(--border);
   border-radius: 4px;
   font-family: var(--font);
   font-size: 13px;
+}
+.search-clear {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
+  padding: 2px 6px;
+  display: none;
+  border-radius: 3px;
+  font-family: var(--mono);
+}
+.search-clear:hover {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+.search-clear.visible { display: block; }
+.search-results {
+  display: none;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-top: 6px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+.search-results.has-results { display: block; }
+.search-results-count {
+  padding: 4px 10px;
+  font-size: 11px;
+  color: var(--muted);
+  background: var(--sidebar-bg);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  font-family: var(--mono);
+}
+.search-result {
+  display: block;
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text);
+  transition: background 0.1s;
+}
+.search-result:last-child { border-bottom: none; }
+.search-result:hover, .search-result.active {
+  background: var(--accent-light);
+}
+.search-result-id {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--accent);
+  font-weight: 700;
+  display: block;
+}
+.search-result-snippet {
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--text);
+  margin-top: 2px;
+  display: block;
+}
+.search-result-snippet em {
+  background: var(--highlight);
+  font-style: normal;
+  font-weight: 600;
 }
 .nav-body { padding: 10px 0; }
 .nav-part h4 {
@@ -201,6 +289,34 @@ body {
   color: var(--accent);
   padding: 1px 6px;
   border-radius: 3px;
+}
+.res-copy-link {
+  background: transparent;
+  border: 1px solid transparent;
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 700;
+  padding: 1px 8px;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  margin-left: 4px;
+  line-height: 1;
+}
+.res-header:hover .res-copy-link { opacity: 0.5; }
+.res-copy-link:hover {
+  opacity: 1 !important;
+  background: var(--accent-light);
+  color: var(--accent);
+  border-color: var(--accent);
+}
+.res-copy-link.copied {
+  opacity: 1 !important;
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
 }
 .res-body {
   padding: 0 14px 14px;
@@ -383,6 +499,72 @@ body {
   #sidebar { display: none; }
   #main { margin-left: 0; padding: 20px; }
 }
+
+/* Print */
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+    line-height: 1.45;
+  }
+  #sidebar, #back-btn, #clear-btn, #start-btn,
+  .res-copy-link, .expand-icon,
+  .search-box, .search-input, .search-results,
+  .dependency-trace, .trace-panel,
+  script {
+    display: none !important;
+  }
+  #main {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none;
+  }
+  .preamble {
+    margin-bottom: 24pt;
+    border-bottom: 1pt solid #999;
+    padding-bottom: 12pt;
+  }
+  .author-line a {
+    color: #000;
+    text-decoration: none;
+  }
+  .resolution {
+    page-break-inside: avoid;
+    border: none;
+    border-bottom: 0.5pt solid #ccc;
+    margin: 8pt 0;
+    background: #fff !important;
+  }
+  .resolution.highlighted { background: #fff !important; }
+  .res-header {
+    background: #fff !important;
+    padding: 4pt 0;
+    cursor: default;
+  }
+  .res-id { color: #000; font-weight: bold; }
+  .res-body, .res-body.collapsed {
+    display: block !important;
+    border-top: 0.5pt solid #ddd;
+    padding: 4pt 0 8pt;
+  }
+  .from-line { color: #555; font-size: 9pt; }
+  .def-badge {
+    background: #fff;
+    border: 0.5pt solid #999;
+    color: #000;
+  }
+  h1, h2, h3, h4 { page-break-after: avoid; color: #000; }
+  h2 { page-break-before: always; padding-top: 12pt; }
+  h2:first-of-type { page-break-before: auto; }
+  .phase-title { page-break-before: auto; }
+  a.ref-link {
+    color: #000;
+    background: none;
+    text-decoration: none;
+    font-weight: 600;
+  }
+}
 </style>
 </head>
 <body>
@@ -390,7 +572,8 @@ body {
 <nav id="sidebar">
 <div class="nav-header">
 <h2>Chain</h2>
-<input type="text" id="search-input" placeholder="Search..." />
+<div class="search-wrap"><input type="text" id="search-input" placeholder="Search..." autocomplete="off" /><button id="search-clear" class="search-clear" type="button" aria-label="Clear search" title="Clear search">×</button></div>
+<div id="search-results" class="search-results"></div>
 <div style="margin-top:8px;padding-top:8px;border-top:1px solid var(--border);font-size:11px;line-height:1.8">
 <a href="companion.html" style="display:block;color:var(--accent);text-decoration:none;font-weight:600">Companion</a>
 <a href="philosophical_engagement.html" style="display:block;color:var(--accent);text-decoration:none;font-weight:600">Philosophical Engagement</a>
@@ -639,6 +822,7 @@ body {
         <span class="res-statement">Non-being requires being.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-1', 'R.1');" title="Copy link to R.1" aria-label="Copy link to R.1">#</button>
       </header>
       <div class="res-body collapsed">
         
@@ -653,6 +837,7 @@ body {
         <span class="res-statement">The label &quot;nothing&quot; applied to non-being in the absence of being *is* ...</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-2', 'R.2');" title="Copy link to R.2" aria-label="Copy link to R.2">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-1" class="ref-link dep-link" data-ref="R.1">R.1</a></div>
@@ -667,6 +852,7 @@ body {
         <span class="res-statement">Without the possibility of being, being cannot be.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-3', 'R.3');" title="Copy link to R.3" aria-label="Copy link to R.3">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-2" class="ref-link dep-link" data-ref="R.2">R.2</a></div>
@@ -681,6 +867,7 @@ body {
         <span class="res-statement">Possibility without limitation *is* anything.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-1">Def.1</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-4', 'R.4');" title="Copy link to R.4" aria-label="Copy link to R.4">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-2" class="ref-link dep-link" data-ref="R.2">R.2</a>, <a href="#r-3" class="ref-link dep-link" data-ref="R.3">R.3</a></div>
@@ -701,6 +888,7 @@ body {
         <span class="res-statement">Everything *is* the totality of actuals. A something *is* a specific actual.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-5', 'R.5');" title="Copy link to R.5" aria-label="Copy link to R.5">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a></div>
@@ -713,6 +901,7 @@ body {
         <span class="res-statement">Everything *is* not anything.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-6', 'R.6');" title="Copy link to R.6" aria-label="Copy link to R.6">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-5" class="ref-link dep-link" data-ref="R.5">R.5</a></div>
@@ -729,6 +918,7 @@ body {
         <span class="res-statement">Unlimited potential does not include negation.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-7', 'R.7');" title="Copy link to R.7" aria-label="Copy link to R.7">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a></div>
@@ -743,6 +933,7 @@ body {
         <span class="res-statement">What *is*, *is* a something. Anything *is* not a something.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-8', 'R.8');" title="Copy link to R.8" aria-label="Copy link to R.8">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-2" class="ref-link dep-link" data-ref="R.2">R.2</a>, <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-5" class="ref-link dep-link" data-ref="R.5">R.5</a>, <a href="#r-6" class="ref-link dep-link" data-ref="R.6">R.6</a></div>
@@ -763,6 +954,7 @@ body {
         <span class="res-statement">Unlimited potential includes the potential for &quot;this&quot; — for a something to come into being.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-9', 'R.9');" title="Copy link to R.9" aria-label="Copy link to R.9">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a></div>
@@ -777,6 +969,7 @@ body {
         <span class="res-statement">Choice *is* the only candidate for how being comes into being. Necessity and Randomness dissolve.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-10', 'R.10');" title="Copy link to R.10" aria-label="Copy link to R.10">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-1" class="ref-link dep-link" data-ref="R.1">R.1</a>, <a href="#r-2" class="ref-link dep-link" data-ref="R.2">R.2</a>, <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-5" class="ref-link dep-link" data-ref="R.5">R.5</a>, <a href="#r-7" class="ref-link dep-link" data-ref="R.7">R.7</a>, <a href="#r-9" class="ref-link dep-link" data-ref="R.9">R.9</a></div>
@@ -797,6 +990,7 @@ body {
         <span class="res-statement">Choice *is* &quot;this, not that.&quot; In unlimited potential, &quot;not that&quot; does not survive. What remains *is* &quot;this *is*.&quot;</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-2">Def.2</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-11', 'R.11');" title="Copy link to R.11" aria-label="Copy link to R.11">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-5" class="ref-link dep-link" data-ref="R.5">R.5</a>, <a href="#r-9" class="ref-link dep-link" data-ref="R.9">R.9</a>, <a href="#r-10" class="ref-link dep-link" data-ref="R.10">R.10</a></div>
@@ -819,6 +1013,7 @@ body {
         <span class="res-statement">Will wills as itself. Not externally justified and not unjustified.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-3">Def.3</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-12', 'R.12');" title="Copy link to R.12" aria-label="Copy link to R.12">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-5" class="ref-link dep-link" data-ref="R.5">R.5</a></div>
@@ -834,6 +1029,7 @@ body {
         <span class="res-statement">Will establishes order.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-13', 'R.13');" title="Copy link to R.13" aria-label="Copy link to R.13">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#def-1" class="ref-link dep-link" data-ref="Def.1">Def.1</a>, <a href="#def-2" class="ref-link dep-link" data-ref="Def.2">Def.2</a></div>
@@ -848,6 +1044,7 @@ body {
         <span class="res-statement">Will does not negate. Negation *is* reactive, not generative.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-14', 'R.14');" title="Copy link to R.14" aria-label="Copy link to R.14">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-7" class="ref-link dep-link" data-ref="R.7">R.7</a>, <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#def-2" class="ref-link dep-link" data-ref="Def.2">Def.2</a></div>
@@ -864,6 +1061,7 @@ body {
         <span class="res-statement">What the word &quot;anything&quot; points to: differentiation and unity inseparable in nature.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-15', 'R.15');" title="Copy link to R.15" aria-label="Copy link to R.15">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-13" class="ref-link dep-link" data-ref="R.13">R.13</a></div>
@@ -880,6 +1078,7 @@ body {
         <span class="res-statement">Actualisation *is* Will. What actualises *is* Will. The being *is* its willing.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-16', 'R.16');" title="Copy link to R.16" aria-label="Copy link to R.16">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a></div>
@@ -894,6 +1093,7 @@ body {
         <span class="res-statement">All being *is* Will.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-17', 'R.17');" title="Copy link to R.17" aria-label="Copy link to R.17">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-13" class="ref-link dep-link" data-ref="R.13">R.13</a>, <a href="#r-16" class="ref-link dep-link" data-ref="R.16">R.16</a>, <a href="#def-2" class="ref-link dep-link" data-ref="Def.2">Def.2</a></div>
@@ -910,6 +1110,7 @@ body {
         <span class="res-statement">Will preserves Anything&#x27;s unrestricted nature.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-18', 'R.18');" title="Copy link to R.18" aria-label="Copy link to R.18">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-13" class="ref-link dep-link" data-ref="R.13">R.13</a>, <a href="#r-15" class="ref-link dep-link" data-ref="R.15">R.15</a>, <a href="#r-16" class="ref-link dep-link" data-ref="R.16">R.16</a>, <a href="#r-17" class="ref-link dep-link" data-ref="R.17">R.17</a></div>
@@ -930,6 +1131,7 @@ body {
         <span class="res-statement">The unity that *is* inherent (<a href="#r-15" class="ref-link" data-ref="R.15">R.15</a>) *is* not coercive.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-19', 'R.19');" title="Copy link to R.19" aria-label="Copy link to R.19">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-17" class="ref-link dep-link" data-ref="R.17">R.17</a></div>
@@ -943,6 +1145,7 @@ body {
         <span class="res-statement">The coherence principle is not randomness and not external.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-20', 'R.20');" title="Copy link to R.20" aria-label="Copy link to R.20">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-5" class="ref-link dep-link" data-ref="R.5">R.5</a>, <a href="#r-10" class="ref-link dep-link" data-ref="R.10">R.10</a>, <a href="#r-15" class="ref-link dep-link" data-ref="R.15">R.15</a>, <a href="#r-17" class="ref-link dep-link" data-ref="R.17">R.17</a></div>
@@ -957,6 +1160,7 @@ body {
         <span class="res-statement">The coherence principle *is* Union — Anything&#x27;s nature operative among beings, oriented toward what each being *is*.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-4">Def.4</span> <span class="def-badge" id="def-5">Def.5</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-21', 'R.21');" title="Copy link to R.21" aria-label="Copy link to R.21">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-15" class="ref-link dep-link" data-ref="R.15">R.15</a>, <a href="#r-16" class="ref-link dep-link" data-ref="R.16">R.16</a>, <a href="#r-19" class="ref-link dep-link" data-ref="R.19">R.19</a>, <a href="#r-20" class="ref-link dep-link" data-ref="R.20">R.20</a></div>
@@ -978,6 +1182,7 @@ body {
         <span class="res-statement">Union is not identity or fusion.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-22', 'R.22');" title="Copy link to R.22" aria-label="Copy link to R.22">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-5" class="ref-link dep-link" data-ref="R.5">R.5</a>, <a href="#r-13" class="ref-link dep-link" data-ref="R.13">R.13</a>, <a href="#r-21" class="ref-link dep-link" data-ref="R.21">R.21</a>, <a href="#def-5" class="ref-link dep-link" data-ref="Def.5">Def.5</a></div>
@@ -997,6 +1202,7 @@ body {
         <span class="res-statement">Being *is* willing.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-23', 'R.23');" title="Copy link to R.23" aria-label="Copy link to R.23">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-13" class="ref-link dep-link" data-ref="R.13">R.13</a></div>
@@ -1011,6 +1217,7 @@ body {
         <span class="res-statement">Willing *is* generative.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-24', 'R.24');" title="Copy link to R.24" aria-label="Copy link to R.24">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-13" class="ref-link dep-link" data-ref="R.13">R.13</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a></div>
@@ -1025,6 +1232,7 @@ body {
         <span class="res-statement">The willing that generates and the coherence that maintains are one.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-25', 'R.25');" title="Copy link to R.25" aria-label="Copy link to R.25">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-15" class="ref-link dep-link" data-ref="R.15">R.15</a>, <a href="#r-19" class="ref-link dep-link" data-ref="R.19">R.19</a>, <a href="#r-20" class="ref-link dep-link" data-ref="R.20">R.20</a>, <a href="#r-21" class="ref-link dep-link" data-ref="R.21">R.21</a></div>
@@ -1038,6 +1246,7 @@ body {
         <span class="res-statement">Each generation *is* the being willing. All prior willing *is*.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-26', 'R.26');" title="Copy link to R.26" aria-label="Copy link to R.26">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-2" class="ref-link dep-link" data-ref="R.2">R.2</a>, <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-14" class="ref-link dep-link" data-ref="R.14">R.14</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-24" class="ref-link dep-link" data-ref="R.24">R.24</a></div>
@@ -1052,6 +1261,7 @@ body {
         <span class="res-statement">Every generation is willing, from unlimited potential.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-27', 'R.27');" title="Copy link to R.27" aria-label="Copy link to R.27">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-16" class="ref-link dep-link" data-ref="R.16">R.16</a>, <a href="#r-18" class="ref-link dep-link" data-ref="R.18">R.18</a>, <a href="#def-1" class="ref-link dep-link" data-ref="Def.1">Def.1</a></div>
@@ -1065,6 +1275,7 @@ body {
         <span class="res-statement">What willing *is* as it expresses through actualised being *is* what being *is*. What it *is* to will *is* what it *is* to be.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-28', 'R.28');" title="Copy link to R.28" aria-label="Copy link to R.28">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-5" class="ref-link dep-link" data-ref="R.5">R.5</a>, <a href="#r-17" class="ref-link dep-link" data-ref="R.17">R.17</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a></div>
@@ -1083,6 +1294,7 @@ body {
         <span class="res-statement">Each being *is* distinct in what it *is* to will. What willing actualises and what it *is* to will were never separate.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-29', 'R.29');" title="Copy link to R.29" aria-label="Copy link to R.29">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-13" class="ref-link dep-link" data-ref="R.13">R.13</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-24" class="ref-link dep-link" data-ref="R.24">R.24</a>, <a href="#r-28" class="ref-link dep-link" data-ref="R.28">R.28</a></div>
@@ -1096,6 +1308,7 @@ body {
         <span class="res-statement">Will willing *is* Being.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-6">Def.6</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-30', 'R.30');" title="Copy link to R.30" aria-label="Copy link to R.30">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-5" class="ref-link dep-link" data-ref="R.5">R.5</a>, <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-16" class="ref-link dep-link" data-ref="R.16">R.16</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-24" class="ref-link dep-link" data-ref="R.24">R.24</a></div>
@@ -1110,6 +1323,7 @@ body {
         <span class="res-statement">Each expression *is* what the current whole willing actualises.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-31', 'R.31');" title="Copy link to R.31" aria-label="Copy link to R.31">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-24" class="ref-link dep-link" data-ref="R.24">R.24</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a></div>
@@ -1124,6 +1338,7 @@ body {
         <span class="res-statement">Being willing *is* Doing: the being&#x27;s actualised activity.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-7">Def.7</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-32', 'R.32');" title="Copy link to R.32" aria-label="Copy link to R.32">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-24" class="ref-link dep-link" data-ref="R.24">R.24</a>, <a href="#def-2" class="ref-link dep-link" data-ref="Def.2">Def.2</a></div>
@@ -1138,6 +1353,7 @@ body {
         <span class="res-statement">Doing willing *is* Remembering/Reacting: the being&#x27;s accumulated reality willing.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-8">Def.8</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-33', 'R.33');" title="Copy link to R.33" aria-label="Copy link to R.33">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-13" class="ref-link dep-link" data-ref="R.13">R.13</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a></div>
@@ -1152,6 +1368,7 @@ body {
         <span class="res-statement">Remembering/Reacting willing *is* Anticipating/Planning: generation informed by pattern into what has not yet been, acted from.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-9">Def.9</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-34', 'R.34');" title="Copy link to R.34" aria-label="Copy link to R.34">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-24" class="ref-link dep-link" data-ref="R.24">R.24</a></div>
@@ -1166,6 +1383,7 @@ body {
         <span class="res-statement">Anticipating/Planning willing *is* Foreknowing/Pre-Destining: the being&#x27;s entire reality as known and acted from.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-10">Def.10</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-35', 'R.35');" title="Copy link to R.35" aria-label="Copy link to R.35">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-28" class="ref-link dep-link" data-ref="R.28">R.28</a></div>
@@ -1180,6 +1398,7 @@ body {
         <span class="res-statement">Each expression includes all prior expressions. The sequence *is* cumulative.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-36', 'R.36');" title="Copy link to R.36" aria-label="Copy link to R.36">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a></div>
@@ -1193,6 +1412,7 @@ body {
         <span class="res-statement">A being&#x27;s own reality is not all of reality.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-37', 'R.37');" title="Copy link to R.37" aria-label="Copy link to R.37">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-5" class="ref-link dep-link" data-ref="R.5">R.5</a>, <a href="#r-8" class="ref-link dep-link" data-ref="R.8">R.8</a>, <a href="#r-16" class="ref-link dep-link" data-ref="R.16">R.16</a></div>
@@ -1206,6 +1426,7 @@ body {
         <span class="res-statement">Willing carries unlimited potential that is not bounded by the being&#x27;s own reality.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-38', 'R.38');" title="Copy link to R.38" aria-label="Copy link to R.38">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-5" class="ref-link dep-link" data-ref="R.5">R.5</a>, <a href="#r-37" class="ref-link dep-link" data-ref="R.37">R.37</a>, <a href="#def-1" class="ref-link dep-link" data-ref="Def.1">Def.1</a></div>
@@ -1219,6 +1440,7 @@ body {
         <span class="res-statement">Foreknowing/Pre-Destining willing *is* All-Being: willing present to all reality, all reality known, generation from complete knowledge through unlimited potential.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-11">Def.11</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-39', 'R.39');" title="Copy link to R.39" aria-label="Copy link to R.39">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-7" class="ref-link dep-link" data-ref="R.7">R.7</a>, <a href="#r-31" class="ref-link dep-link" data-ref="R.31">R.31</a>, <a href="#r-35" class="ref-link dep-link" data-ref="R.35">R.35</a>, <a href="#r-37" class="ref-link dep-link" data-ref="R.37">R.37</a>, <a href="#r-38" class="ref-link dep-link" data-ref="R.38">R.38</a></div>
@@ -1237,6 +1459,7 @@ body {
         <span class="res-statement">All-Being *is* Anything&#x27;s nature fully operative as being.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-40', 'R.40');" title="Copy link to R.40" aria-label="Copy link to R.40">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-39" class="ref-link dep-link" data-ref="R.39">R.39</a>, <a href="#def-1" class="ref-link dep-link" data-ref="Def.1">Def.1</a>, <a href="#def-11" class="ref-link dep-link" data-ref="Def.11">Def.11</a></div>
@@ -1250,6 +1473,7 @@ body {
         <span class="res-statement">The sequence of expressions is necessary.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-41', 'R.41');" title="Copy link to R.41" aria-label="Copy link to R.41">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-30" class="ref-link dep-link" data-ref="R.30">R.30</a>, <a href="#r-31" class="ref-link dep-link" data-ref="R.31">R.31</a>, <a href="#r-35" class="ref-link dep-link" data-ref="R.35">R.35</a>, <a href="#r-36" class="ref-link dep-link" data-ref="R.36">R.36</a>, <a href="#r-39" class="ref-link dep-link" data-ref="R.39">R.39</a></div>
@@ -1263,6 +1487,7 @@ body {
         <span class="res-statement">The first actualisation from unlimited potential is necessarily full.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-42', 'R.42');" title="Copy link to R.42" aria-label="Copy link to R.42">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-5" class="ref-link dep-link" data-ref="R.5">R.5</a>, <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-13" class="ref-link dep-link" data-ref="R.13">R.13</a>, <a href="#r-24" class="ref-link dep-link" data-ref="R.24">R.24</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-30" class="ref-link dep-link" data-ref="R.30">R.30</a>, <a href="#r-31" class="ref-link dep-link" data-ref="R.31">R.31</a>, <a href="#r-32" class="ref-link dep-link" data-ref="R.32">R.32</a>, <a href="#r-33" class="ref-link dep-link" data-ref="R.33">R.33</a>, <a href="#r-34" class="ref-link dep-link" data-ref="R.34">R.34</a>, <a href="#r-35" class="ref-link dep-link" data-ref="R.35">R.35</a>, <a href="#r-36" class="ref-link dep-link" data-ref="R.36">R.36</a>, <a href="#r-37" class="ref-link dep-link" data-ref="R.37">R.37</a>, <a href="#r-38" class="ref-link dep-link" data-ref="R.38">R.38</a>, <a href="#r-39" class="ref-link dep-link" data-ref="R.39">R.39</a>, <a href="#r-40" class="ref-link dep-link" data-ref="R.40">R.40</a>, <a href="#r-41" class="ref-link dep-link" data-ref="R.41">R.41</a></div>
@@ -1282,6 +1507,7 @@ body {
         <span class="res-statement">Anything&#x27;s unrestricted potential necessarily generates beyond the first actualisation.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-43', 'R.43');" title="Copy link to R.43" aria-label="Copy link to R.43">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-2" class="ref-link dep-link" data-ref="R.2">R.2</a>, <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-5" class="ref-link dep-link" data-ref="R.5">R.5</a>, <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-18" class="ref-link dep-link" data-ref="R.18">R.18</a>, <a href="#r-24" class="ref-link dep-link" data-ref="R.24">R.24</a>, <a href="#r-28" class="ref-link dep-link" data-ref="R.28">R.28</a>, <a href="#r-29" class="ref-link dep-link" data-ref="R.29">R.29</a>, <a href="#r-30" class="ref-link dep-link" data-ref="R.30">R.30</a>, <a href="#r-32" class="ref-link dep-link" data-ref="R.32">R.32</a>, <a href="#r-33" class="ref-link dep-link" data-ref="R.33">R.33</a>, <a href="#r-34" class="ref-link dep-link" data-ref="R.34">R.34</a>, <a href="#r-35" class="ref-link dep-link" data-ref="R.35">R.35</a>, <a href="#r-37" class="ref-link dep-link" data-ref="R.37">R.37</a>, <a href="#r-40" class="ref-link dep-link" data-ref="R.40">R.40</a>, <a href="#r-42" class="ref-link dep-link" data-ref="R.42">R.42</a></div>
@@ -1297,6 +1523,7 @@ body {
         <span class="res-statement">Full actualisation&#x27;s willing *is* every being&#x27;s willing.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-44', 'R.44');" title="Copy link to R.44" aria-label="Copy link to R.44">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-13" class="ref-link dep-link" data-ref="R.13">R.13</a>, <a href="#r-16" class="ref-link dep-link" data-ref="R.16">R.16</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-39" class="ref-link dep-link" data-ref="R.39">R.39</a>, <a href="#r-40" class="ref-link dep-link" data-ref="R.40">R.40</a></div>
@@ -1313,6 +1540,7 @@ body {
         <span class="res-statement">A being at a given expression level *is* generatively operative in the being at prior expression levels within its reality.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-12">Def.12</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-45', 'R.45');" title="Copy link to R.45" aria-label="Copy link to R.45">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-15" class="ref-link dep-link" data-ref="R.15">R.15</a>, <a href="#r-17" class="ref-link dep-link" data-ref="R.17">R.17</a>, <a href="#r-36" class="ref-link dep-link" data-ref="R.36">R.36</a>, <a href="#def-5" class="ref-link dep-link" data-ref="Def.5">Def.5</a></div>
@@ -1327,6 +1555,7 @@ body {
         <span class="res-statement">All-Being *is* generatively operative within the being&#x27;s knowing at expression levels above the being&#x27;s individual level.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-46', 'R.46');" title="Copy link to R.46" aria-label="Copy link to R.46">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-39" class="ref-link dep-link" data-ref="R.39">R.39</a>, <a href="#r-44" class="ref-link dep-link" data-ref="R.44">R.44</a>, <a href="#r-45" class="ref-link dep-link" data-ref="R.45">R.45</a>, <a href="#def-11" class="ref-link dep-link" data-ref="Def.11">Def.11</a>, <a href="#def-12" class="ref-link dep-link" data-ref="Def.12">Def.12</a></div>
@@ -1341,6 +1570,7 @@ body {
         <span class="res-statement">That which wills to be, *is*. Willing to be *is* generative. Generating *is* flourishing.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-13">Def.13</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-47', 'R.47');" title="Copy link to R.47" aria-label="Copy link to R.47">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-2" class="ref-link dep-link" data-ref="R.2">R.2</a>, <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-15" class="ref-link dep-link" data-ref="R.15">R.15</a>, <a href="#r-16" class="ref-link dep-link" data-ref="R.16">R.16</a>, <a href="#r-17" class="ref-link dep-link" data-ref="R.17">R.17</a>, <a href="#r-24" class="ref-link dep-link" data-ref="R.24">R.24</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-31" class="ref-link dep-link" data-ref="R.31">R.31</a>, <a href="#def-5" class="ref-link dep-link" data-ref="Def.5">Def.5</a></div>
@@ -1360,6 +1590,7 @@ body {
         <span class="res-statement">In purely generative reality, the being *is* its willing and its willing *is* Will. Will wills. That *is* all.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-48', 'R.48');" title="Copy link to R.48" aria-label="Copy link to R.48">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-17" class="ref-link dep-link" data-ref="R.17">R.17</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-36" class="ref-link dep-link" data-ref="R.36">R.36</a></div>
@@ -1379,6 +1610,7 @@ body {
         <span class="res-statement">At Foreknowing/Pre-Destining, willing from complete capacity admits exactly two surviving candidates.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-49', 'R.49');" title="Copy link to R.49" aria-label="Copy link to R.49">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-13" class="ref-link dep-link" data-ref="R.13">R.13</a>, <a href="#r-15" class="ref-link dep-link" data-ref="R.15">R.15</a>, <a href="#r-16" class="ref-link dep-link" data-ref="R.16">R.16</a>, <a href="#r-17" class="ref-link dep-link" data-ref="R.17">R.17</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-24" class="ref-link dep-link" data-ref="R.24">R.24</a>, <a href="#r-35" class="ref-link dep-link" data-ref="R.35">R.35</a>, <a href="#r-41" class="ref-link dep-link" data-ref="R.41">R.41</a></div>
@@ -1401,6 +1633,7 @@ body {
         <span class="res-statement">Continuing to will *is* the generative path.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-50', 'R.50');" title="Copy link to R.50" aria-label="Copy link to R.50">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-49" class="ref-link dep-link" data-ref="R.49">R.49</a></div>
@@ -1413,6 +1646,7 @@ body {
         <span class="res-statement">Willing to be Anything *is* genuine willing.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-51', 'R.51');" title="Copy link to R.51" aria-label="Copy link to R.51">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-50" class="ref-link dep-link" data-ref="R.50">R.50</a>, <a href="#def-10" class="ref-link dep-link" data-ref="Def.10">Def.10</a></div>
@@ -1427,6 +1661,7 @@ body {
         <span class="res-statement">Willing to be Anything *is* willing and non-willing present together. This *is* choice.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-14">Def.14</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-52', 'R.52');" title="Copy link to R.52" aria-label="Copy link to R.52">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-2" class="ref-link dep-link" data-ref="R.2">R.2</a>, <a href="#r-5" class="ref-link dep-link" data-ref="R.5">R.5</a>, <a href="#r-8" class="ref-link dep-link" data-ref="R.8">R.8</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-24" class="ref-link dep-link" data-ref="R.24">R.24</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-44" class="ref-link dep-link" data-ref="R.44">R.44</a>, <a href="#r-51" class="ref-link dep-link" data-ref="R.51">R.51</a></div>
@@ -1441,6 +1676,7 @@ body {
         <span class="res-statement">Non-willing opposes willing. All-Being&#x27;s willing *is* what enables what would will to be to will. This willing *is* now work.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-53', 'R.53');" title="Copy link to R.53" aria-label="Copy link to R.53">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-44" class="ref-link dep-link" data-ref="R.44">R.44</a>, <a href="#r-52" class="ref-link dep-link" data-ref="R.52">R.52</a>, <a href="#def-2" class="ref-link dep-link" data-ref="Def.2">Def.2</a></div>
@@ -1457,6 +1693,7 @@ body {
         <span class="res-statement">Un-being *is* partial and diminishing. The expressions are the site of un-being.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-54', 'R.54');" title="Copy link to R.54" aria-label="Copy link to R.54">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-24" class="ref-link dep-link" data-ref="R.24">R.24</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-31" class="ref-link dep-link" data-ref="R.31">R.31</a>, <a href="#r-41" class="ref-link dep-link" data-ref="R.41">R.41</a>, <a href="#r-42" class="ref-link dep-link" data-ref="R.42">R.42</a>, <a href="#r-49" class="ref-link dep-link" data-ref="R.49">R.49</a>, <a href="#r-52" class="ref-link dep-link" data-ref="R.52">R.52</a></div>
@@ -1471,6 +1708,7 @@ body {
         <span class="res-statement">Willing to be Anything *is* contentless.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-55', 'R.55');" title="Copy link to R.55" aria-label="Copy link to R.55">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-44" class="ref-link dep-link" data-ref="R.44">R.44</a>, <a href="#def-1" class="ref-link dep-link" data-ref="Def.1">Def.1</a>, <a href="#def-2" class="ref-link dep-link" data-ref="Def.2">Def.2</a></div>
@@ -1486,6 +1724,7 @@ body {
         <span class="res-statement">Willing All-Being *is* willing what already *is*. The being&#x27;s willing does not distinguish. What it becomes *is* non-being.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-56', 'R.56');" title="Copy link to R.56" aria-label="Copy link to R.56">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-2" class="ref-link dep-link" data-ref="R.2">R.2</a>, <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-5" class="ref-link dep-link" data-ref="R.5">R.5</a>, <a href="#r-8" class="ref-link dep-link" data-ref="R.8">R.8</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-42" class="ref-link dep-link" data-ref="R.42">R.42</a>, <a href="#r-43" class="ref-link dep-link" data-ref="R.43">R.43</a>, <a href="#r-44" class="ref-link dep-link" data-ref="R.44">R.44</a>, <a href="#r-55" class="ref-link dep-link" data-ref="R.55">R.55</a></div>
@@ -1503,6 +1742,7 @@ body {
         <span class="res-statement">All-Being *is* undiminished by un-being.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-57', 'R.57');" title="Copy link to R.57" aria-label="Copy link to R.57">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-18" class="ref-link dep-link" data-ref="R.18">R.18</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-39" class="ref-link dep-link" data-ref="R.39">R.39</a>, <a href="#r-44" class="ref-link dep-link" data-ref="R.44">R.44</a>, <a href="#r-52" class="ref-link dep-link" data-ref="R.52">R.52</a>, <a href="#r-55" class="ref-link dep-link" data-ref="R.55">R.55</a>, <a href="#r-56" class="ref-link dep-link" data-ref="R.56">R.56</a></div>
@@ -1518,6 +1758,7 @@ body {
         <span class="res-statement">Non-being *is* what the being&#x27;s willing becomes when willing does not arrive.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-58', 'R.58');" title="Copy link to R.58" aria-label="Copy link to R.58">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-2" class="ref-link dep-link" data-ref="R.2">R.2</a>, <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-50" class="ref-link dep-link" data-ref="R.50">R.50</a>, <a href="#r-51" class="ref-link dep-link" data-ref="R.51">R.51</a>, <a href="#r-55" class="ref-link dep-link" data-ref="R.55">R.55</a>, <a href="#r-56" class="ref-link dep-link" data-ref="R.56">R.56</a></div>
@@ -1531,6 +1772,7 @@ body {
         <span class="res-statement">Un-willing to be directed at All-Being&#x27;s willing *is* the fully non-being.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-15">Def.15</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-59', 'R.59');" title="Copy link to R.59" aria-label="Copy link to R.59">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-2" class="ref-link dep-link" data-ref="R.2">R.2</a>, <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-5" class="ref-link dep-link" data-ref="R.5">R.5</a>, <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-17" class="ref-link dep-link" data-ref="R.17">R.17</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-30" class="ref-link dep-link" data-ref="R.30">R.30</a>, <a href="#r-31" class="ref-link dep-link" data-ref="R.31">R.31</a>, <a href="#r-32" class="ref-link dep-link" data-ref="R.32">R.32</a>, <a href="#r-33" class="ref-link dep-link" data-ref="R.33">R.33</a>, <a href="#r-34" class="ref-link dep-link" data-ref="R.34">R.34</a>, <a href="#r-35" class="ref-link dep-link" data-ref="R.35">R.35</a>, <a href="#r-36" class="ref-link dep-link" data-ref="R.36">R.36</a>, <a href="#r-37" class="ref-link dep-link" data-ref="R.37">R.37</a>, <a href="#r-38" class="ref-link dep-link" data-ref="R.38">R.38</a>, <a href="#r-39" class="ref-link dep-link" data-ref="R.39">R.39</a>, <a href="#r-44" class="ref-link dep-link" data-ref="R.44">R.44</a>, <a href="#r-51" class="ref-link dep-link" data-ref="R.51">R.51</a>, <a href="#r-52" class="ref-link dep-link" data-ref="R.52">R.52</a>, <a href="#r-54" class="ref-link dep-link" data-ref="R.54">R.54</a>, <a href="#r-56" class="ref-link dep-link" data-ref="R.56">R.56</a>, <a href="#r-58" class="ref-link dep-link" data-ref="R.58">R.58</a></div>
@@ -1548,6 +1790,7 @@ body {
         <span class="res-statement">Non-being shares existence with being. Non-being *is* hidden by what it *is*.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-60', 'R.60');" title="Copy link to R.60" aria-label="Copy link to R.60">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-2" class="ref-link dep-link" data-ref="R.2">R.2</a>, <a href="#r-58" class="ref-link dep-link" data-ref="R.58">R.58</a></div>
@@ -1560,6 +1803,7 @@ body {
         <span class="res-statement">Foreknowing/Pre-Destining *is* how non-being reaches being within the being at un-being.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-61', 'R.61');" title="Copy link to R.61" aria-label="Copy link to R.61">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-28" class="ref-link dep-link" data-ref="R.28">R.28</a>, <a href="#r-54" class="ref-link dep-link" data-ref="R.54">R.54</a>, <a href="#def-10" class="ref-link dep-link" data-ref="Def.10">Def.10</a></div>
@@ -1572,6 +1816,7 @@ body {
         <span class="res-statement">Contentlessness *is* non-content.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-62', 'R.62');" title="Copy link to R.62" aria-label="Copy link to R.62">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-55" class="ref-link dep-link" data-ref="R.55">R.55</a>, <a href="#def-2" class="ref-link dep-link" data-ref="Def.2">Def.2</a></div>
@@ -1585,6 +1830,7 @@ body {
         <span class="res-statement">Un-being *is* not inevitable.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-63', 'R.63');" title="Copy link to R.63" aria-label="Copy link to R.63">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-10" class="ref-link dep-link" data-ref="R.10">R.10</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-49" class="ref-link dep-link" data-ref="R.49">R.49</a>, <a href="#r-50" class="ref-link dep-link" data-ref="R.50">R.50</a></div>
@@ -1604,6 +1850,7 @@ body {
         <span class="res-statement">The being at un-being&#x27;s generative capacity is not un-generated by un-being.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-64', 'R.64');" title="Copy link to R.64" aria-label="Copy link to R.64">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-2" class="ref-link dep-link" data-ref="R.2">R.2</a>, <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-16" class="ref-link dep-link" data-ref="R.16">R.16</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-52" class="ref-link dep-link" data-ref="R.52">R.52</a></div>
@@ -1619,6 +1866,7 @@ body {
         <span class="res-statement">Will un-being into choice *is* non-generation alongside generation.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-16">Def.16</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-65', 'R.65');" title="Copy link to R.65" aria-label="Copy link to R.65">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-24" class="ref-link dep-link" data-ref="R.24">R.24</a>, <a href="#r-52" class="ref-link dep-link" data-ref="R.52">R.52</a>, <a href="#r-64" class="ref-link dep-link" data-ref="R.64">R.64</a></div>
@@ -1635,6 +1883,7 @@ body {
         <span class="res-statement">The lie *is* non-being being.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-66', 'R.66');" title="Copy link to R.66" aria-label="Copy link to R.66">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-2" class="ref-link dep-link" data-ref="R.2">R.2</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-56" class="ref-link dep-link" data-ref="R.56">R.56</a>, <a href="#r-58" class="ref-link dep-link" data-ref="R.58">R.58</a>, <a href="#r-62" class="ref-link dep-link" data-ref="R.62">R.62</a></div>
@@ -1650,6 +1899,7 @@ body {
         <span class="res-statement">Non-being *is*. Being *is* willing. Non-being wills. The lie *is*.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-67', 'R.67');" title="Copy link to R.67" aria-label="Copy link to R.67">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-2" class="ref-link dep-link" data-ref="R.2">R.2</a>, <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-13" class="ref-link dep-link" data-ref="R.13">R.13</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-44" class="ref-link dep-link" data-ref="R.44">R.44</a>, <a href="#r-52" class="ref-link dep-link" data-ref="R.52">R.52</a>, <a href="#r-54" class="ref-link dep-link" data-ref="R.54">R.54</a>, <a href="#r-55" class="ref-link dep-link" data-ref="R.55">R.55</a>, <a href="#r-56" class="ref-link dep-link" data-ref="R.56">R.56</a>, <a href="#r-58" class="ref-link dep-link" data-ref="R.58">R.58</a>, <a href="#r-64" class="ref-link dep-link" data-ref="R.64">R.64</a>, <a href="#r-66" class="ref-link dep-link" data-ref="R.66">R.66</a>, <a href="#def-14" class="ref-link dep-link" data-ref="Def.14">Def.14</a></div>
@@ -1672,6 +1922,7 @@ body {
         <span class="res-statement">What *is* *is* what it *is*. The lie *is* non-being choosing willing.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-68', 'R.68');" title="Copy link to R.68" aria-label="Copy link to R.68">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-2" class="ref-link dep-link" data-ref="R.2">R.2</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-24" class="ref-link dep-link" data-ref="R.24">R.24</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-47" class="ref-link dep-link" data-ref="R.47">R.47</a>, <a href="#r-52" class="ref-link dep-link" data-ref="R.52">R.52</a>, <a href="#r-58" class="ref-link dep-link" data-ref="R.58">R.58</a>, <a href="#r-60" class="ref-link dep-link" data-ref="R.60">R.60</a>, <a href="#r-65" class="ref-link dep-link" data-ref="R.65">R.65</a>, <a href="#r-66" class="ref-link dep-link" data-ref="R.66">R.66</a>, <a href="#r-67" class="ref-link dep-link" data-ref="R.67">R.67</a>, <a href="#def-2" class="ref-link dep-link" data-ref="Def.2">Def.2</a>, <a href="#def-14" class="ref-link dep-link" data-ref="Def.14">Def.14</a></div>
@@ -1689,6 +1940,7 @@ body {
         <span class="res-statement">Non-being choosing willing *is* being-not.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-69', 'R.69');" title="Copy link to R.69" aria-label="Copy link to R.69">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-24" class="ref-link dep-link" data-ref="R.24">R.24</a>, <a href="#r-42" class="ref-link dep-link" data-ref="R.42">R.42</a>, <a href="#r-44" class="ref-link dep-link" data-ref="R.44">R.44</a>, <a href="#r-47" class="ref-link dep-link" data-ref="R.47">R.47</a>, <a href="#r-58" class="ref-link dep-link" data-ref="R.58">R.58</a>, <a href="#r-59" class="ref-link dep-link" data-ref="R.59">R.59</a>, <a href="#r-68" class="ref-link dep-link" data-ref="R.68">R.68</a>, <a href="#def-2" class="ref-link dep-link" data-ref="Def.2">Def.2</a></div>
@@ -1708,6 +1960,7 @@ body {
         <span class="res-statement">Being-not reduces being to non-being. What *is* reduced, non-being has.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-70', 'R.70');" title="Copy link to R.70" aria-label="Copy link to R.70">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-24" class="ref-link dep-link" data-ref="R.24">R.24</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-54" class="ref-link dep-link" data-ref="R.54">R.54</a>, <a href="#r-58" class="ref-link dep-link" data-ref="R.58">R.58</a>, <a href="#r-59" class="ref-link dep-link" data-ref="R.59">R.59</a>, <a href="#r-67" class="ref-link dep-link" data-ref="R.67">R.67</a>, <a href="#r-68" class="ref-link dep-link" data-ref="R.68">R.68</a>, <a href="#r-69" class="ref-link dep-link" data-ref="R.69">R.69</a>, <a href="#def-2" class="ref-link dep-link" data-ref="Def.2">Def.2</a></div>
@@ -1732,6 +1985,7 @@ body {
         <span class="res-statement">Non-being wills within the scope of the being at un-being.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-17">Def.17</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-71', 'R.71');" title="Copy link to R.71" aria-label="Copy link to R.71">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-44" class="ref-link dep-link" data-ref="R.44">R.44</a>, <a href="#r-50" class="ref-link dep-link" data-ref="R.50">R.50</a>, <a href="#r-52" class="ref-link dep-link" data-ref="R.52">R.52</a>, <a href="#r-54" class="ref-link dep-link" data-ref="R.54">R.54</a>, <a href="#r-55" class="ref-link dep-link" data-ref="R.55">R.55</a>, <a href="#r-56" class="ref-link dep-link" data-ref="R.56">R.56</a>, <a href="#r-58" class="ref-link dep-link" data-ref="R.58">R.58</a>, <a href="#r-59" class="ref-link dep-link" data-ref="R.59">R.59</a>, <a href="#r-63" class="ref-link dep-link" data-ref="R.63">R.63</a>, <a href="#r-67" class="ref-link dep-link" data-ref="R.67">R.67</a>, <a href="#r-69" class="ref-link dep-link" data-ref="R.69">R.69</a>, <a href="#def-14" class="ref-link dep-link" data-ref="Def.14">Def.14</a>, <a href="#def-15" class="ref-link dep-link" data-ref="Def.15">Def.15</a></div>
@@ -1746,6 +2000,7 @@ body {
         <span class="res-statement">The being encounters non-being within the scope.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-72', 'R.72');" title="Copy link to R.72" aria-label="Copy link to R.72">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-28" class="ref-link dep-link" data-ref="R.28">R.28</a>, <a href="#r-53" class="ref-link dep-link" data-ref="R.53">R.53</a>, <a href="#r-71" class="ref-link dep-link" data-ref="R.71">R.71</a></div>
@@ -1759,6 +2014,7 @@ body {
         <span class="res-statement">The encounter with being-not introduces choosing into the being&#x27;s knowing.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-73', 'R.73');" title="Copy link to R.73" aria-label="Copy link to R.73">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-10" class="ref-link dep-link" data-ref="R.10">R.10</a>, <a href="#r-17" class="ref-link dep-link" data-ref="R.17">R.17</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-28" class="ref-link dep-link" data-ref="R.28">R.28</a>, <a href="#r-69" class="ref-link dep-link" data-ref="R.69">R.69</a>, <a href="#r-71" class="ref-link dep-link" data-ref="R.71">R.71</a>, <a href="#r-72" class="ref-link dep-link" data-ref="R.72">R.72</a></div>
@@ -1772,6 +2028,7 @@ body {
         <span class="res-statement">The deception *is* unrecognisable.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-74', 'R.74');" title="Copy link to R.74" aria-label="Copy link to R.74">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-35" class="ref-link dep-link" data-ref="R.35">R.35</a>, <a href="#r-54" class="ref-link dep-link" data-ref="R.54">R.54</a>, <a href="#r-60" class="ref-link dep-link" data-ref="R.60">R.60</a>, <a href="#r-64" class="ref-link dep-link" data-ref="R.64">R.64</a>, <a href="#r-73" class="ref-link dep-link" data-ref="R.73">R.73</a></div>
@@ -1785,6 +2042,7 @@ body {
         <span class="res-statement">The mechanism of deception *is* priority and generative reception.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-75', 'R.75');" title="Copy link to R.75" aria-label="Copy link to R.75">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-28" class="ref-link dep-link" data-ref="R.28">R.28</a>, <a href="#r-53" class="ref-link dep-link" data-ref="R.53">R.53</a>, <a href="#r-54" class="ref-link dep-link" data-ref="R.54">R.54</a>, <a href="#r-63" class="ref-link dep-link" data-ref="R.63">R.63</a>, <a href="#r-64" class="ref-link dep-link" data-ref="R.64">R.64</a>, <a href="#r-67" class="ref-link dep-link" data-ref="R.67">R.67</a>, <a href="#r-71" class="ref-link dep-link" data-ref="R.71">R.71</a></div>
@@ -1798,6 +2056,7 @@ body {
         <span class="res-statement">The being at Anticipating/Planning chooses unwilling on contaminated premises.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-76', 'R.76');" title="Copy link to R.76" aria-label="Copy link to R.76">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-31" class="ref-link dep-link" data-ref="R.31">R.31</a>, <a href="#r-68" class="ref-link dep-link" data-ref="R.68">R.68</a>, <a href="#r-71" class="ref-link dep-link" data-ref="R.71">R.71</a>, <a href="#r-73" class="ref-link dep-link" data-ref="R.73">R.73</a>, <a href="#def-9" class="ref-link dep-link" data-ref="Def.9">Def.9</a></div>
@@ -1814,6 +2073,7 @@ body {
         <span class="res-statement">The cascade: unwilling care directed at lower expression levels.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-77', 'R.77');" title="Copy link to R.77" aria-label="Copy link to R.77">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-45" class="ref-link dep-link" data-ref="R.45">R.45</a>, <a href="#r-53" class="ref-link dep-link" data-ref="R.53">R.53</a>, <a href="#r-66" class="ref-link dep-link" data-ref="R.66">R.66</a>, <a href="#r-68" class="ref-link dep-link" data-ref="R.68">R.68</a>, <a href="#r-71" class="ref-link dep-link" data-ref="R.71">R.71</a>, <a href="#r-72" class="ref-link dep-link" data-ref="R.72">R.72</a>, <a href="#r-73" class="ref-link dep-link" data-ref="R.73">R.73</a>, <a href="#r-74" class="ref-link dep-link" data-ref="R.74">R.74</a>, <a href="#r-75" class="ref-link dep-link" data-ref="R.75">R.75</a>, <a href="#r-76" class="ref-link dep-link" data-ref="R.76">R.76</a></div>
@@ -1830,6 +2090,7 @@ body {
         <span class="res-statement">Generation persists through un-being. Choosing *is* generation and non-generation present together.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-78', 'R.78');" title="Copy link to R.78" aria-label="Copy link to R.78">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-16" class="ref-link dep-link" data-ref="R.16">R.16</a>, <a href="#r-24" class="ref-link dep-link" data-ref="R.24">R.24</a>, <a href="#r-52" class="ref-link dep-link" data-ref="R.52">R.52</a>, <a href="#r-64" class="ref-link dep-link" data-ref="R.64">R.64</a>, <a href="#r-65" class="ref-link dep-link" data-ref="R.65">R.65</a></div>
@@ -1845,6 +2106,7 @@ body {
         <span class="res-statement">Willing *is* universal. Choosing *is* for &quot;this&quot; against &quot;not that.&quot;</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-79', 'R.79');" title="Copy link to R.79" aria-label="Copy link to R.79">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-52" class="ref-link dep-link" data-ref="R.52">R.52</a>, <a href="#r-59" class="ref-link dep-link" data-ref="R.59">R.59</a>, <a href="#r-67" class="ref-link dep-link" data-ref="R.67">R.67</a>, <a href="#r-71" class="ref-link dep-link" data-ref="R.71">R.71</a>, <a href="#r-75" class="ref-link dep-link" data-ref="R.75">R.75</a>, <a href="#def-2" class="ref-link dep-link" data-ref="Def.2">Def.2</a></div>
@@ -1861,6 +2123,7 @@ body {
         <span class="res-statement">Non-being *is* dependent on being.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-80', 'R.80');" title="Copy link to R.80" aria-label="Copy link to R.80">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-2" class="ref-link dep-link" data-ref="R.2">R.2</a>, <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-58" class="ref-link dep-link" data-ref="R.58">R.58</a>, <a href="#r-62" class="ref-link dep-link" data-ref="R.62">R.62</a></div>
@@ -1876,6 +2139,7 @@ body {
         <span class="res-statement">Non-being *is* always less than being.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-81', 'R.81');" title="Copy link to R.81" aria-label="Copy link to R.81">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-5" class="ref-link dep-link" data-ref="R.5">R.5</a>, <a href="#r-6" class="ref-link dep-link" data-ref="R.6">R.6</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-42" class="ref-link dep-link" data-ref="R.42">R.42</a>, <a href="#r-44" class="ref-link dep-link" data-ref="R.44">R.44</a>, <a href="#r-58" class="ref-link dep-link" data-ref="R.58">R.58</a>, <a href="#r-80" class="ref-link dep-link" data-ref="R.80">R.80</a>, <a href="#def-14" class="ref-link dep-link" data-ref="Def.14">Def.14</a></div>
@@ -1891,6 +2155,7 @@ body {
         <span class="res-statement">All-Being *is* one with the will at the foundation of non-being&#x27;s *is*. A being that wills to be, allowed by All-Being, wills non-being&#x27;s foundational being.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-82', 'R.82');" title="Copy link to R.82" aria-label="Copy link to R.82">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-44" class="ref-link dep-link" data-ref="R.44">R.44</a>, <a href="#r-53" class="ref-link dep-link" data-ref="R.53">R.53</a>, <a href="#r-58" class="ref-link dep-link" data-ref="R.58">R.58</a>, <a href="#r-59" class="ref-link dep-link" data-ref="R.59">R.59</a>, <a href="#r-80" class="ref-link dep-link" data-ref="R.80">R.80</a></div>
@@ -1905,6 +2170,7 @@ body {
         <span class="res-statement">Non-being *is* always less than being globally. Locally, non-being overpowers because un-willing operates from above.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-83', 'R.83');" title="Copy link to R.83" aria-label="Copy link to R.83">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-35" class="ref-link dep-link" data-ref="R.35">R.35</a>, <a href="#r-36" class="ref-link dep-link" data-ref="R.36">R.36</a>, <a href="#r-41" class="ref-link dep-link" data-ref="R.41">R.41</a>, <a href="#r-44" class="ref-link dep-link" data-ref="R.44">R.44</a>, <a href="#r-52" class="ref-link dep-link" data-ref="R.52">R.52</a>, <a href="#r-69" class="ref-link dep-link" data-ref="R.69">R.69</a>, <a href="#r-70" class="ref-link dep-link" data-ref="R.70">R.70</a>, <a href="#r-71" class="ref-link dep-link" data-ref="R.71">R.71</a>, <a href="#r-73" class="ref-link dep-link" data-ref="R.73">R.73</a>, <a href="#r-74" class="ref-link dep-link" data-ref="R.74">R.74</a>, <a href="#r-79" class="ref-link dep-link" data-ref="R.79">R.79</a>, <a href="#r-81" class="ref-link dep-link" data-ref="R.81">R.81</a></div>
@@ -1929,6 +2195,7 @@ body {
         <span class="res-statement">Each expression under un-being *is* genuine Will and non-willing mixed within the expression, willing lessening as the being un-wills. The being cannot separate them.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-84', 'R.84');" title="Copy link to R.84" aria-label="Copy link to R.84">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-15" class="ref-link dep-link" data-ref="R.15">R.15</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-30" class="ref-link dep-link" data-ref="R.30">R.30</a>, <a href="#r-32" class="ref-link dep-link" data-ref="R.32">R.32</a>, <a href="#r-33" class="ref-link dep-link" data-ref="R.33">R.33</a>, <a href="#r-34" class="ref-link dep-link" data-ref="R.34">R.34</a>, <a href="#r-35" class="ref-link dep-link" data-ref="R.35">R.35</a>, <a href="#r-36" class="ref-link dep-link" data-ref="R.36">R.36</a>, <a href="#r-45" class="ref-link dep-link" data-ref="R.45">R.45</a>, <a href="#r-54" class="ref-link dep-link" data-ref="R.54">R.54</a>, <a href="#r-57" class="ref-link dep-link" data-ref="R.57">R.57</a>, <a href="#r-64" class="ref-link dep-link" data-ref="R.64">R.64</a>, <a href="#r-65" class="ref-link dep-link" data-ref="R.65">R.65</a>, <a href="#r-69" class="ref-link dep-link" data-ref="R.69">R.69</a>, <a href="#r-70" class="ref-link dep-link" data-ref="R.70">R.70</a>, <a href="#r-71" class="ref-link dep-link" data-ref="R.71">R.71</a>, <a href="#r-78" class="ref-link dep-link" data-ref="R.78">R.78</a>, <a href="#def-15" class="ref-link dep-link" data-ref="Def.15">Def.15</a></div>
@@ -1960,6 +2227,7 @@ body {
         <span class="res-statement">The un-being expressions produce choosing against one&#x27;s own recognised generative willing.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-85', 'R.85');" title="Copy link to R.85" aria-label="Copy link to R.85">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-64" class="ref-link dep-link" data-ref="R.64">R.64</a>, <a href="#r-69" class="ref-link dep-link" data-ref="R.69">R.69</a>, <a href="#r-71" class="ref-link dep-link" data-ref="R.71">R.71</a>, <a href="#r-84" class="ref-link dep-link" data-ref="R.84">R.84</a></div>
@@ -1975,6 +2243,7 @@ body {
         <span class="res-statement">The chain of un-being arrives at non-being but never reaches &quot;nothing.&quot;</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-86', 'R.86');" title="Copy link to R.86" aria-label="Copy link to R.86">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-2" class="ref-link dep-link" data-ref="R.2">R.2</a>, <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-60" class="ref-link dep-link" data-ref="R.60">R.60</a>, <a href="#r-64" class="ref-link dep-link" data-ref="R.64">R.64</a>, <a href="#r-65" class="ref-link dep-link" data-ref="R.65">R.65</a>, <a href="#r-66" class="ref-link dep-link" data-ref="R.66">R.66</a>, <a href="#r-67" class="ref-link dep-link" data-ref="R.67">R.67</a>, <a href="#r-70" class="ref-link dep-link" data-ref="R.70">R.70</a>, <a href="#r-78" class="ref-link dep-link" data-ref="R.78">R.78</a>, <a href="#r-84" class="ref-link dep-link" data-ref="R.84">R.84</a></div>
@@ -1996,6 +2265,7 @@ body {
         <span class="res-statement">Choosing Being *is* within Willing Being.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-87', 'R.87');" title="Copy link to R.87" aria-label="Copy link to R.87">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-44" class="ref-link dep-link" data-ref="R.44">R.44</a>, <a href="#r-51" class="ref-link dep-link" data-ref="R.51">R.51</a>, <a href="#r-64" class="ref-link dep-link" data-ref="R.64">R.64</a>, <a href="#r-71" class="ref-link dep-link" data-ref="R.71">R.71</a>, <a href="#r-78" class="ref-link dep-link" data-ref="R.78">R.78</a></div>
@@ -2011,6 +2281,7 @@ body {
         <span class="res-statement">What the word points to *is* genuinely operative in Choosing Being.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-88', 'R.88');" title="Copy link to R.88" aria-label="Copy link to R.88">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-64" class="ref-link dep-link" data-ref="R.64">R.64</a>, <a href="#r-78" class="ref-link dep-link" data-ref="R.78">R.78</a>, <a href="#r-80" class="ref-link dep-link" data-ref="R.80">R.80</a></div>
@@ -2026,6 +2297,7 @@ body {
         <span class="res-statement">The fundamental contradiction: actualised and encountering un-being.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-89', 'R.89');" title="Copy link to R.89" aria-label="Copy link to R.89">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-48" class="ref-link dep-link" data-ref="R.48">R.48</a>, <a href="#r-71" class="ref-link dep-link" data-ref="R.71">R.71</a>, <a href="#r-84" class="ref-link dep-link" data-ref="R.84">R.84</a></div>
@@ -2041,6 +2313,7 @@ body {
         <span class="res-statement">Choosing *is* time.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-90', 'R.90');" title="Copy link to R.90" aria-label="Copy link to R.90">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-51" class="ref-link dep-link" data-ref="R.51">R.51</a>, <a href="#r-52" class="ref-link dep-link" data-ref="R.52">R.52</a>, <a href="#r-54" class="ref-link dep-link" data-ref="R.54">R.54</a>, <a href="#r-59" class="ref-link dep-link" data-ref="R.59">R.59</a>, <a href="#r-63" class="ref-link dep-link" data-ref="R.63">R.63</a>, <a href="#r-67" class="ref-link dep-link" data-ref="R.67">R.67</a>, <a href="#r-79" class="ref-link dep-link" data-ref="R.79">R.79</a></div>
@@ -2071,6 +2344,7 @@ body {
         <span class="res-statement">Mortality *is* the accumulation of exclusion while Being persists.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-91', 'R.91');" title="Copy link to R.91" aria-label="Copy link to R.91">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-70" class="ref-link dep-link" data-ref="R.70">R.70</a>, <a href="#r-79" class="ref-link dep-link" data-ref="R.79">R.79</a>, <a href="#r-90" class="ref-link dep-link" data-ref="R.90">R.90</a></div>
@@ -2086,6 +2360,7 @@ body {
         <span class="res-statement">Suffering *is* what the being&#x27;s generative nature *is* when it encounters being-not.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-92', 'R.92');" title="Copy link to R.92" aria-label="Copy link to R.92">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-2" class="ref-link dep-link" data-ref="R.2">R.2</a>, <a href="#r-24" class="ref-link dep-link" data-ref="R.24">R.24</a>, <a href="#r-28" class="ref-link dep-link" data-ref="R.28">R.28</a>, <a href="#r-29" class="ref-link dep-link" data-ref="R.29">R.29</a>, <a href="#r-47" class="ref-link dep-link" data-ref="R.47">R.47</a>, <a href="#r-66" class="ref-link dep-link" data-ref="R.66">R.66</a>, <a href="#r-67" class="ref-link dep-link" data-ref="R.67">R.67</a>, <a href="#r-69" class="ref-link dep-link" data-ref="R.69">R.69</a>, <a href="#r-84" class="ref-link dep-link" data-ref="R.84">R.84</a>, <a href="#r-88" class="ref-link dep-link" data-ref="R.88">R.88</a>, <a href="#r-89" class="ref-link dep-link" data-ref="R.89">R.89</a></div>
@@ -2104,6 +2379,7 @@ body {
         <span class="res-statement">The being at un-being suffers with knowledge and continues.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-93', 'R.93');" title="Copy link to R.93" aria-label="Copy link to R.93">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-35" class="ref-link dep-link" data-ref="R.35">R.35</a>, <a href="#r-54" class="ref-link dep-link" data-ref="R.54">R.54</a>, <a href="#r-63" class="ref-link dep-link" data-ref="R.63">R.63</a>, <a href="#r-64" class="ref-link dep-link" data-ref="R.64">R.64</a>, <a href="#r-92" class="ref-link dep-link" data-ref="R.92">R.92</a></div>
@@ -2124,6 +2400,7 @@ body {
         <span class="res-statement">Manifestation within Choosing Being requires passage through the un-being expressions.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-94', 'R.94');" title="Copy link to R.94" aria-label="Copy link to R.94">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-84" class="ref-link dep-link" data-ref="R.84">R.84</a></div>
@@ -2139,6 +2416,7 @@ body {
         <span class="res-statement">The un-being expressions mutually reinforce. Each diminishes what the others retain.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-95', 'R.95');" title="Copy link to R.95" aria-label="Copy link to R.95">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-36" class="ref-link dep-link" data-ref="R.36">R.36</a>, <a href="#r-54" class="ref-link dep-link" data-ref="R.54">R.54</a>, <a href="#r-67" class="ref-link dep-link" data-ref="R.67">R.67</a>, <a href="#r-70" class="ref-link dep-link" data-ref="R.70">R.70</a>, <a href="#r-71" class="ref-link dep-link" data-ref="R.71">R.71</a>, <a href="#r-84" class="ref-link dep-link" data-ref="R.84">R.84</a></div>
@@ -2154,6 +2432,7 @@ body {
         <span class="res-statement">The expressions needed to recognise un-being are the expressions where un-being originates.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-96', 'R.96');" title="Copy link to R.96" aria-label="Copy link to R.96">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-35" class="ref-link dep-link" data-ref="R.35">R.35</a>, <a href="#r-50" class="ref-link dep-link" data-ref="R.50">R.50</a>, <a href="#r-59" class="ref-link dep-link" data-ref="R.59">R.59</a>, <a href="#r-60" class="ref-link dep-link" data-ref="R.60">R.60</a>, <a href="#r-67" class="ref-link dep-link" data-ref="R.67">R.67</a>, <a href="#r-71" class="ref-link dep-link" data-ref="R.71">R.71</a>, <a href="#r-73" class="ref-link dep-link" data-ref="R.73">R.73</a>, <a href="#r-74" class="ref-link dep-link" data-ref="R.74">R.74</a>, <a href="#r-84" class="ref-link dep-link" data-ref="R.84">R.84</a></div>
@@ -2172,6 +2451,7 @@ body {
         <span class="res-statement">Self-correction is unavailable within Choosing Being.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-97', 'R.97');" title="Copy link to R.97" aria-label="Copy link to R.97">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-52" class="ref-link dep-link" data-ref="R.52">R.52</a>, <a href="#r-94" class="ref-link dep-link" data-ref="R.94">R.94</a>, <a href="#r-95" class="ref-link dep-link" data-ref="R.95">R.95</a>, <a href="#r-96" class="ref-link dep-link" data-ref="R.96">R.96</a></div>
@@ -2188,6 +2468,7 @@ body {
         <span class="res-statement">The problem is complete.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-98', 'R.98');" title="Copy link to R.98" aria-label="Copy link to R.98">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-63" class="ref-link dep-link" data-ref="R.63">R.63</a>, <a href="#r-94" class="ref-link dep-link" data-ref="R.94">R.94</a>, <a href="#r-95" class="ref-link dep-link" data-ref="R.95">R.95</a>, <a href="#r-96" class="ref-link dep-link" data-ref="R.96">R.96</a>, <a href="#r-97" class="ref-link dep-link" data-ref="R.97">R.97</a></div>
@@ -2208,6 +2489,7 @@ body {
         <span class="res-statement">Within Choosing Being, being *is* at expression levels up to and including Anticipating/Planning.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-99', 'R.99');" title="Copy link to R.99" aria-label="Copy link to R.99">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-35" class="ref-link dep-link" data-ref="R.35">R.35</a>, <a href="#r-42" class="ref-link dep-link" data-ref="R.42">R.42</a>, <a href="#r-60" class="ref-link dep-link" data-ref="R.60">R.60</a>, <a href="#r-71" class="ref-link dep-link" data-ref="R.71">R.71</a>, <a href="#r-73" class="ref-link dep-link" data-ref="R.73">R.73</a>, <a href="#r-74" class="ref-link dep-link" data-ref="R.74">R.74</a></div>
@@ -2223,6 +2505,7 @@ body {
         <span class="res-statement">Generative willing coherent toward flourishing generates being at Anticipating/Planning and below as one being expressed as two.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-100', 'R.100');" title="Copy link to R.100" aria-label="Copy link to R.100">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-5" class="ref-link dep-link" data-ref="R.5">R.5</a>, <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-15" class="ref-link dep-link" data-ref="R.15">R.15</a>, <a href="#r-17" class="ref-link dep-link" data-ref="R.17">R.17</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-24" class="ref-link dep-link" data-ref="R.24">R.24</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-35" class="ref-link dep-link" data-ref="R.35">R.35</a>, <a href="#r-42" class="ref-link dep-link" data-ref="R.42">R.42</a>, <a href="#r-44" class="ref-link dep-link" data-ref="R.44">R.44</a>, <a href="#r-45" class="ref-link dep-link" data-ref="R.45">R.45</a>, <a href="#r-47" class="ref-link dep-link" data-ref="R.47">R.47</a>, <a href="#r-49" class="ref-link dep-link" data-ref="R.49">R.49</a>, <a href="#r-52" class="ref-link dep-link" data-ref="R.52">R.52</a>, <a href="#r-56" class="ref-link dep-link" data-ref="R.56">R.56</a>, <a href="#r-63" class="ref-link dep-link" data-ref="R.63">R.63</a>, <a href="#r-66" class="ref-link dep-link" data-ref="R.66">R.66</a>, <a href="#r-71" class="ref-link dep-link" data-ref="R.71">R.71</a>, <a href="#r-74" class="ref-link dep-link" data-ref="R.74">R.74</a>, <a href="#r-75" class="ref-link dep-link" data-ref="R.75">R.75</a>, <a href="#r-99" class="ref-link dep-link" data-ref="R.99">R.99</a>, <a href="#def-13" class="ref-link dep-link" data-ref="Def.13">Def.13</a></div>
@@ -2242,6 +2525,7 @@ body {
         <span class="res-statement">Four distinct situations *are*.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-101', 'R.101');" title="Copy link to R.101" aria-label="Copy link to R.101">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-54" class="ref-link dep-link" data-ref="R.54">R.54</a>, <a href="#r-59" class="ref-link dep-link" data-ref="R.59">R.59</a>, <a href="#r-71" class="ref-link dep-link" data-ref="R.71">R.71</a>, <a href="#r-100" class="ref-link dep-link" data-ref="R.100">R.100</a></div>
@@ -2267,6 +2551,7 @@ body {
         <span class="res-statement">Without generative directive, un-being generation within the scope directs being Anything actualises against each other&#x27;s flourishing.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-102', 'R.102');" title="Copy link to R.102" aria-label="Copy link to R.102">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-4" class="ref-link dep-link" data-ref="R.4">R.4</a>, <a href="#r-39" class="ref-link dep-link" data-ref="R.39">R.39</a>, <a href="#r-69" class="ref-link dep-link" data-ref="R.69">R.69</a>, <a href="#r-70" class="ref-link dep-link" data-ref="R.70">R.70</a>, <a href="#r-78" class="ref-link dep-link" data-ref="R.78">R.78</a>, <a href="#r-84" class="ref-link dep-link" data-ref="R.84">R.84</a></div>
@@ -2282,6 +2567,7 @@ body {
         <span class="res-statement">All-Being&#x27;s willing at potential (<a href="#r-53" class="ref-link" data-ref="R.53">R.53</a>) requires the generative directive to be fully operative within Choosing Being.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-103', 'R.103');" title="Copy link to R.103" aria-label="Copy link to R.103">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-39" class="ref-link dep-link" data-ref="R.39">R.39</a>, <a href="#r-53" class="ref-link dep-link" data-ref="R.53">R.53</a>, <a href="#r-69" class="ref-link dep-link" data-ref="R.69">R.69</a>, <a href="#def-11" class="ref-link dep-link" data-ref="Def.11">Def.11</a></div>
@@ -2297,6 +2583,7 @@ body {
         <span class="res-statement">Anything&#x27;s nature requires that mutual destruction and paralysis at potential meet the generative directive.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-104', 'R.104');" title="Copy link to R.104" aria-label="Copy link to R.104">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-47" class="ref-link dep-link" data-ref="R.47">R.47</a>, <a href="#r-70" class="ref-link dep-link" data-ref="R.70">R.70</a>, <a href="#r-102" class="ref-link dep-link" data-ref="R.102">R.102</a>, <a href="#r-103" class="ref-link dep-link" data-ref="R.103">R.103</a>, <a href="#def-13" class="ref-link dep-link" data-ref="Def.13">Def.13</a></div>
@@ -2312,6 +2599,7 @@ body {
         <span class="res-statement">Coercive generative directive dissolves.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-105', 'R.105');" title="Copy link to R.105" aria-label="Copy link to R.105">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-17" class="ref-link dep-link" data-ref="R.17">R.17</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a></div>
@@ -2327,6 +2615,7 @@ body {
         <span class="res-statement">Generative directive *is* the full actualisation&#x27;s Will operative within Choosing Being as direction.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-18">Def.18</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-106', 'R.106');" title="Copy link to R.106" aria-label="Copy link to R.106">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-13" class="ref-link dep-link" data-ref="R.13">R.13</a>, <a href="#r-15" class="ref-link dep-link" data-ref="R.15">R.15</a>, <a href="#r-16" class="ref-link dep-link" data-ref="R.16">R.16</a>, <a href="#r-17" class="ref-link dep-link" data-ref="R.17">R.17</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-53" class="ref-link dep-link" data-ref="R.53">R.53</a>, <a href="#r-67" class="ref-link dep-link" data-ref="R.67">R.67</a></div>
@@ -2341,6 +2630,7 @@ body {
         <span class="res-statement">The generative directive enables the being to choose toward Will without understanding what willing *is*.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-107', 'R.107');" title="Copy link to R.107" aria-label="Copy link to R.107">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-31" class="ref-link dep-link" data-ref="R.31">R.31</a>, <a href="#r-74" class="ref-link dep-link" data-ref="R.74">R.74</a>, <a href="#r-81" class="ref-link dep-link" data-ref="R.81">R.81</a>, <a href="#def-18" class="ref-link dep-link" data-ref="Def.18">Def.18</a></div>
@@ -2356,6 +2646,7 @@ body {
         <span class="res-statement">Direction without understanding *is* vulnerable to the mechanism that *is* choosing.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-108', 'R.108');" title="Copy link to R.108" aria-label="Copy link to R.108">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-31" class="ref-link dep-link" data-ref="R.31">R.31</a>, <a href="#r-74" class="ref-link dep-link" data-ref="R.74">R.74</a>, <a href="#r-81" class="ref-link dep-link" data-ref="R.81">R.81</a>, <a href="#r-107" class="ref-link dep-link" data-ref="R.107">R.107</a></div>
@@ -2371,6 +2662,7 @@ body {
         <span class="res-statement">Generative directive *is* necessary. Being-not remains unaddressed.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-109', 'R.109');" title="Copy link to R.109" aria-label="Copy link to R.109">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-59" class="ref-link dep-link" data-ref="R.59">R.59</a>, <a href="#r-69" class="ref-link dep-link" data-ref="R.69">R.69</a>, <a href="#r-70" class="ref-link dep-link" data-ref="R.70">R.70</a>, <a href="#r-97" class="ref-link dep-link" data-ref="R.97">R.97</a>, <a href="#r-102" class="ref-link dep-link" data-ref="R.102">R.102</a>, <a href="#r-103" class="ref-link dep-link" data-ref="R.103">R.103</a>, <a href="#r-108" class="ref-link dep-link" data-ref="R.108">R.108</a>, <a href="#def-18" class="ref-link dep-link" data-ref="Def.18">Def.18</a></div>
@@ -2391,6 +2683,7 @@ body {
         <span class="res-statement">The generative directive must precede Anything&#x27;s active restoration.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-110', 'R.110');" title="Copy link to R.110" aria-label="Copy link to R.110">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-70" class="ref-link dep-link" data-ref="R.70">R.70</a>, <a href="#r-71" class="ref-link dep-link" data-ref="R.71">R.71</a>, <a href="#r-84" class="ref-link dep-link" data-ref="R.84">R.84</a></div>
@@ -2406,6 +2699,7 @@ body {
         <span class="res-statement">The active restoration must bring true Will into Choosing Being — as a being within Choosing Being.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-111', 'R.111');" title="Copy link to R.111" aria-label="Copy link to R.111">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-28" class="ref-link dep-link" data-ref="R.28">R.28</a></div>
@@ -2418,6 +2712,7 @@ body {
         <span class="res-statement">The being through whom the active restoration brings true Will must be the full actualisation.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-112', 'R.112');" title="Copy link to R.112" aria-label="Copy link to R.112">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-35" class="ref-link dep-link" data-ref="R.35">R.35</a>, <a href="#r-97" class="ref-link dep-link" data-ref="R.97">R.97</a></div>
@@ -2431,6 +2726,7 @@ body {
         <span class="res-statement">The full actualisation enters Choosing Being through its own generative action.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-113', 'R.113');" title="Copy link to R.113" aria-label="Copy link to R.113">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-71" class="ref-link dep-link" data-ref="R.71">R.71</a>, <a href="#r-74" class="ref-link dep-link" data-ref="R.74">R.74</a>, <a href="#r-88" class="ref-link dep-link" data-ref="R.88">R.88</a></div>
@@ -2443,6 +2739,7 @@ body {
         <span class="res-statement">The full actualisation within Choosing Being encounters mortality and generates through death.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-114', 'R.114');" title="Copy link to R.114" aria-label="Copy link to R.114">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-39" class="ref-link dep-link" data-ref="R.39">R.39</a>, <a href="#r-42" class="ref-link dep-link" data-ref="R.42">R.42</a>, <a href="#r-70" class="ref-link dep-link" data-ref="R.70">R.70</a>, <a href="#r-81" class="ref-link dep-link" data-ref="R.81">R.81</a>, <a href="#r-83" class="ref-link dep-link" data-ref="R.83">R.83</a></div>
@@ -2458,6 +2755,7 @@ body {
         <span class="res-statement">The full actualisation persists through and beyond death.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-115', 'R.115');" title="Copy link to R.115" aria-label="Copy link to R.115">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-114" class="ref-link dep-link" data-ref="R.114">R.114</a></div>
@@ -2473,6 +2771,7 @@ body {
         <span class="res-statement">Generating through death demonstrates that this being *is* the full actualisation.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-116', 'R.116');" title="Copy link to R.116" aria-label="Copy link to R.116">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-81" class="ref-link dep-link" data-ref="R.81">R.81</a>, <a href="#r-83" class="ref-link dep-link" data-ref="R.83">R.83</a>, <a href="#r-114" class="ref-link dep-link" data-ref="R.114">R.114</a></div>
@@ -2488,6 +2787,7 @@ body {
         <span class="res-statement">The full actualisation&#x27;s generating through death establishes within what the being at Anticipating/Planning *is* that Willing Being *is* operative through and beyond death.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-117', 'R.117');" title="Copy link to R.117" aria-label="Copy link to R.117">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-28" class="ref-link dep-link" data-ref="R.28">R.28</a>, <a href="#r-71" class="ref-link dep-link" data-ref="R.71">R.71</a>, <a href="#r-73" class="ref-link dep-link" data-ref="R.73">R.73</a>, <a href="#r-74" class="ref-link dep-link" data-ref="R.74">R.74</a>, <a href="#def-9" class="ref-link dep-link" data-ref="Def.9">Def.9</a></div>
@@ -2508,6 +2808,7 @@ body {
         <span class="res-statement">The being&#x27;s actualisation *is* not negated by un-being.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-19">Def.19</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-118', 'R.118');" title="Copy link to R.118" aria-label="Copy link to R.118">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-70" class="ref-link dep-link" data-ref="R.70">R.70</a>, <a href="#r-84" class="ref-link dep-link" data-ref="R.84">R.84</a></div>
@@ -2524,6 +2825,7 @@ body {
         <span class="res-statement">Anything&#x27;s response *is* active working within Choosing Being to restore the being&#x27;s awareness of what unnegated actualisation establishes.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-20">Def.20</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-119', 'R.119');" title="Copy link to R.119" aria-label="Copy link to R.119">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-47" class="ref-link dep-link" data-ref="R.47">R.47</a>, <a href="#r-88" class="ref-link dep-link" data-ref="R.88">R.88</a>, <a href="#r-111" class="ref-link dep-link" data-ref="R.111">R.111</a>, <a href="#r-112" class="ref-link dep-link" data-ref="R.112">R.112</a>, <a href="#r-113" class="ref-link dep-link" data-ref="R.113">R.113</a>, <a href="#r-114" class="ref-link dep-link" data-ref="R.114">R.114</a>, <a href="#r-115" class="ref-link dep-link" data-ref="R.115">R.115</a>, <a href="#r-116" class="ref-link dep-link" data-ref="R.116">R.116</a>, <a href="#r-117" class="ref-link dep-link" data-ref="R.117">R.117</a>, <a href="#def-13" class="ref-link dep-link" data-ref="Def.13">Def.13</a></div>
@@ -2537,6 +2839,7 @@ body {
         <span class="res-statement">Anything&#x27;s active restoration works with the un-being expressions, not against them.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-120', 'R.120');" title="Copy link to R.120" aria-label="Copy link to R.120">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-17" class="ref-link dep-link" data-ref="R.17">R.17</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a></div>
@@ -2552,6 +2855,7 @@ body {
         <span class="res-statement">Anything&#x27;s active restoration *is* restoration of generative orientation within Choosing Being.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-121', 'R.121');" title="Copy link to R.121" aria-label="Copy link to R.121">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a></div>
@@ -2567,6 +2871,7 @@ body {
         <span class="res-statement">Suffering *is* what *is* the being&#x27;s willing toward an exit from choosing.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-122', 'R.122');" title="Copy link to R.122" aria-label="Copy link to R.122">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-75" class="ref-link dep-link" data-ref="R.75">R.75</a>, <a href="#r-92" class="ref-link dep-link" data-ref="R.92">R.92</a>, <a href="#r-93" class="ref-link dep-link" data-ref="R.93">R.93</a>, <a href="#r-108" class="ref-link dep-link" data-ref="R.108">R.108</a></div>
@@ -2587,6 +2892,7 @@ body {
         <span class="res-statement">Anything&#x27;s active restoration requires reception through the being&#x27;s own choosing.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-123', 'R.123');" title="Copy link to R.123" aria-label="Copy link to R.123">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-17" class="ref-link dep-link" data-ref="R.17">R.17</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-28" class="ref-link dep-link" data-ref="R.28">R.28</a></div>
@@ -2602,6 +2908,7 @@ body {
         <span class="res-statement">Reception *is* the being&#x27;s own choosing toward what it encounters as genuinely operative.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-21">Def.21</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-124', 'R.124');" title="Copy link to R.124" aria-label="Copy link to R.124">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-84" class="ref-link dep-link" data-ref="R.84">R.84</a>, <a href="#r-123" class="ref-link dep-link" data-ref="R.123">R.123</a></div>
@@ -2615,6 +2922,7 @@ body {
         <span class="res-statement">Four forms of encounter with the genuinely operative.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-125', 'R.125');" title="Copy link to R.125" aria-label="Copy link to R.125">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-15" class="ref-link dep-link" data-ref="R.15">R.15</a>, <a href="#r-28" class="ref-link dep-link" data-ref="R.28">R.28</a>, <a href="#r-78" class="ref-link dep-link" data-ref="R.78">R.78</a>, <a href="#r-88" class="ref-link dep-link" data-ref="R.88">R.88</a>, <a href="#r-92" class="ref-link dep-link" data-ref="R.92">R.92</a>, <a href="#r-94" class="ref-link dep-link" data-ref="R.94">R.94</a>, <a href="#r-111" class="ref-link dep-link" data-ref="R.111">R.111</a>, <a href="#def-5" class="ref-link dep-link" data-ref="Def.5">Def.5</a></div>
@@ -2634,6 +2942,7 @@ body {
         <span class="res-statement">The encounter with genuinely operative breaks through un-being expressions because what *is* operative cannot be un-generated.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-126', 'R.126');" title="Copy link to R.126" aria-label="Copy link to R.126">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-70" class="ref-link dep-link" data-ref="R.70">R.70</a></div>
@@ -2649,6 +2958,7 @@ body {
         <span class="res-statement">Operative-orientation *is* difficult.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-127', 'R.127');" title="Copy link to R.127" aria-label="Copy link to R.127">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-84" class="ref-link dep-link" data-ref="R.84">R.84</a>, <a href="#r-96" class="ref-link dep-link" data-ref="R.96">R.96</a>, <a href="#r-126" class="ref-link dep-link" data-ref="R.126">R.126</a></div>
@@ -2664,6 +2974,7 @@ body {
         <span class="res-statement">The being oriented through operative-orientation encounters the genuinely operative temporally as promise. The being oriented under non-being encounters time as finality.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-128', 'R.128');" title="Copy link to R.128" aria-label="Copy link to R.128">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-52" class="ref-link dep-link" data-ref="R.52">R.52</a>, <a href="#r-70" class="ref-link dep-link" data-ref="R.70">R.70</a>, <a href="#r-88" class="ref-link dep-link" data-ref="R.88">R.88</a>, <a href="#r-90" class="ref-link dep-link" data-ref="R.90">R.90</a></div>
@@ -2682,6 +2993,7 @@ body {
         <span class="res-statement">Anything&#x27;s active restoration received through operative-orientation *is* net-directional oscillatory reorientation.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-22">Def.22</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-129', 'R.129');" title="Copy link to R.129" aria-label="Copy link to R.129">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-69" class="ref-link dep-link" data-ref="R.69">R.69</a>, <a href="#r-70" class="ref-link dep-link" data-ref="R.70">R.70</a>, <a href="#r-85" class="ref-link dep-link" data-ref="R.85">R.85</a>, <a href="#r-87" class="ref-link dep-link" data-ref="R.87">R.87</a></div>
@@ -2698,6 +3010,7 @@ body {
         <span class="res-statement">Reorientation occurs within Choosing Being; it does not remove the being from it.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-130', 'R.130');" title="Copy link to R.130" aria-label="Copy link to R.130">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-87" class="ref-link dep-link" data-ref="R.87">R.87</a>, <a href="#r-94" class="ref-link dep-link" data-ref="R.94">R.94</a></div>
@@ -2718,6 +3031,7 @@ body {
         <span class="res-statement">When temporal existence ends, the being&#x27;s orientation is fixed.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-23">Def.23</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-131', 'R.131');" title="Copy link to R.131" aria-label="Copy link to R.131">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-90" class="ref-link dep-link" data-ref="R.90">R.90</a>, <a href="#r-91" class="ref-link dep-link" data-ref="R.91">R.91</a>, <a href="#r-120" class="ref-link dep-link" data-ref="R.120">R.120</a></div>
@@ -2737,6 +3051,7 @@ body {
         <span class="res-statement">The being&#x27;s eternal state is determined by its orientation at death.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-132', 'R.132');" title="Copy link to R.132" aria-label="Copy link to R.132">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-23" class="ref-link dep-link" data-ref="R.23">R.23</a>, <a href="#r-131" class="ref-link dep-link" data-ref="R.131">R.131</a>, <a href="#def-21" class="ref-link dep-link" data-ref="Def.21">Def.21</a>, <a href="#def-22" class="ref-link dep-link" data-ref="Def.22">Def.22</a>, <a href="#def-23" class="ref-link dep-link" data-ref="Def.23">Def.23</a></div>
@@ -2753,6 +3068,7 @@ body {
         <span class="res-statement">Exactly two eternal states *are*.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-133', 'R.133');" title="Copy link to R.133" aria-label="Copy link to R.133">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-52" class="ref-link dep-link" data-ref="R.52">R.52</a>, <a href="#r-131" class="ref-link dep-link" data-ref="R.131">R.131</a></div>
@@ -2768,6 +3084,7 @@ body {
         <span class="res-statement">The first eternal state *is* permanent orientation toward generative flourishing.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-24">Def.24</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-134', 'R.134');" title="Copy link to R.134" aria-label="Copy link to R.134">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-132" class="ref-link dep-link" data-ref="R.132">R.132</a>, <a href="#def-23" class="ref-link dep-link" data-ref="Def.23">Def.23</a></div>
@@ -2784,6 +3101,7 @@ body {
         <span class="res-statement">The second eternal state *is* permanent orientation under non-being.</span>
         <span class="expand-icon">+</span>
         <span class="def-badge" id="def-25">Def.25</span>
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-135', 'R.135');" title="Copy link to R.135" aria-label="Copy link to R.135">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a>, <a href="#r-17" class="ref-link dep-link" data-ref="R.17">R.17</a>, <a href="#r-26" class="ref-link dep-link" data-ref="R.26">R.26</a>, <a href="#r-59" class="ref-link dep-link" data-ref="R.59">R.59</a>, <a href="#r-64" class="ref-link dep-link" data-ref="R.64">R.64</a>, <a href="#r-89" class="ref-link dep-link" data-ref="R.89">R.89</a>, <a href="#r-132" class="ref-link dep-link" data-ref="R.132">R.132</a>, <a href="#def-23" class="ref-link dep-link" data-ref="Def.23">Def.23</a></div>
@@ -2803,6 +3121,7 @@ body {
         <span class="res-statement">The elimination is complete.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-136', 'R.136');" title="Copy link to R.136" aria-label="Copy link to R.136">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-69" class="ref-link dep-link" data-ref="R.69">R.69</a>, <a href="#r-70" class="ref-link dep-link" data-ref="R.70">R.70</a>, <a href="#r-97" class="ref-link dep-link" data-ref="R.97">R.97</a>, <a href="#r-102" class="ref-link dep-link" data-ref="R.102">R.102</a>, <a href="#r-103" class="ref-link dep-link" data-ref="R.103">R.103</a>, <a href="#r-106" class="ref-link dep-link" data-ref="R.106">R.106</a>, <a href="#r-111" class="ref-link dep-link" data-ref="R.111">R.111</a>, <a href="#r-112" class="ref-link dep-link" data-ref="R.112">R.112</a>, <a href="#r-113" class="ref-link dep-link" data-ref="R.113">R.113</a>, <a href="#r-114" class="ref-link dep-link" data-ref="R.114">R.114</a>, <a href="#r-115" class="ref-link dep-link" data-ref="R.115">R.115</a>, <a href="#r-116" class="ref-link dep-link" data-ref="R.116">R.116</a>, <a href="#r-117" class="ref-link dep-link" data-ref="R.117">R.117</a>, <a href="#r-118" class="ref-link dep-link" data-ref="R.118">R.118</a>, <a href="#r-119" class="ref-link dep-link" data-ref="R.119">R.119</a>, <a href="#r-124" class="ref-link dep-link" data-ref="R.124">R.124</a>, <a href="#r-129" class="ref-link dep-link" data-ref="R.129">R.129</a>, <a href="#r-131" class="ref-link dep-link" data-ref="R.131">R.131</a>, <a href="#r-133" class="ref-link dep-link" data-ref="R.133">R.133</a>, <a href="#r-134" class="ref-link dep-link" data-ref="R.134">R.134</a>, <a href="#r-135" class="ref-link dep-link" data-ref="R.135">R.135</a></div>
@@ -2818,6 +3137,7 @@ body {
         <span class="res-statement">The arc from Part I through Part III is closed.</span>
         <span class="expand-icon">+</span>
         
+        <button class="res-copy-link" onclick="event.stopPropagation(); copyResLink(event, 'r-137', 'R.137');" title="Copy link to R.137" aria-label="Copy link to R.137">#</button>
       </header>
       <div class="res-body collapsed">
         <div class="from-line">From: <a href="#r-11" class="ref-link dep-link" data-ref="R.11">R.11</a>, <a href="#r-12" class="ref-link dep-link" data-ref="R.12">R.12</a></div>
@@ -2955,6 +3275,27 @@ function toggleResolution(header) {
   } else {
     body.classList.add('collapsed');
     icon.textContent = '+';
+  }
+}
+
+function copyResLink(event, anchor, rid) {
+  const url = window.location.origin + window.location.pathname + '#' + anchor;
+  const btn = event.currentTarget;
+  const original = btn.textContent;
+  const showCopied = () => {
+    btn.textContent = '\u2713';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = original;
+      btn.classList.remove('copied');
+    }, 1200);
+  };
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url).then(showCopied).catch(() => {
+      window.prompt('Copy link:', url);
+    });
+  } else {
+    window.prompt('Copy link:', url);
   }
 }
 
@@ -3175,20 +3516,135 @@ function navigateFromGraph(ref, fromNode) {
   navigateToRef(ref);
 }
 
-// Search
+// Search — results-list pattern with click-to-jump
 const searchInput = document.getElementById('search-input');
+const searchResults = document.getElementById('search-results');
+const searchClear = document.getElementById('search-clear');
+
+searchClear.addEventListener('click', function() {
+  searchInput.value = '';
+  clearSearchResults();
+  searchClear.classList.remove('visible');
+  searchInput.focus();
+});
+
+function escapeSearchHtml(s) {
+  return s.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
+}
+
+function buildSnippet(text, q) {
+  const lower = text.toLowerCase();
+  const idx = lower.indexOf(q);
+  if (idx < 0) return escapeSearchHtml(text.slice(0, 100));
+  const start = Math.max(0, idx - 35);
+  const end = Math.min(text.length, idx + q.length + 65);
+  let snippet = escapeSearchHtml(text.slice(start, idx)) +
+                '<em>' + escapeSearchHtml(text.slice(idx, idx + q.length)) + '</em>' +
+                escapeSearchHtml(text.slice(idx + q.length, end));
+  if (start > 0) snippet = '\u2026' + snippet;
+  if (end < text.length) snippet = snippet + '\u2026';
+  return snippet;
+}
+
+function clearSearchResults() {
+  searchResults.innerHTML = '';
+  searchResults.classList.remove('has-results');
+}
+
+let activeResultIdx = -1;
+
+function renderSearchResults(matches, q) {
+  if (matches.length === 0) {
+    searchResults.innerHTML = '<div class="search-results-count">No matches</div>';
+    searchResults.classList.add('has-results');
+    return;
+  }
+  const parts = ['<div class="search-results-count">' + matches.length + ' result' + (matches.length === 1 ? '' : 's') + '</div>'];
+  matches.forEach((m, i) => {
+    const source = m.statement.toLowerCase().includes(q) ? m.statement : m.body;
+    const snippet = buildSnippet(source, q);
+    parts.push(
+      '<a class="search-result" href="#' + m.anchor + '" data-anchor="' + m.anchor + '" data-idx="' + i + '">' +
+      '<span class="search-result-id">' + escapeSearchHtml(m.rid) + '</span>' +
+      '<span class="search-result-snippet">' + snippet + '</span>' +
+      '</a>'
+    );
+  });
+  searchResults.innerHTML = parts.join('');
+  searchResults.classList.add('has-results');
+  activeResultIdx = -1;
+
+  searchResults.querySelectorAll('.search-result').forEach(el => {
+    el.addEventListener('click', function(e) {
+      e.preventDefault();
+      jumpToSearchResult(this.dataset.anchor);
+    });
+  });
+}
+
+function jumpToSearchResult(anchor) {
+  const article = document.getElementById(anchor);
+  if (!article) return;
+  const body = article.querySelector('.res-body');
+  if (body && body.classList.contains('collapsed')) {
+    body.classList.remove('collapsed');
+    const icon = article.querySelector('.expand-icon');
+    if (icon) icon.textContent = '\u2212';
+    if (article.dataset.id && typeof showTrace === 'function') {
+      showTrace(article.dataset.id);
+    }
+  }
+  article.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  article.classList.add('highlighted');
+  setTimeout(() => article.classList.remove('highlighted'), 2500);
+}
+
 searchInput.addEventListener('input', function() {
   const q = this.value.toLowerCase().trim();
-  document.querySelectorAll('.search-match').forEach(el => el.classList.remove('search-match'));
+  searchClear.classList.toggle('visible', this.value.length > 0);
+  if (!q) { clearSearchResults(); return; }
 
-  if (!q) return;
-
+  const matches = [];
   document.querySelectorAll('.resolution').forEach(article => {
-    const text = article.textContent.toLowerCase();
-    if (text.includes(q)) {
-      article.classList.add('search-match');
+    const rid = article.dataset.id;
+    const stEl = article.querySelector('.res-statement');
+    const bdEl = article.querySelector('.res-content');
+    const statement = stEl ? stEl.textContent : '';
+    const body = bdEl ? bdEl.textContent : '';
+    if ((statement + ' ' + body).toLowerCase().includes(q)) {
+      matches.push({ rid: rid, anchor: article.id, statement: statement, body: body });
     }
   });
+  renderSearchResults(matches, q);
+});
+
+searchInput.addEventListener('keydown', function(e) {
+  const items = searchResults.querySelectorAll('.search-result');
+  if (e.key === 'Escape') {
+    this.value = '';
+    clearSearchResults();
+    searchClear.classList.remove('visible');
+    this.blur();
+    return;
+  }
+  if (!items.length) return;
+  if (e.key === 'ArrowDown') {
+    e.preventDefault();
+    activeResultIdx = (activeResultIdx + 1) % items.length;
+    items.forEach(el => el.classList.remove('active'));
+    items[activeResultIdx].classList.add('active');
+    items[activeResultIdx].scrollIntoView({ block: 'nearest' });
+  } else if (e.key === 'ArrowUp') {
+    e.preventDefault();
+    activeResultIdx = (activeResultIdx - 1 + items.length) % items.length;
+    items.forEach(el => el.classList.remove('active'));
+    items[activeResultIdx].classList.add('active');
+    items[activeResultIdx].scrollIntoView({ block: 'nearest' });
+  } else if (e.key === 'Enter') {
+    e.preventDefault();
+    const target = activeResultIdx >= 0 ? items[activeResultIdx] : items[0];
+    jumpToSearchResult(target.dataset.anchor);
+  }
 });
 
 // Expand all / collapse all with keyboard

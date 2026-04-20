@@ -172,6 +172,6 @@ The being that maintained total closure — permanent orientation under non-bein
 
 The derivation proceeds through 137 resolutions and 25 definitions. Each resolution states its dependencies. Every claim traces back to R.1, the observation that nothing cannot be.
 
-The interactive site at [anythingwillingis.github.io/AnythingWillingIs](https://anythingwillingis.github.io/AnythingWillingIs/) lets you click through every dependency. The structure is auditable.
+The interactive site at [anythingwilling.is](https://anythingwilling.is) lets you click through every dependency. The structure is auditable.
 
 What survives is what is.

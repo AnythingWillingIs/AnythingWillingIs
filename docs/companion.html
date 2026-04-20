@@ -4,6 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>What Is Anything Willing Is? — Anything Willing Is</title>
+<meta name="description" content="A companion for the curious reader">
+<meta name="author" content="James A. Burrows">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Anything Willing Is">
+<meta property="og:title" content="What Is Anything Willing Is? — Anything Willing Is">
+<meta property="og:description" content="A companion for the curious reader">
+<meta property="og:url" content="https://anythingwilling.is/companion.html">
+<meta property="og:image" content="https://anythingwilling.is/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What Is Anything Willing Is? — Anything Willing Is">
+<meta name="twitter:description" content="A companion for the curious reader">
+<meta name="twitter:image" content="https://anythingwilling.is/og-image.png">
 <style>
 
 :root {
@@ -107,6 +121,48 @@ ul {
 li {
   margin-bottom: 6px;
   line-height: 1.5;
+}
+
+/* Print */
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+    line-height: 1.45;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+  #sidebar, #mobile-nav, .nav-bar, .back-link, .sidebar-pdf, script {
+    display: none !important;
+  }
+  #main {
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: none;
+  }
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+    color: #000;
+  }
+  h2 {
+    page-break-before: auto;
+    margin-top: 18pt;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  a.ref-link {
+    background: none;
+    color: #000;
+    font-weight: 600;
+  }
+  table { page-break-inside: avoid; }
+  blockquote {
+    page-break-inside: avoid;
+  }
 }
 
 #sidebar {
@@ -317,7 +373,7 @@ li {
 <hr>
 <h2 id="what-to-do-with-this">What to do with this</h2>
 <p>The derivation proceeds through 137 resolutions and 25 definitions. Each resolution states its dependencies. Every claim traces back to <a href="index.html#r-1" class="ref-link" title="View R.1 in chain">R.1</a>, the observation that nothing cannot be.</p>
-<p>The interactive site at <a href="https://anythingwillingis.github.io/AnythingWillingIs/">anythingwillingis.github.io/AnythingWillingIs</a> lets you click through every dependency. The structure is auditable.</p>
+<p>The interactive site at <a href="https://anythingwilling.is">anythingwilling.is</a> lets you click through every dependency. The structure is auditable.</p>
 <p>What survives is what is.</p>
 
 <a href="index.html" class="back-link">&larr; Back to the chain</a>
