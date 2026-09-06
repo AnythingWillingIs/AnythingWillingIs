@@ -4,7 +4,7 @@
 
 ---
 
-Imagine someone told you they had started from the observation that absolute nothing cannot exist, and, without importing any religious text, any philosophical tradition, any premise you have to accept on faith, arrived at the structural necessity of the Incarnation, the Fall, the nature of evil, why you suffer, what death is, and what happens after it.
+The derivation starts from the observation that absolute "nothing" cannot exist and, without importing any religious text, any philosophical tradition, or any premise accepted on faith, arrives at the structural necessity of the Incarnation, the Fall, the nature of evil, why suffering is, what death is, and what happens after it.
 
 This companion explains what the derivation does, what it finds, and why it is structured the way it is.
 
@@ -16,7 +16,7 @@ You suffer. Things break. People you love die. You have experienced moments wher
 
 *Anything Willing Is* starts from the bare structure of what can and cannot be, and derives its way to conclusions about why.
 
-The question the derivation poses is not whether you agree with it. The question is whether you can find where it fails. Each step depends on the steps before it. If a step does not hold, everything after it does not stand. If it does hold, what survives is what survives.
+The question the derivation poses is not agreement. The question is whether it fails, and where. Each step depends on the steps before it. If a step does not hold, everything after it does not stand. If it does hold, what survives is what survives.
 
 ---
 
@@ -134,7 +134,7 @@ The Law works. It gives direction. A being under deception, who cannot distingui
 
 But direction without understanding is vulnerable to the very mechanism it addresses. The being follows the directive as "this, not that," because choosing is all the being knows. The directive becomes another thing to choose, another exclusion, another "not that." Within Choosing Being, even the Law operates through choosing.
 
-Consider the theological convergence: God's directive was given to the descendants of Abraham, a man who, within choosing, placed his most precious choosing (his only descendant) into the hands of Will. Willing directed him not to go through with it. The willingness to place choosing within Will's hands is what made it possible for Will to give choosing direction. That is Israel. That is the Law. Direction that works, but cannot, by itself, undo the mechanism.
+There is a theological convergence here. God's directive was given to the descendants of Abraham, a man who, within choosing, placed his most precious choosing (his only descendant) into the hands of Will. Willing directed him not to go through with it. The willingness to place choosing within Will's hands is what made it possible for Will to give choosing direction. That is Israel. That is the Law. Direction that works, but cannot, by itself, undo the mechanism.
 
 The Law is necessary. Without it, the being has no direction at all within the brutality of Choosing Being. But it is not sufficient. For Will to be understood, not just chosen toward, Will must be encountered directly. Not as a directive. As a being.
 
